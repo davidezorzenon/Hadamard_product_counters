@@ -1,0 +1,160 @@
+\section{etvo\+:\+:E\+\_\+op Class Reference}
+\label{classetvo_1_1_e__op}\index{etvo\+::\+E\+\_\+op@{etvo\+::\+E\+\_\+op}}
+
+
+Class to describe E-\/operators which are coefficients of terms in E[[d]]. One \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} element is defined by a Counter-\/to-\/counter (\doxyref{Fminp}{p.}{classetvo_1_1_fminp}) function.  
+
+
+
+
+{\ttfamily \#include $<$E\+\_\+op.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ E\+\_\+op} ()
+\begin{DoxyCompactList}\small\item\em default initialization is the neutral E-\/operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a15e50a2ad99e80201984d0b3bcf7349a}} 
+\textbf{ E\+\_\+op} (const \textbf{ g\+Ng} \&term)
+\begin{DoxyCompactList}\small\item\em Initialization with a \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} term (...gamma\+\_\+nr) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a7679763aa19a4713f018bce75bf31ffb}} 
+void \textbf{ add} (const \textbf{ g\+Ng} \&term)
+\begin{DoxyCompactList}\small\item\em Add a \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} term to the current E-\/operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_ac0c490f59a9db2bff7e660466b5e4d57}} 
+void \textbf{ add} (const \textbf{ E\+\_\+op} \&op)
+\begin{DoxyCompactList}\small\item\em Add an E-\/operator to the current E-\/operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a953ee9e2710c90effb65334c46221f98}} 
+std\+::pair$<$ unsigned, unsigned $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em Returns the periodicity of the Fw Counter-\/to-\/\+Counter function (B,M) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a14d3b084a0532d4c515b5c0071a2db7f}} 
+std\+::vector$<$ \textbf{ g\+Ng} $>$ \textbf{ get\+Terms} () const
+\begin{DoxyCompactList}\small\item\em Returns the set of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} terms for the current E-\/operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a78c59066989cbd9ccb1e3145ca4452fb}} 
+unsigned \textbf{ getM} () const
+\begin{DoxyCompactList}\small\item\em Returns the M value in the (B,M) periodicity. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_aed97bb80bb6b40ff6ff8d98d5289f6ff}} 
+unsigned \textbf{ getB} () const
+\begin{DoxyCompactList}\small\item\em Returns the B value in the (B,M) periodicity. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a7831ec24c185839fdcdec4223851c536}} 
+\textbf{ E\+\_\+op} \textbf{ extend\+By} (unsigned mul) const
+\begin{DoxyCompactList}\small\item\em Extend the E-\/operator in a non canonical form. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a600faceb59e408b2ee599ff10dcc0ad1}} 
+void \textbf{ reduce} ()
+\begin{DoxyCompactList}\small\item\em Reduce to the canonical form. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_aef081bff2feb680f075c07eaa53a9c0b}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em Returns a string which describes the E-\/operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a466a0f1a34d5b98fe2fe03086228097b}} 
+std\+::string \textbf{ to\+String\+As\+Mu\+Var} () const
+\begin{DoxyCompactList}\small\item\em Returns a string which describes the E-\/operator with a $<$seq$>$ description. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a904e8de29db03f9b2cf189f6785057c7}} 
+int \textbf{ Fw} (int ki) const
+\begin{DoxyCompactList}\small\item\em Gives the evaluation of the underlying Fw (Counter-\/to-\/counter function) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_af387da361f01e84dcf1c9b23a19ddff4}} 
+\textbf{ Fminp} \textbf{ get\+Fw} () const
+\begin{DoxyCompactList}\small\item\em Returns the \doxyref{Fminp}{p.}{classetvo_1_1_fminp} Counter-\/to-\/counter function. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a026cd377b4e5356692145d0ececa54a1}} 
+void \textbf{ set\+From\+Fw} (const \textbf{ Fminp} \&)
+\begin{DoxyCompactList}\small\item\em Defines the current E-\/operator from a counter-\/to-\/counter function. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a6d57057a573cba0f86f34f7d34f1281e}} 
+\textbf{ E\+\_\+op} \textbf{ operator+} (const \textbf{ E\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Sum of \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} elements. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a3aa6a1e74ca457da54256c7da4f9fae9}} 
+\textbf{ E\+\_\+op} \textbf{ oplus} (const \textbf{ E\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Sum of \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} elements. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a8389d6548ea02dc2ab4115ca747d8c54}} 
+\textbf{ E\+\_\+op} {\bfseries inf} (const \textbf{ E\+\_\+op} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_a1e6211e859b13462ec5f11377c287ca7}} 
+\textbf{ E\+\_\+op} {\bfseries operator$\ast$} (const \textbf{ E\+\_\+op} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_a9deaafd6a37699b06d38c14f62789ea0}} 
+\textbf{ E\+\_\+op} {\bfseries otimes} (const \textbf{ E\+\_\+op} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_af9ea8ee5b7de2600e64d0c8d84c8dfc9}} 
+\textbf{ E\+\_\+op} {\bfseries lfrac} (const \textbf{ E\+\_\+op} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_ad4c9100f33a1f671be04a32578f42c26}} 
+\textbf{ E\+\_\+op} {\bfseries rfrac} (const \textbf{ E\+\_\+op} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_ac66ce9de9bcaa312a403a0deb2cf3d97}} 
+bool {\bfseries operator==} (const \textbf{ E\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_ad763928861245b5bc8e9c75906bf0d82}} 
+bool {\bfseries operator!=} (const \textbf{ E\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_ae2f1f67d0d3701520f604aeda4fe6437}} 
+bool {\bfseries operator$<$=} (const \textbf{ E\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_a6627ac3cb504b6ac538e00cff5a8771c}} 
+bool {\bfseries operator$>$=} (const \textbf{ E\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_aa2a4a3f8874705bf48ee1b7f7bef59a5}} 
+bool {\bfseries operator$>$} (const \textbf{ E\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_e__op_aa3e99731f41aa177e5e7734c50d0c159}} 
+bool {\bfseries operator$<$} (const \textbf{ E\+\_\+op} \&w) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_e__op_a22d48bf3d93e2df19b2f8a02ac7042c5}} 
+static \textbf{ E\+\_\+op} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em neutral \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_aba0456fd1e9a82ca328952efd7dff8f0}} 
+static \textbf{ E\+\_\+op} \textbf{ Mu} (unsigned m)
+\begin{DoxyCompactList}\small\item\em E\+\_\+op\+::\+Mu(c) is the  operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_af6734ac89bbf9c19faba25e03c075c0e}} 
+static \textbf{ E\+\_\+op} \textbf{ Beta} (unsigned b)
+\begin{DoxyCompactList}\small\item\em E\+\_\+op\+::\+Beta(c) is the  operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a800c9838694c60509b3a851013045e2e}} 
+static \textbf{ E\+\_\+op} \textbf{ Nabla} (unsigned m, unsigned b)
+\begin{DoxyCompactList}\small\item\em E\+\_\+op\+::\+Nabla(m,b) is the . composed operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a202e20dafccdff23890c2b9827dd95a7}} 
+static \textbf{ E\+\_\+op} \textbf{ Nabla} (unsigned mb)
+\begin{DoxyCompactList}\small\item\em E\+\_\+op\+::\+Nabla(mb) is the . composed operator. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_ab14c340bd31dbfbb146bd8bb84f28c63}} 
+static \textbf{ E\+\_\+op} \textbf{ Mu\+Var} (const std\+::vector$<$ unsigned $>$ \&weights)
+\begin{DoxyCompactList}\small\item\em \doxyref{E\+\_\+op\+::\+Mu\+Var}{p.}{classetvo_1_1_e__op_ab14c340bd31dbfbb146bd8bb84f28c63}(\{1,2\}) is an E-\/operator $<$seq$>$ defined by a sequence of weights. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_adb65d14e7fdd1cd28f0d9aff75ebc794}} 
+static \textbf{ E\+\_\+op} \textbf{ Beta\+Var} (const std\+::vector$<$ unsigned $>$ \&weights)
+\begin{DoxyCompactList}\small\item\em \doxyref{E\+\_\+op\+::\+Beta\+Var}{p.}{classetvo_1_1_e__op_adb65d14e7fdd1cd28f0d9aff75ebc794}(\{1,2\}) is an E-\/operator $<$seq$>$ defined by a sequence of weights. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_e__op_a2c0e01f7c07c0f7ace8566b7eb872b6d}} 
+static \textbf{ E\+\_\+op} \textbf{ Gamma} (int n)
+\begin{DoxyCompactList}\small\item\em E\+\_\+op\+::\+Gamma(n) is the  E-\/operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_e__op_a7cf1a5622fbcb94e715d65af829307f7}} 
+\textbf{ Fminp} {\bfseries \+\_\+fper}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to describe E-\/operators which are coefficients of terms in E[[d]]. One \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} element is defined by a Counter-\/to-\/counter (\doxyref{Fminp}{p.}{classetvo_1_1_fminp}) function. 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1_e__op_ab3d4b072eac87f34da840cb00b7ae61c}} 
+\index{etvo\+::\+E\+\_\+op@{etvo\+::\+E\+\_\+op}!E\+\_\+op@{E\+\_\+op}}
+\index{E\+\_\+op@{E\+\_\+op}!etvo\+::\+E\+\_\+op@{etvo\+::\+E\+\_\+op}}
+\subsubsection{E\+\_\+op()}
+{\footnotesize\ttfamily etvo\+::\+E\+\_\+op\+::\+E\+\_\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default initialization is the neutral E-\/operator 
+
+E. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/E\+\_\+op.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/E\+\_\+op.\+cpp\end{DoxyCompactItemize}

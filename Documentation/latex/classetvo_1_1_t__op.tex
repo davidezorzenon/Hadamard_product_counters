@@ -1,0 +1,145 @@
+\section{etvo\+:\+:T\+\_\+op Class Reference}
+\label{classetvo_1_1_t__op}\index{etvo\+::\+T\+\_\+op@{etvo\+::\+T\+\_\+op}}
+
+
+Class to describe T-\/operators which are coefficients of terms in T[[g]].  
+
+
+
+
+{\ttfamily \#include $<$T\+\_\+op.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ T\+\_\+op} ()
+\begin{DoxyCompactList}\small\item\em neutral \doxyref{T\+\_\+op}{p.}{classetvo_1_1_t__op} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_ab4198f32c47d1b72621112f11f5231c7}} 
+\textbf{ T\+\_\+op} (const \textbf{ d\+Dd} \&term)
+\begin{DoxyCompactList}\small\item\em \doxyref{T\+\_\+op}{p.}{classetvo_1_1_t__op} initialized with a \doxyref{d\+Dd}{p.}{classetvo_1_1d_dd} object. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_af81cb64f53f64bfe09decc6aaae76310}} 
+void {\bfseries add} (const \textbf{ d\+Dd} \&term)
+\item 
+\mbox{\label{classetvo_1_1_t__op_ae756480cd3b7f4ac534618289b2de9cf}} 
+void {\bfseries add} (const \textbf{ T\+\_\+op} \&op)
+\item 
+\mbox{\label{classetvo_1_1_t__op_abc6328f69cc2294b20b01fa6e87b8a36}} 
+std\+::pair$<$ unsigned, unsigned $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em returns periodicity \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a4530728befc44304e1d3afda9098380f}} 
+std\+::vector$<$ \textbf{ d\+Dd} $>$ \textbf{ get\+Terms} () const
+\begin{DoxyCompactList}\small\item\em returns the collection of \doxyref{d\+Dd}{p.}{classetvo_1_1d_dd} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a715c16a8a4138d57ee66dd05d41e019d}} 
+unsigned \textbf{ get\+MB} () const
+\begin{DoxyCompactList}\small\item\em returns periodicity \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_afa28dce40f13ad4e9a622fe82ed68a9d}} 
+\textbf{ T\+\_\+op} {\bfseries extend\+By} (unsigned mul) const
+\item 
+\mbox{\label{classetvo_1_1_t__op_a8e9b18330499d30c724cfa56c4fbe416}} 
+void {\bfseries reduce} ()
+\item 
+\mbox{\label{classetvo_1_1_t__op_a72d5d0afa95b11ab0db374d1ca068f3e}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em returns a string description \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a0566a6922058c2357d720ab4577c77e4}} 
+std\+::string \textbf{ to\+String\+As\+Delta\+Var} () const
+\begin{DoxyCompactList}\small\item\em returns a string description as d$<$seq$>$ coefficients \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a5e39b3f50dd8e18c679e84b566b72673}} 
+int \textbf{ Rw} (int ki) const
+\begin{DoxyCompactList}\small\item\em Release time evaluation. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a9f37c80430c23f8dcf20d1eee6dece9f}} 
+\textbf{ Fmaxp} \textbf{ get\+Rw} () const
+\begin{DoxyCompactList}\small\item\em Returns the release-\/time function. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_abea5f1339aa2c3542f8ea8e5bdd813b9}} 
+void \textbf{ set\+From\+Rw} (const \textbf{ Fmaxp} \&)
+\begin{DoxyCompactList}\small\item\em Sets from a release-\/time function. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_aa1ec0d8cf81e35f50cdcf2e32574adcc}} 
+\textbf{ T\+\_\+op} \textbf{ operator+} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the sum (max) of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a5609a264ab58be76b60a6032ec60cdd1}} 
+\textbf{ T\+\_\+op} \textbf{ oplus} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the sum (max) of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a761f8543b6befe9829c52cc52f2f1eb3}} 
+\textbf{ T\+\_\+op} \textbf{ inf} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the min of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a3f042c60c1f1cb720c790e454755f8fd}} 
+\textbf{ T\+\_\+op} \textbf{ operator$\ast$} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the composition of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a5d30b79b5348780ae0bcf2f6c55b1447}} 
+\textbf{ T\+\_\+op} \textbf{ otimes} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the composition of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a06ca151b4ad1b0093927edd3970e7bcb}} 
+\textbf{ T\+\_\+op} \textbf{ lfrac} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the residuation of left composition of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a8dda8c548a8a6a63464d5e8a2d3ba363}} 
+\textbf{ T\+\_\+op} \textbf{ rfrac} (const \textbf{ T\+\_\+op} \&f) const
+\begin{DoxyCompactList}\small\item\em Returns the residuation of right composition of T\+\_\+ops. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a1a102c21422de81a94a7d274ec3279c7}} 
+bool \textbf{ operator==} (const \textbf{ T\+\_\+op} \&w) const
+\begin{DoxyCompactList}\small\item\em checks equality \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_af2f8aea00f741becc2807e70cc3ec279}} 
+bool \textbf{ operator!=} (const \textbf{ T\+\_\+op} \&w) const
+\begin{DoxyCompactList}\small\item\em checks inequality \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_abec7c6cd6c6e1e4406ab0f05b9bad5c6}} 
+bool {\bfseries operator$<$=} (const \textbf{ T\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_t__op_ab1762cd830866319d151fadc66cc8541}} 
+bool {\bfseries operator$>$=} (const \textbf{ T\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_t__op_a621e55a984e522d5a3e33f754045af8e}} 
+bool {\bfseries operator$>$} (const \textbf{ T\+\_\+op} \&w) const
+\item 
+\mbox{\label{classetvo_1_1_t__op_a4adeb7015050610fd435c664cae52c62}} 
+bool {\bfseries operator$<$} (const \textbf{ T\+\_\+op} \&w) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_t__op_a1aa3f87271d6ff8b623bf7a223fd30a5}} 
+static \textbf{ T\+\_\+op} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em neutral \doxyref{T\+\_\+op}{p.}{classetvo_1_1_t__op} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a2a2e5ced28587b19ab055d2a9dde4977}} 
+static \textbf{ T\+\_\+op} \textbf{ Delta} (unsigned mb)
+\begin{DoxyCompactList}\small\item\em Delta\+\_\+mb. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a49713b682b30291374b5bd72f1b1c211}} 
+static \textbf{ T\+\_\+op} \textbf{ delta} (int t)
+\begin{DoxyCompactList}\small\item\em delta$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_t__op_a787aa6d2b375891e62a79e10a1c75e32}} 
+static \textbf{ T\+\_\+op} \textbf{ delta\+Var} (const std\+::vector$<$ int $>$ \&delays)
+\begin{DoxyCompactList}\small\item\em delta$^\wedge$$<$t1,t2..$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_t__op_a07b8286a1fcc655b912a47a66e9991c3}} 
+\textbf{ Fmaxp} {\bfseries \+\_\+fper}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to describe T-\/operators which are coefficients of terms in T[[g]]. 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1_t__op_a3b280b42567784d76824c211405a48f9}} 
+\index{etvo\+::\+T\+\_\+op@{etvo\+::\+T\+\_\+op}!T\+\_\+op@{T\+\_\+op}}
+\index{T\+\_\+op@{T\+\_\+op}!etvo\+::\+T\+\_\+op@{etvo\+::\+T\+\_\+op}}
+\subsubsection{T\+\_\+op()}
+{\footnotesize\ttfamily etvo\+::\+T\+\_\+op\+::\+T\+\_\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+neutral \doxyref{T\+\_\+op}{p.}{classetvo_1_1_t__op} 
+
+Neutral \doxyref{T\+\_\+op}{p.}{classetvo_1_1_t__op}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/T\+\_\+op.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/T\+\_\+op.\+cpp\end{DoxyCompactItemize}

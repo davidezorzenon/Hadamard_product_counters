@@ -1,0 +1,247 @@
+\section{etvo Namespace Reference}
+\label{namespaceetvo}\index{etvo@{etvo}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ d\+Dd}
+\begin{DoxyCompactList}\small\item\em terms like d$^\wedge$tl T\+M\+\_\+m d$^\wedge$tc T\+B\+\_\+b d$^\wedge$tr \end{DoxyCompactList}\item 
+class \textbf{ E\+\_\+op}
+\begin{DoxyCompactList}\small\item\em Class to describe E-\/operators which are coefficients of terms in E[[d]]. One \doxyref{E\+\_\+op}{p.}{classetvo_1_1_e__op} element is defined by a Counter-\/to-\/counter (\doxyref{Fminp}{p.}{classetvo_1_1_fminp}) function. \end{DoxyCompactList}\item 
+class \textbf{ Ed}
+\begin{DoxyCompactList}\small\item\em Class for monomials in the semiring E[[d]]. \end{DoxyCompactList}\item 
+class \textbf{ etvo\+Exception}
+\begin{DoxyCompactList}\small\item\em Class to describe exceptions in etvo. \end{DoxyCompactList}\item 
+class \textbf{ Fmaxp}
+\begin{DoxyCompactList}\small\item\em Class for pseudo -\/ periodic functions with oplus=max and otimes=composition. \end{DoxyCompactList}\item 
+class \textbf{ Fminp}
+\begin{DoxyCompactList}\small\item\em Class for pseudo -\/ periodic functions with oplus=min and otimes=composition. \end{DoxyCompactList}\item 
+class \textbf{ Fper}
+\begin{DoxyCompactList}\small\item\em Base class for pseudo -\/ periodic functions Z-\/$>$Z where f(x + dP) = codP + f(x) \end{DoxyCompactList}\item 
+class \textbf{ gd}
+\begin{DoxyCompactList}\small\item\em Wrapper class to \doxyref{mmgd\+::gd}{p.}{classmmgd_1_1gd} from Min\+Max\+GD library. \end{DoxyCompactList}\item 
+class \textbf{ g\+Ng}
+\begin{DoxyCompactList}\small\item\em Class to describe terms in E[[d]] written g$^\wedge$n.Nabla\+\_\+(m$\vert$b).g$^\wedge$n\textquotesingle{} = g$^\wedge$nl.M\+\_\+m.\+B\+\_\+b.\+g$^\wedge$nr. \end{DoxyCompactList}\item 
+class \textbf{ I\+Sterm}
+\begin{DoxyCompactList}\small\item\em Abstract base class to handle Idempotent Semiring terms. \end{DoxyCompactList}\item 
+class \textbf{ matrix}
+\item 
+class \textbf{ matrix$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Template class to create matrix of semiring elements (series,\doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} ...) \end{DoxyCompactList}\item 
+class \textbf{ poly}
+\begin{DoxyCompactList}\small\item\em Wrapper class to \doxyref{mmgd\+::poly}{p.}{classmmgd_1_1poly} from from Min\+Max\+GD library. \end{DoxyCompactList}\item 
+class \textbf{ poly\+Ed}
+\begin{DoxyCompactList}\small\item\em Class for polynomials in the semiring E[[d]]. \end{DoxyCompactList}\item 
+class \textbf{ poly\+Tg}
+\begin{DoxyCompactList}\small\item\em Class for polynomials in the semiring T[[g]]. \end{DoxyCompactList}\item 
+class \textbf{ series}
+\begin{DoxyCompactList}\small\item\em Wrapper class to \doxyref{mmgd\+::serie}{p.}{classmmgd_1_1serie} from Min\+Max\+GD library. \end{DoxyCompactList}\item 
+class \textbf{ series\+Ed}
+\begin{DoxyCompactList}\small\item\em Class for ultimately-\/periodic series in the semiring E[[d]]. In a general way, the series are described by two standard (canonical) forms s=p+q.r$\ast$=p\textquotesingle{}+r\textquotesingle{}$\ast$.q\textquotesingle{} where p,p\textquotesingle{},q,q\textquotesingle{} are polynomials in E[[d]] and r/r\textquotesingle{} are \doxyref{etvo\+::gd}{p.}{classetvo_1_1gd} terms (in Min\+Max[[g,d]]). \end{DoxyCompactList}\item 
+class \textbf{ series\+Tg}
+\begin{DoxyCompactList}\small\item\em Class for ultimately-\/periodic series in the semiring T[[g]]. \end{DoxyCompactList}\item 
+class \textbf{ T\+\_\+op}
+\begin{DoxyCompactList}\small\item\em Class to describe T-\/operators which are coefficients of terms in T[[g]]. \end{DoxyCompactList}\item 
+class \textbf{ Tg}
+\begin{DoxyCompactList}\small\item\em Class for monomials in the semiring T[[g]]. \end{DoxyCompactList}\item 
+class \textbf{ Tools}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&f, const \textbf{ d\+Dd} \&m)
+\item 
+\mbox{\label{namespaceetvo_ad89daccb80e7cdee7ef7897044363e3d}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&f, const \textbf{ E\+\_\+op} \&op)
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&f, const \textbf{ g\+Ng} \&m)
+\item 
+\mbox{\label{namespaceetvo_a6ff57c1b1a578e5d78df1e92f29c08f0}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&f, const \textbf{ T\+\_\+op} \&op)
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&f, const \textbf{ Fper} \&)
+\begin{DoxyCompactList}\small\item\em operator to print \doxyref{Fper}{p.}{classetvo_1_1_fper} elements into the standard ostream \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a225ac895acce3a226d2af46a38d11a7f}} 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&st, const \textbf{ Ed} \&m)
+\begin{DoxyCompactList}\small\item\em insert an \doxyref{Ed}{p.}{classetvo_1_1_ed} term into the standard ostream \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a415e12b531f5e08e1ec14e5f37eb3065}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&st, const \textbf{ poly\+Ed} \&p)
+\item 
+\mbox{\label{namespaceetvo_ab47ed0fc9e99b15d71569152dc19eecf}} 
+bool {\bfseries compD} (\textbf{ Ed} m1, \textbf{ Ed} m2)
+\item 
+\mbox{\label{namespaceetvo_add28ebe9bfb2cd6d24c887d5c52c9c72}} 
+\textbf{ series\+Ed} \textbf{ eg} (int n)
+\begin{DoxyCompactList}\small\item\em element g$^\wedge$n in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_aae877a0fcfdb04630cd3281d71123ed7}} 
+\textbf{ series\+Ed} \textbf{ ed} (int t)
+\begin{DoxyCompactList}\small\item\em element d$^\wedge$t in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a97d6b1103d4a7d594b4f463527dc18be}} 
+\textbf{ series\+Ed} \textbf{ em} (unsigned m)
+\begin{DoxyCompactList}\small\item\em element mu\+\_\+m in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a520663673fc842319ee4ba99e54f93f8}} 
+\textbf{ series\+Ed} \textbf{ eb} (unsigned b)
+\begin{DoxyCompactList}\small\item\em element beta\+\_\+b in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_af6b38ec220549b6ba8de69f1bccdb1d8}} 
+\textbf{ series\+Ed} \textbf{ en} (unsigned n)
+\begin{DoxyCompactList}\small\item\em element Nabla\+\_\+n=mu\+\_\+n.\+beta\+\_\+n in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a2cb35d4044b3f958a088f7f41856fedb}} 
+\textbf{ series\+Ed} \textbf{ em} (const std\+::vector$<$ unsigned $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em element mu var mu\+\_\+$<$seq$>$ in E[[d]] where the sequence is given by a vector \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a67130d07c6d624a01910bcd3509d5457}} 
+\textbf{ series\+Ed} \textbf{ eb} (const std\+::vector$<$ unsigned $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em element beta var beta\+\_\+$<$seq$>$ in E[[d]] where the sequence is given by a vector \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_adf0a9cba846ea35850586848075edf2e}} 
+\textbf{ series\+Ed} {\bfseries star} (const \textbf{ series\+Ed} \&s)
+\item 
+\mbox{\label{namespaceetvo_aabb335b616044075040379ebfd7a57c3}} 
+\textbf{ series\+Ed} {\bfseries oplus} (const \textbf{ series\+Ed} \&s1, const \textbf{ series\+Ed} \&s2)
+\item 
+\mbox{\label{namespaceetvo_ad0d3d851b631a39250b8c728cd1280d9}} 
+\textbf{ series\+Ed} {\bfseries inf} (const \textbf{ series\+Ed} \&s1, const \textbf{ series\+Ed} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a14295bcce6404d2599fbc7ef38941df3}} 
+\textbf{ series\+Ed} {\bfseries otimes} (const \textbf{ series\+Ed} \&s1, const \textbf{ series\+Ed} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a8c37ed6dc8bde2dd5990591606bd5bdd}} 
+\textbf{ series\+Ed} {\bfseries lfrac} (const \textbf{ series\+Ed} \&s1, const \textbf{ series\+Ed} \&s2)
+\item 
+\mbox{\label{namespaceetvo_aaeff32b3ae96ced075558902039d2fe5}} 
+\textbf{ series\+Ed} {\bfseries rfrac} (const \textbf{ series\+Ed} \&s1, const \textbf{ series\+Ed} \&s2)
+\item 
+\mbox{\label{namespaceetvo_ac1bf05b7dfac541360ebe15311f1ed7c}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&f, const \textbf{ series\+Ed} \&s)
+\item 
+\mbox{\label{namespaceetvo_a5a548be93772e74ab01335912acb8b30}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&st, const \textbf{ poly\+Tg} \&p)
+\item 
+\mbox{\label{namespaceetvo_aa4000e3efcd7110cb1e00457c0831b6a}} 
+bool {\bfseries compG} (\textbf{ Tg} m1, \textbf{ Tg} m2)
+\item 
+\mbox{\label{namespaceetvo_a28e25bca456e11be6bea2ed0163b7a9d}} 
+\textbf{ series\+Tg} \textbf{ tg} (int n)
+\begin{DoxyCompactList}\small\item\em element g$^\wedge$n in T[[g]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_ac4d9951235082dccc4bc10712f4b6e2b}} 
+\textbf{ series\+Tg} \textbf{ td} (int t)
+\begin{DoxyCompactList}\small\item\em element d$^\wedge$t in T[[g]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_af9fa6796ab4749bdd227cb1a49e2afe2}} 
+\textbf{ series\+Tg} \textbf{ tD} (unsigned n)
+\begin{DoxyCompactList}\small\item\em element Delta\+\_\+n T[[g]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a7e47e20bfb3e0107b74555996ba00d60}} 
+\textbf{ series\+Tg} \textbf{ td} (const std\+::vector$<$ int $>$ \&seq\+Delays)
+\begin{DoxyCompactList}\small\item\em element delta var delta$^\wedge$$<$seq$>$ in T[[g]] where the sequence is given by a vector \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a37875ed97740dbb0c70a77561824347c}} 
+\textbf{ series\+Tg} {\bfseries star} (const \textbf{ series\+Tg} \&s)
+\item 
+\mbox{\label{namespaceetvo_ab0aab302cec316ccbae3350237e5374c}} 
+\textbf{ series\+Tg} {\bfseries oplus} (const \textbf{ series\+Tg} \&s1, const \textbf{ series\+Tg} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a08b614e3084f18050bd88a895842aba6}} 
+\textbf{ series\+Tg} {\bfseries inf} (const \textbf{ series\+Tg} \&s1, const \textbf{ series\+Tg} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a9c2a8d480a1d28ed6800047f5facd7e4}} 
+\textbf{ series\+Tg} {\bfseries otimes} (const \textbf{ series\+Tg} \&s1, const \textbf{ series\+Tg} \&s2)
+\item 
+\mbox{\label{namespaceetvo_acb703d34938e32eed1681934feef9993}} 
+\textbf{ series\+Tg} {\bfseries lfrac} (const \textbf{ series\+Tg} \&s1, const \textbf{ series\+Tg} \&s2)
+\item 
+\mbox{\label{namespaceetvo_ad8c2fef7c7fe2be6d8e5d1384b7429a5}} 
+\textbf{ series\+Tg} {\bfseries rfrac} (const \textbf{ series\+Tg} \&s1, const \textbf{ series\+Tg} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a934075f8d5a9d4e8920b8f42478a1216}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&f, const \textbf{ series\+Tg} \&s)
+\item 
+\mbox{\label{namespaceetvo_a6bddd1b4119586b0a29a3e45f7637581}} 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&st, const \textbf{ Tg} \&m)
+\begin{DoxyCompactList}\small\item\em standard output of a \doxyref{Tg}{p.}{classetvo_1_1_tg} term \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_afd139072388ecabcbd2ceab31fdded62}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&f, const \textbf{ gd} \&m)
+\item 
+\mbox{\label{namespaceetvo_a652b5b2a2bff7bfced47a6d5d95f9324}} 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&flot, const \textbf{ matrix}$<$ T $>$ \&m)
+\item 
+\mbox{\label{namespaceetvo_a6b3f17c3a6d936020efc550bbdd8f35c}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries oplus\+Global} (const \textbf{ matrix}$<$ T $>$ \&m1, const \textbf{ matrix}$<$ T $>$ \&m2)
+\item 
+\mbox{\label{namespaceetvo_a540b8250edb57ded2174ed86b4cfdb2e}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries inf\+Global} (const \textbf{ matrix}$<$ T $>$ \&m1, const \textbf{ matrix}$<$ T $>$ \&m2)
+\item 
+\mbox{\label{namespaceetvo_ad65c997f8f8bf5106ea3cf036839cbaf}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries otimes\+Global} (const \textbf{ matrix}$<$ T $>$ \&m1, const \textbf{ matrix}$<$ T $>$ \&m2)
+\item 
+\mbox{\label{namespaceetvo_a72ebd2f077452e3b78985a1ec069d8ce}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries star\+Global} (const \textbf{ matrix}$<$ T $>$ \&ak\+\_\+1)
+\item 
+\mbox{\label{namespaceetvo_a4de06e817da273fead42394d2ed574f4}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries lfrac\+Global} (const \textbf{ matrix}$<$ T $>$ \&m1, const \textbf{ matrix}$<$ T $>$ \&m2)
+\item 
+\mbox{\label{namespaceetvo_a67515592050e570dcb8464891675a24d}} 
+{\footnotesize template$<$class T $>$ }\\\textbf{ matrix}$<$ T $>$ {\bfseries rfrac\+Global} (const \textbf{ matrix}$<$ T $>$ \&m1, const \textbf{ matrix}$<$ T $>$ \&m2)
+\item 
+\mbox{\label{namespaceetvo_acebbaed05d9de5223f14ecde29830b16}} 
+\textbf{ poly} \textbf{ oplus} (const \textbf{ poly} \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em global function \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a9fae753bfb5b80693bde6d5e7f5e9a5b}} 
+\textbf{ poly} \textbf{ otimes} (const \textbf{ poly} \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em global function \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_aeb0a8b1c1b4cc341d7e9ad5c7c5d22f3}} 
+\textbf{ poly} \textbf{ inf} (const \textbf{ poly} \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em global function \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_aec5d5b3f4cceed8a4e76da31f0db5511}} 
+\textbf{ poly} \textbf{ lfrac} (const \textbf{ poly} \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em global function \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a929677a7253441ca34e5a06d06d01380}} 
+\textbf{ poly} \textbf{ rfrac} (const \textbf{ poly} \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em global function \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a5ae0367b0065c9d102005c43aa5abfe1}} 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&, const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em to insert a polynomial into the standard ostream \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_aa279caf766c2820a6778c3f169ee9146}} 
+\textbf{ series} \textbf{ star} (const \textbf{ series} \&s)
+\begin{DoxyCompactList}\small\item\em global functions \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a3baa2c0ec7aca91b776482f4764503cf}} 
+\textbf{ series} {\bfseries oplus} (const \textbf{ series} \&s1, const \textbf{ series} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a373cee82fc1c7a63ccd7559591c9d985}} 
+\textbf{ series} {\bfseries inf} (const \textbf{ series} \&s1, const \textbf{ series} \&s2)
+\item 
+\mbox{\label{namespaceetvo_afa380355ba133c5ef58acfc7cd0c6c86}} 
+\textbf{ series} {\bfseries otimes} (const \textbf{ series} \&s1, const \textbf{ series} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a60824323ab93fd8f6f6040d717bc9b24}} 
+\textbf{ series} {\bfseries lfrac} (const \textbf{ series} \&s1, const \textbf{ series} \&s2)
+\item 
+\mbox{\label{namespaceetvo_aeaa76d68178b15d77e80304362daaa69}} 
+\textbf{ series} {\bfseries rfrac} (const \textbf{ series} \&s1, const \textbf{ series} \&s2)
+\item 
+\mbox{\label{namespaceetvo_a36fd7075d3f861eee27ff0e71aace8bb}} 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&flot, const \textbf{ series} \&serie1)
+\begin{DoxyCompactList}\small\item\em global function to print a series in the standard ostream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+namespace for E\+T\+VO classes 
+
+\subsection{Function Documentation}
+\mbox{\label{namespaceetvo_af947ce29e41badd9b96c173143012e62}} 
+\index{etvo@{etvo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!etvo@{etvo}}
+\subsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::ostream \& etvo\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{f,  }\item[{const \textbf{ Fper} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+operator to print \doxyref{Fper}{p.}{classetvo_1_1_fper} elements into the standard ostream 
+
+\mbox{\label{namespaceetvo_a6c1e03f19e34d55b0ce2d62c3c22ff7a}} 
+\index{etvo@{etvo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!etvo@{etvo}}
+\subsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::ostream \& etvo\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{f,  }\item[{const \textbf{ g\+Ng} \&}]{m }\end{DoxyParamCaption})}
+
+operator to print an element into the standard ostream \mbox{\label{namespaceetvo_a0034e0abdd9be65b669b6b27f7992a64}} 
+\index{etvo@{etvo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!etvo@{etvo}}
+\subsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::ostream \& etvo\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{f,  }\item[{const \textbf{ d\+Dd} \&}]{m }\end{DoxyParamCaption})}
+
+operator to print an element into the standard ostream 

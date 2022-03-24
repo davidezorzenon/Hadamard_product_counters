@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\common">
+      <UniqueIdentifier>{1634d602-2c59-4d60-aee1-912a54132371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fper">
+      <UniqueIdentifier>{839fd4ab-9954-4286-ae4d-e1372fb1f3a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\etop">
+      <UniqueIdentifier>{7f6ec7d9-e44a-4397-a0e4-1605217e5923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\seriesEd">
+      <UniqueIdentifier>{18dae3d9-da32-4063-b828-1e8db77e3b92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\grafic">
+      <UniqueIdentifier>{d7ee311a-522b-468c-ba7e-59a3059a983d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\SeriesTg">
+      <UniqueIdentifier>{e8a81877-b0f8-4eb1-b78b-b029d63da1b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\wrapperMMGD">
+      <UniqueIdentifier>{a17389f9-e291-40c5-831c-cf4781301fe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\factory">
+      <UniqueIdentifier>{e4e64f8d-20a7-41eb-bf38-3bab41200d0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\parsers">
+      <UniqueIdentifier>{5b7d5057-d896-41d0-82d3-fea6cd2f6310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Test">
+      <UniqueIdentifier>{5f517dc2-96e0-4b80-9dc6-78dc1ec039aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\libminmaxgd">
+      <UniqueIdentifier>{facdebf0-8975-40cb-8389-4a0e1dffb164}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\etvoException.cpp">
+      <Filter>Fichiers sources\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Fper\Fmaxp.cpp">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClCompile>
+    <ClCompile Include="Fper\Fminp.cpp">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClCompile>
+    <ClCompile Include="Fper\Fper.cpp">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClCompile>
+    <ClCompile Include="etop\gNg.cpp">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClCompile>
+    <ClCompile Include="etop\dDd.cpp">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesEd\Ed.cpp">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesEd\polyEd.cpp">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesEd\seriesEd.cpp">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ISterm.cpp">
+      <Filter>Fichiers sources\common</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesTg\polyTg.cpp">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesTg\Tg.cpp">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClCompile>
+    <ClCompile Include="common\global.cpp">
+      <Filter>Fichiers sources\common</Filter>
+    </ClCompile>
+    <ClCompile Include="etop\E_op.cpp">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClCompile>
+    <ClCompile Include="etop\T_op.cpp">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapperMMGD\gdWrapper.cpp">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapperMMGD\polyWrapper.cpp">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapperMMGD\seriesWrapper.cpp">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\parsers\parser.cpp">
+      <Filter>Fichiers sources\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\parsers\parserSeriesEd.cpp">
+      <Filter>Fichiers sources\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactoryFper.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactoryPoly.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactoryPolyEd.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactoryPolyTg.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactorySeries.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactorySeriesEd.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\randGen.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\Test.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\testException.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestCommon\TestPov.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestETVOP\TestSpecificgNgdDd.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestFper\TestFperFmaxFmin.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestMMGD\TestWrapperMMGD.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTg.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestCommon\TestBugs.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestPolyEd.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestPolyEdExtra.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdRegular.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdUnit.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdExtra1.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdCanon.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdCore.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="common\EtvoTools.cpp">
+      <Filter>Fichiers sources\common</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapperMMGD\lminmaxgd.cpp">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesTg\TestPolyTg.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesTg\seriesTg.cpp">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTgUnit.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\factory\FactorySeriesTg.cpp">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\parsers\calculatorMmEdTgETVO21.cpp">
+      <Filter>Fichiers sources\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="grafic\PovRay.cpp">
+      <Filter>Fichiers sources\grafic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\parsers\parserSeriesTg.cpp">
+      <Filter>Fichiers sources\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestScenarios.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTgRegular.cpp">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mainDocETVO.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fper\Fmaxp.h">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClInclude>
+    <ClInclude Include="Fper\Fminp.h">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClInclude>
+    <ClInclude Include="Fper\Fper.h">
+      <Filter>Fichiers sources\Fper</Filter>
+    </ClInclude>
+    <ClInclude Include="etop\gNg.h">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClInclude>
+    <ClInclude Include="etop\dDd.h">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesEd\Ed.h">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesEd\polyEd.h">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesEd\seriesEd.h">
+      <Filter>Fichiers sources\seriesEd</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ISterm.h">
+      <Filter>Fichiers sources\common</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesTg\polyTg.h">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesTg\Tg.h">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClInclude>
+    <ClInclude Include="common\global.h">
+      <Filter>Fichiers sources\common</Filter>
+    </ClInclude>
+    <ClInclude Include="etop\E_op.h">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClInclude>
+    <ClInclude Include="etop\T_op.h">
+      <Filter>Fichiers sources\etop</Filter>
+    </ClInclude>
+    <ClInclude Include="wrapperMMGD\gdWrapper.h">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClInclude>
+    <ClInclude Include="wrapperMMGD\polyWrapper.h">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClInclude>
+    <ClInclude Include="wrapperMMGD\seriesWrapper.h">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClInclude>
+    <ClInclude Include="wrapperMMGD\matrixWrapper.h">
+      <Filter>Fichiers sources\wrapperMMGD</Filter>
+    </ClInclude>
+    <ClInclude Include="common\etvoException.h">
+      <Filter>Fichiers sources\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactoryFper.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactoryPoly.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactoryPolyEd.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactoryPolyTg.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactorySeries.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactorySeriesEd.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\factoryT.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\randGen.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\macros.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\Test.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\testException.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\TestTemplate\TestIS.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\TestTemplate\TestKleene.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\TestTemplate\TestResiduation.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\TestTemplate\TestXIS.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\TestTemplate\testresiduationineq.h">
+      <Filter>Fichiers sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="libminmaxgd\include\gd.h">
+      <Filter>Fichiers sources\libminmaxgd</Filter>
+    </ClInclude>
+    <ClInclude Include="libminmaxgd\include\poly.h">
+      <Filter>Fichiers sources\libminmaxgd</Filter>
+    </ClInclude>
+    <ClInclude Include="libminmaxgd\include\serie.h">
+      <Filter>Fichiers sources\libminmaxgd</Filter>
+    </ClInclude>
+    <ClInclude Include="libminmaxgd\include\tools.h">
+      <Filter>Fichiers sources\libminmaxgd</Filter>
+    </ClInclude>
+    <ClInclude Include="libminmaxgd\include\vars.h">
+      <Filter>Fichiers sources\libminmaxgd</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesTg\seriesTg.h">
+      <Filter>Fichiers sources\SeriesTg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test\factory\FactorySeriesTg.h">
+      <Filter>Fichiers sources\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="grafic\PovRay.h">
+      <Filter>Fichiers sources\grafic</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

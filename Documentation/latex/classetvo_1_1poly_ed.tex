@@ -1,0 +1,257 @@
+\section{etvo\+:\+:poly\+Ed Class Reference}
+\label{classetvo_1_1poly_ed}\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+
+
+Class for polynomials in the semiring E[[d]].  
+
+
+
+
+{\ttfamily \#include $<$poly\+Ed.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:poly\+Ed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1poly_ed}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a82aa32fb16af0436d94beb915e50d158}} 
+\textbf{ poly\+Ed} ()
+\begin{DoxyCompactList}\small\item\em default initialization to Epsilon \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ab5c5bc5383986ba9d48373fe277c38c5}} 
+\textbf{ poly\+Ed} (bool Top\+NotE)
+\begin{DoxyCompactList}\small\item\em specific initialization \+: poly\+Ed(true) set to Top, poly\+Ed(false) set to E \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a3b2bdd141d15d15c90474dd3dd6766f0}} 
+\textbf{ poly\+Ed} (const \textbf{ Ed} \&m)
+\begin{DoxyCompactList}\small\item\em initialisation to a polynomial with one \doxyref{Ed}{p.}{classetvo_1_1_ed} term w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\textbf{ poly\+Ed} (const std\+::vector$<$ \textbf{ Ed} $>$ \&v)
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a9010ec718c914d0b004a9a6a77014094}} 
+\textbf{ poly} \textbf{ to\+Poly} () const
+\begin{DoxyCompactList}\small\item\em The zero-\/slice polynomial in Min\+Max[[g,d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ac83a3de206764082e6b2b640e416e771}} 
+\textbf{ poly\+Ed} \textbf{ operator+} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Sum of polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ac87c88989209880ec06bd7b147e915ab}} 
+\textbf{ poly\+Ed} \textbf{ oplus} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Sum of polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ac634c723e5f8d624776000163d4926d7}} 
+\textbf{ poly\+Ed} \textbf{ oplus\+CD} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Sum of polynomials in E[[d]] via a Core Decomposition (see J.\+Trunk Thesis) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ae869c9df48cd94a04c06b5b687322e74}} 
+\textbf{ poly\+Ed} \textbf{ operator+} (const \textbf{ Ed} \&m) const
+\begin{DoxyCompactList}\small\item\em Sum of a polynomial in E[[d]] with a monomial in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_afb88ad949598bd94f720f6e7e453e91e}} 
+void \textbf{ add} (const \textbf{ Ed} \&m)
+\begin{DoxyCompactList}\small\item\em The current polynomial pcur is modified as pcur=pcur+m. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a4d524f339d16a17c4a1abc5ff6837a47}} 
+\textbf{ poly\+Ed} \textbf{ operator+=} (const \textbf{ Ed} \&m)
+\begin{DoxyCompactList}\small\item\em Lies on \doxyref{poly\+Ed\+::add(const Ed \& m)}{p.}{classetvo_1_1poly_ed_afb88ad949598bd94f720f6e7e453e91e} method. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a69a3d0b6df800f2d735ec550c6325ef5}} 
+\textbf{ poly\+Ed} \textbf{ operator$\ast$} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Product of polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a3785ebbd0f0b9e1ac4007f1ea6ce9cb4}} 
+\textbf{ poly\+Ed} \textbf{ operator$\ast$} (const \textbf{ Ed} \&m) const
+\begin{DoxyCompactList}\small\item\em Product of one polynomial by one monomial in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_abf6db66a71df90aec21b5c81e57321dc}} 
+\textbf{ poly\+Ed} \textbf{ otimes} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Product of polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a8fa9e4ea0540cf0db6348661efb407ed}} 
+\textbf{ poly\+Ed} \textbf{ otimes\+CD} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Product of polynomials in E[[d]] via a Core Decomposition (see j.\+Trunk thesis) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a34ea58c110bbdce153195ca73afbfc8f}} 
+\textbf{ poly\+Ed} \textbf{ inf} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em Infimum of two polynomials in E[[d]] \+: p1.\+inf(p2) = greatest x s.\+t. x$<$=p1 and x$<$=p2. \end{DoxyCompactList}\item 
+\textbf{ poly\+Ed} \textbf{ inf\+CD} (const \textbf{ poly\+Ed} \&p) const
+\item 
+\textbf{ series\+Ed} \textbf{ star} () const
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a48b58fe08414b910b2ed6361e050aeee}} 
+\textbf{ poly\+Ed} \textbf{ lfrac} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Computation of the left-\/multiplication residuation\+: p1.\+lfrac(p2) =p2= greatest x s.\+t. p2.\+x $<$= p1. \end{DoxyCompactList}\item 
+\textbf{ poly\+Ed} \textbf{ lfrac\+CD} (const \textbf{ poly\+Ed} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a4d5795908c3633c453bca87b71a6dfbb}} 
+\textbf{ poly\+Ed} \textbf{ lfrac} (const \textbf{ Ed} \&m) const
+\begin{DoxyCompactList}\small\item\em Computation of the left-\/multiplication residuation\+: p1.\+lfrac(m) =m= greatest x s.\+t. m.\+x $<$= p1. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a922eac49bf439b0f09191ce39a78e492}} 
+\textbf{ poly\+Ed} \textbf{ rfrac} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Computation of the right-\/multiplication residuation\+: p1.\+rfrac(p2) =p1/p2= greatest x s.\+t. x.\+p2 $<$= p1. \end{DoxyCompactList}\item 
+\textbf{ poly\+Ed} \textbf{ rfrac\+CD} (const \textbf{ poly\+Ed} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_ed_aa8512adb43e328f910904195295d94a4}} 
+\textbf{ poly\+Ed} \textbf{ rfrac} (const \textbf{ Ed} \&m) const
+\begin{DoxyCompactList}\small\item\em Computation of the right-\/multiplication residuation\+: p1.\+rfrac(m) =p1/m= greatest x s.\+t. x.\+m $<$= p1. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ae4e2a5688b9c49b3ac2e98f8c55fa76c}} 
+bool \textbf{ operator==} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Check equality. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_af9466b6fddac07d961a5ddb348ff8ca6}} 
+bool \textbf{ operator!=} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Check difference. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a6913357b93e582d5215e49a97659dc81}} 
+bool \textbf{ operator$<$=} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Check order on polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ad54a41a94587da3ccb475b3ccd484831}} 
+bool \textbf{ operator$>$=} (const \textbf{ poly\+Ed} \&) const
+\begin{DoxyCompactList}\small\item\em Check order on polynomials in E[[d]]. \end{DoxyCompactList}\item 
+\textbf{ Ed} \textbf{ get\+First\+Dif} (const \textbf{ poly\+Ed} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a6fd62867c15fa17a16ac1ed4963f69be}} 
+\textbf{ poly\+Ed} \textbf{ transient\+Star} (int Tmax) const
+\begin{DoxyCompactList}\small\item\em Do not use it. Use \doxyref{poly\+Ed\+::star()}{p.}{classetvo_1_1poly_ed_a9e019aac691c52c0c8aeee5ab7951711}. Only for D\+E\+B\+U\+G\+G\+I\+NG purpose. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a2aada4c0c9026d276cd55a9e8cc8adc1}} 
+bool \textbf{ is\+Canon} () const
+\begin{DoxyCompactList}\small\item\em Check if a \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} is in canonical form, say for a sum w\+\_\+id$^\wedge$t\+\_\+i, w\+\_\+i and t\+\_\+i are strictly ordered. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a329095ca170e75082d4c8ea474f8cbc5}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em set to the canonical form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a924059ce8832a001b90702185c81688f}} 
+void \textbf{ get\+Max\+Gain} (unsigned int \&mu, unsigned int \&beta) const
+\begin{DoxyCompactList}\small\item\em Gives the maximal gain. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ae630b676a80c3b0ec6e59180fbec80c3}} 
+void \textbf{ get\+Lcm\+Gain} (unsigned int \&mu, unsigned int \&beta) const
+\begin{DoxyCompactList}\small\item\em Gives th Least Common multiple of gains. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a280a34228045293221afcb915ab8ea18}} 
+std\+::pair$<$ unsigned int, unsigned int $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em Returns the periodicity as a pair. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ad3ce73f0d8e5d946b600f8092965f5b4}} 
+std\+::vector$<$ \textbf{ Ed} $>$ \textbf{ get\+Terms} () const
+\begin{DoxyCompactList}\small\item\em return the monomials as a collection of \doxyref{Ed}{p.}{classetvo_1_1_ed} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_acad5a19ff9967acdbfb9b29995e80edd}} 
+void \textbf{ remove\+Term} (unsigned idx)
+\begin{DoxyCompactList}\small\item\em remove term number i in the polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a127a273850a91fc1ca4dbb5fceba7736}} 
+\textbf{ Ed} \textbf{ operator[$\,$]} (unsigned idx) const
+\begin{DoxyCompactList}\small\item\em Returns a copy of monomial in position idx in the polynomial. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a63c2f1bf8bc9dbfe91ffcf18a1650a95}} 
+unsigned int \textbf{ size} () const
+\begin{DoxyCompactList}\small\item\em Returns the size = the number of monomials. For Epsilon and Top, size=0. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a3963354b06b32e0dbf39d4beb7d0a110}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em returns a string that gives the description of the current polynomial. Is depending on the canonical form of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ac690c33834b4311f3fe1005f9145aecc}} 
+std\+::string \textbf{ to\+String\+As\+Mu\+Var} () const
+\begin{DoxyCompactList}\small\item\em returns a string that gives the description of the current polynomial as a sum of g$^\wedge$n.m$<$seq$>$.\+d$^\wedge$t terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a7d35b5c7ee11f7a1dadae85bacc3fe47}} 
+bool \textbf{ isE} () const
+\begin{DoxyCompactList}\small\item\em check if is equal to \doxyref{E()}{p.}{classetvo_1_1poly_ed_ad5ae9eeab30466ca3daf98e4f7d795bb}=g0.\+d0 \end{DoxyCompactList}\item 
+\textbf{ matrix}$<$ \textbf{ poly} $>$ \textbf{ get\+Core} (unsigned ratio=1) const
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a01f9a34e6a83e0dd9f27946665372a1c}} 
+\textbf{ matrix}$<$ \textbf{ poly} $>$ \textbf{ get\+Core\+Max} (unsigned ratio=1) const
+\begin{DoxyCompactList}\small\item\em returns the maximal Core matrix$<$poly$>$ (in Min\+Max[[g,d]]) of the current polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a97688831d44cb0df9526dce396f2ae34}} 
+void \textbf{ to\+Pov} (\textbf{ graphic\+P\+R\+::\+Pov\+Ray} \&pov, \textbf{ graphic\+P\+R\+::\+Pov\+Ray\+::\+Color} c)
+\begin{DoxyCompactList}\small\item\em used in the creation of P\+O\+V-\/\+Ray script for a \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1poly_ed_ade6d14ef0aa8b7de0c2119726e639432}} 
+static \textbf{ poly\+Ed} \textbf{ Epsilon} ()
+\begin{DoxyCompactList}\small\item\em Epsilon element. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a04d2432911531317224baf963d7f13f5}} 
+static \textbf{ poly\+Ed} \textbf{ Top} ()
+\begin{DoxyCompactList}\small\item\em Top element. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_ad5ae9eeab30466ca3daf98e4f7d795bb}} 
+static \textbf{ poly\+Ed} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em E element. \end{DoxyCompactList}\item 
+static \textbf{ poly\+Ed} \textbf{ to\+Poly\+Ed} (const \textbf{ poly} \&p)
+\item 
+\mbox{\label{classetvo_1_1poly_ed_a26b6b0c00376dd515865031d9bd1eb78}} 
+static \textbf{ poly\+Ed} \textbf{ to\+Causal} (const \textbf{ poly\+Ed} \&p)
+\begin{DoxyCompactList}\small\item\em returns a causal polynomial in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_ed_a781aaf84e8b2df5447c1c97988563226}} 
+static \textbf{ poly\+Ed} {\bfseries otimes} (const \textbf{ Ed} \&m, const \textbf{ poly\+Ed} \&p)
+\item 
+\mbox{\label{classetvo_1_1poly_ed_ab4aae57b8d5feacf59168087ce1f5d16}} 
+static \textbf{ poly\+Ed} \textbf{ core\+To\+Poly\+Ed} (const \textbf{ matrix}$<$ \textbf{ poly} $>$ \&core)
+\begin{DoxyCompactList}\small\item\em computes the recomposition of a \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} polynomial from a Core Decomposition core. \end{DoxyCompactList}\item 
+static \textbf{ etvo\+::matrix}$<$ \textbf{ poly} $>$ \textbf{ get\+MatN} (unsigned \textbf{ size})
+\begin{DoxyCompactList}\small\item\em with Beta\+\_\+b=[beta\+\_\+b g$^\wedge$(b-\/1) ... beta\+\_\+b g$^\wedge$1 beta\+\_\+b]\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for polynomials in the semiring E[[d]]. 
+
+Epsilon and Top element exist
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1poly_ed_a3c211db3a97994b9899c91c3e4600d06}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!poly\+Ed@{poly\+Ed}}
+\index{poly\+Ed@{poly\+Ed}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{poly\+Ed()}
+{\footnotesize\ttfamily etvo\+::poly\+Ed\+::poly\+Ed (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \textbf{ Ed} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+initialization to a polynomial created from a collection of \doxyref{Ed}{p.}{classetvo_1_1_ed} terms w.\+d$^\wedge$t The initialization leads to a canonical form where \doxyref{Ed}{p.}{classetvo_1_1_ed} terms are sorted 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1poly_ed_a8f79bd132aa08e1f211c9b62c8d22f1a}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!get\+Core@{get\+Core}}
+\index{get\+Core@{get\+Core}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{get\+Core()}
+{\footnotesize\ttfamily \textbf{ matrix}$<$ \textbf{ poly} $>$ etvo\+::poly\+Ed\+::get\+Core (\begin{DoxyParamCaption}\item[{unsigned}]{ratio = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+
+returns the Core matrix$<$poly$>$ (in Min\+Max[[g,d]]) of the current polynomial a polynomial p=Mu\+\_\+m Q Beta\+\_\+b with Mu\+\_\+m=[mu\+\_\+m g$^\wedge$1mu\+\_\+m g$^\wedge$2mu\+\_\+m ... g$^\wedge$(m-\/1)mu\+\_\+m] with Beta\+\_\+b=[beta\+\_\+b g$^\wedge$(b-\/1) ... beta\+\_\+b g$^\wedge$1 beta\+\_\+b]\textquotesingle{} and Q in Min\+Max[[g,d]] Mu\+\_\+m and Beta\+\_\+b are implicit from the size of Core \mbox{\label{classetvo_1_1poly_ed_ac3762f81eaa8d9838a50dca75f2a57a4}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!get\+First\+Dif@{get\+First\+Dif}}
+\index{get\+First\+Dif@{get\+First\+Dif}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{get\+First\+Dif()}
+{\footnotesize\ttfamily \textbf{ Ed} etvo\+::poly\+Ed\+::get\+First\+Dif (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Ed} \&}]{p }\end{DoxyParamCaption}) const}
+
+When the current polynomial is different from p, gives the first different monomial Otherwise, if both polynomials are equals, returns \doxyref{Ed\+::\+E()}{p.}{classetvo_1_1_ed_a70e1f67a5fdffdc2ec0ab3dbf63c84e2}=g0.\+d0 \mbox{\label{classetvo_1_1poly_ed_a73a88b1791efcf26d11f60b663899047}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!get\+MatN@{get\+MatN}}
+\index{get\+MatN@{get\+MatN}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{get\+Mat\+N()}
+{\footnotesize\ttfamily \textbf{ etvo\+::matrix}$<$ \textbf{ poly} $>$ etvo\+::poly\+Ed\+::get\+MatN (\begin{DoxyParamCaption}\item[{unsigned}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+with Beta\+\_\+b=[beta\+\_\+b g$^\wedge$(b-\/1) ... beta\+\_\+b g$^\wedge$1 beta\+\_\+b]\textquotesingle{} 
+
+returns the specific matrix Beta\+\_\+\+N.\+Mu\+\_\+N with Mu\+\_\+m=[mu\+\_\+m g$^\wedge$1mu\+\_\+m g$^\wedge$2mu\+\_\+m ... g$^\wedge$(m-\/1)mu\+\_\+m] \mbox{\label{classetvo_1_1poly_ed_a11827ad18c37002fd9c59a33111692b1}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!inf\+CD@{inf\+CD}}
+\index{inf\+CD@{inf\+CD}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{inf\+C\+D()}
+{\footnotesize\ttfamily \textbf{ poly\+Ed} etvo\+::poly\+Ed\+::inf\+CD (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Ed} \&}]{p }\end{DoxyParamCaption}) const}
+
+Infimum of two polynomials in E[[d]] via a Core Decomposition (see J.\+Trunk thesis) Note\+: p1.\+inf(p2) is supposed to be equal to p1.\+inf\+C\+D(p2), with a different algorithm. \mbox{\label{classetvo_1_1poly_ed_aee09b7d2ada45032ee9e95aab676ac61}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!lfrac\+CD@{lfrac\+CD}}
+\index{lfrac\+CD@{lfrac\+CD}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{lfrac\+C\+D()}
+{\footnotesize\ttfamily \textbf{ poly\+Ed} etvo\+::poly\+Ed\+::lfrac\+CD (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Ed} \&}]{p }\end{DoxyParamCaption}) const}
+
+Computation of the left-\/multiplication residuation via a Core Decomposition \+: p1.\+lfrac\+C\+D(p2) =p2= greatest x s.\+t. p2.\+x $<$= p1 Note\+: p1.\+lfrac(p2) is supposed to be equal to p1.\+lfrac\+C\+D(p2) with a different algorithm \mbox{\label{classetvo_1_1poly_ed_a521118297a15d9add566d7b8dd0ccca4}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!rfrac\+CD@{rfrac\+CD}}
+\index{rfrac\+CD@{rfrac\+CD}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{rfrac\+C\+D()}
+{\footnotesize\ttfamily \textbf{ poly\+Ed} etvo\+::poly\+Ed\+::rfrac\+CD (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Ed} \&}]{p }\end{DoxyParamCaption}) const}
+
+Computation of the right-\/multiplication residuation via a Core Decomposition\+: p1.\+rfrac(p2) =p1/p2= greatest x s.\+t. x.\+p2 $<$= p1 Note\+: p1.\+rfrac(p2) is supposed to be equal to p1.\+rfrac\+C\+D(p2), with a different algorithm \mbox{\label{classetvo_1_1poly_ed_a9e019aac691c52c0c8aeee5ab7951711}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!star@{star}}
+\index{star@{star}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{star()}
+{\footnotesize\ttfamily \textbf{ series\+Ed} etvo\+::poly\+Ed\+::star (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Kleene star of a polynomial in E[[d]], the result is a series in E[[d]] The default algorithm is by using a Core Decomposition of the current polynomial, the Kleene star of the Core matrix, and finally the recomposition of a series in E[[d]] Exception \+: this method can throw a const char $\ast$ exception (non causal case) or an \doxyref{etvo\+Exception}{p.}{classetvo_1_1etvo_exception} when the result is a degenerate matrix (generally, it corresponds to liveness issues for the corresponding W\+B-\/\+T\+EG) \mbox{\label{classetvo_1_1poly_ed_ab55a82518ccf249cd2a50e1b7f4b0edc}} 
+\index{etvo\+::poly\+Ed@{etvo\+::poly\+Ed}!to\+Poly\+Ed@{to\+Poly\+Ed}}
+\index{to\+Poly\+Ed@{to\+Poly\+Ed}!etvo\+::poly\+Ed@{etvo\+::poly\+Ed}}
+\subsubsection{to\+Poly\+Ed()}
+{\footnotesize\ttfamily \textbf{ poly\+Ed} etvo\+::poly\+Ed\+::to\+Poly\+Ed (\begin{DoxyParamCaption}\item[{const \textbf{ poly} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a polynomial in E[[d]] from a polynomial in Min\+Max[[g,d]] An injection from Min\+Max[[g,d]] to E[[d]] 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/\textbf{ poly\+Ed.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/poly\+Ed.\+cpp\end{DoxyCompactItemize}

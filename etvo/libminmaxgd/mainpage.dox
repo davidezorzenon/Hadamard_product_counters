@@ -1,0 +1,23 @@
+/*!
+*\mainpage[MinMaxgd classes]
+* 
+*
+*@authors L.Hardouin (Laboratory LARIS - Angers - FRANCE)
+*
+@image html FigSBGET1.svg 
+* 
+*@image html GET1.svg 
+*
+*
+*
+*@section Introduction
+*
+* This library is a set of classes to make computations on formal series used in
+* Discrete Event Systems. More specifically, these series allow us to describe
+* the behaviour of a subclass of Petri Nets.
+* The formal series handled with this library lie on a set of elementary operators 
+* used to describe Timed Event Graphs (TEGs).
+*
+*
+*/
+

@@ -1,0 +1,110 @@
+\section{graphic\+PR\+:\+:Pov\+Ray Class Reference}
+\label{classgraphic_p_r_1_1_pov_ray}\index{graphic\+P\+R\+::\+Pov\+Ray@{graphic\+P\+R\+::\+Pov\+Ray}}
+
+
+Used to generate P\+O\+V-\/\+Ray scripts to draw 3D descriptions of poly\+Ed and poly\+Tg objects.  
+
+
+
+
+{\ttfamily \#include $<$Pov\+Ray.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Color}
+\begin{DoxyCompactList}\small\item\em the script description of a color in P\+O\+V-\/\+Ray \end{DoxyCompactList}\item 
+class \textbf{ Point}
+\begin{DoxyCompactList}\small\item\em the script description of a point in P\+O\+V-\/\+Ray \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a7bb3dd07e8c0fffa7c70103d485a8d85}} 
+\textbf{ Pov\+Ray} (const std\+::string \&str\+File\+Name)
+\begin{DoxyCompactList}\small\item\em For a script description stored into the file named str\+File\+Name. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ac3c935e83d1846955d7880e8921298b6}} 
+void \textbf{ Axis\+Ed} ()
+\begin{DoxyCompactList}\small\item\em Script for Axis creation for Ed elements. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a3ba88d53d0d008ca267e56b6086b2055}} 
+void \textbf{ Axis\+Tg} ()
+\begin{DoxyCompactList}\small\item\em Script for Axis creation for Tg elements. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ab14560a1b081a77055ddae70532d2c59}} 
+void \textbf{ Pov\+\_\+\+Start\+Ed} ()
+\begin{DoxyCompactList}\small\item\em Script header for Ed elements. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_af5b7b58da1303c3a9ddd8acea217ebf4}} 
+void \textbf{ Pov\+\_\+\+Start\+Tg} ()
+\begin{DoxyCompactList}\small\item\em Script header for Tg elements. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a35ea6876eade87363f8970d4028b8b06}} 
+void \textbf{ Pov\+\_\+\+End} ()
+\begin{DoxyCompactList}\small\item\em Script closure. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ab9be91bf3f5c20d6b22ba52a1613ce85}} 
+void \textbf{ Save\+To\+File} ()
+\begin{DoxyCompactList}\small\item\em Save the script into the file. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a3c77578ed0a72b3ee7c37f3a7ad6eabe}} 
+void {\bfseries Box} (\textbf{ Point} pA, \textbf{ Point} pB, \textbf{ Color} c)
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a6bd3bbecca0b15620e76ccd13ddf74f1}} 
+void {\bfseries Sphere} (\textbf{ Point} centre, float rayon, \textbf{ Color} c)
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_aaf00c01d3ea2b157ecc84cd442849d2c}} 
+void {\bfseries Cylinder} (\textbf{ Point} pA, \textbf{ Point} pB, float rayon, \textbf{ Color} c)
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a63f9ea3b52142759255e52a86bd26002}} 
+void {\bfseries Face\+XY} (\textbf{ Point} pA, \textbf{ Point} pB)
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ad23cc44a05b58c1999b12d6b89410459}} 
+void {\bfseries FaceZ} (\textbf{ Point} pA, \textbf{ Point} pB)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a71fca23628a32a631cc56198477450ae}} 
+\textbf{ Point} \textbf{ Location\+Camera}
+\begin{DoxyCompactList}\small\item\em Camera location in the scene. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_aa635deb7d40ef1b7df025f3f06f8897c}} 
+\textbf{ Point} \textbf{ Camera\+Look\+At}
+\begin{DoxyCompactList}\small\item\em \doxyref{Point}{p.}{classgraphic_p_r_1_1_pov_ray_1_1_point} observed by the Camera into the scene. \end{DoxyCompactList}\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a896f26b8097b5a550d8382d84286a73b}} 
+\textbf{ Color} {\bfseries C\+Surface}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a321ea0510260db58196a8c9b7b675ab7}} 
+int {\bfseries xmin}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a78b6e35f2d3ef5aeda6ba34486561cde}} 
+int {\bfseries ymax}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a2fd172af17b917c197f3b7c963a423ff}} 
+int {\bfseries zmin}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_aa599a848834234f67d47cf695e42290a}} 
+int {\bfseries xmax}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ac6210b84744668777aec1053facad7d0}} 
+int {\bfseries zmax}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ac656bc8673c6b4850c8993a4c290664e}} 
+int {\bfseries ymin}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_a35528c2d9c457b03070e15fd1d31ab6a}} 
+std\+::string {\bfseries file\+Name\+Pov\+Ray}
+\item 
+\mbox{\label{classgraphic_p_r_1_1_pov_ray_ab4d8d117059ee71c728c77de11e56e01}} 
+std\+::strstream {\bfseries ss}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to generate P\+O\+V-\/\+Ray scripts to draw 3D descriptions of poly\+Ed and poly\+Tg objects. 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/grafic/Pov\+Ray.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/grafic/Pov\+Ray.\+cpp\end{DoxyCompactItemize}

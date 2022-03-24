@@ -1,0 +1,178 @@
+\section{etvo\+:\+:Ed Class Reference}
+\label{classetvo_1_1_ed}\index{etvo\+::\+Ed@{etvo\+::\+Ed}}
+
+
+Class for monomials in the semiring E[[d]].  
+
+
+
+
+{\ttfamily \#include $<$Ed.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_ed_ad20c9c6f826439921100aeb6f07d7cac}} 
+\textbf{ Ed} ()
+\begin{DoxyCompactList}\small\item\em init as neutral element \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a9bda2dd2373c47fb0ae9385547779f1d}} 
+\textbf{ Ed} (int n, int \textbf{ d})
+\begin{DoxyCompactList}\small\item\em init as g$^\wedge$n.d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a55c7a6e5975f00d4283f301002acd527}} 
+\textbf{ Ed} (int n, unsigned \textbf{ m}, unsigned \textbf{ b}, int np, int \textbf{ d})
+\begin{DoxyCompactList}\small\item\em init as g$^\wedge$n.m\+\_\+m.\+b\+\_\+b.\+g$^\wedge$np.d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a7eb5df5fdf6107a88b97cf8402431993}} 
+\textbf{ Ed} (int n, unsigned nabla, int np, int \textbf{ d})
+\begin{DoxyCompactList}\small\item\em init as g$^\wedge$n.nabla\+\_\+mb.\+g$^\wedge$np.d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a1d64b86148735b62d6652fa3dd5f6c06}} 
+\textbf{ Ed} (const \textbf{ E\+\_\+op} \&w, int t)
+\begin{DoxyCompactList}\small\item\em init as w.\+d$^\wedge$t element \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a719f4b743cecf5469c9f731c2c8c981a}} 
+\textbf{ E\+\_\+op} \textbf{ get\+E\+\_\+op} () const
+\begin{DoxyCompactList}\small\item\em returns the E-\/operator w of w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_aa13b13433331ab5ce30fc8541a0a2fed}} 
+void \textbf{ set\+E\+\_\+op} (const \textbf{ E\+\_\+op} \&)
+\begin{DoxyCompactList}\small\item\em sets the E-\/operator w of w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a3b77663edd33895e24728dc52cfac009}} 
+int \textbf{ getD} () const
+\begin{DoxyCompactList}\small\item\em returns the t (delay) exponent of w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a0ecee88ab37e97d15d0291355999255b}} 
+void \textbf{ setD} (int \textbf{ d})
+\begin{DoxyCompactList}\small\item\em returns the t exponent (delay) of w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_ad51c45e4adb8422039f94e03c1a98185}} 
+void \textbf{ get\+Gain} (unsigned int \&mu, unsigned int \&beta) const
+\begin{DoxyCompactList}\small\item\em gives the gain mu/beta of the E-\/operator w of w.\+d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a02d3d4906889c7cdedd9de590917e868}} 
+\textbf{ Ed} \textbf{ operator$\ast$} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w.\+d$^\wedge$t =w\+\_\+this.\+d$^\wedge$t\+\_\+this $\ast$ w\+\_\+m.\+d$^\wedge$t\+\_\+m \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a36b8e4df19d0cdb000c1586716c6114e}} 
+\textbf{ Ed} \textbf{ otimes} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w.\+d$^\wedge$t =w\+\_\+this.\+d$^\wedge$t\+\_\+this $\ast$ w\+\_\+m.\+d$^\wedge$t\+\_\+m \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_af2e6d6e38a3cc0ccd80eb7eed039066d}} 
+\textbf{ poly\+Ed} \textbf{ operator$\ast$} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em returns the polynomial w\+\_\+this.\+d$^\wedge$t\+\_\+this $\ast$ p \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a85a230c782332c15b236f381c1263bf4}} 
+\textbf{ poly\+Ed} \textbf{ otimes} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em returns the polynomial w\+\_\+this.\+d$^\wedge$t\+\_\+this $\ast$ p \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_adb202335e243ccc6f3c515c023124824}} 
+\textbf{ series\+Ed} \textbf{ operator$\ast$} (const \textbf{ series\+Ed} \&s) const
+\begin{DoxyCompactList}\small\item\em returns the series w\+\_\+this.\+d$^\wedge$t\+\_\+this$\ast$s with s=(p+q.r$\ast$) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_acb6842d516426083f38502b10ce9972e}} 
+\textbf{ series\+Ed} \textbf{ otimes} (const \textbf{ series\+Ed} \&s) const
+\begin{DoxyCompactList}\small\item\em returns the series w\+\_\+this.\+d$^\wedge$t\+\_\+this$\ast$s with s=(p+q.r$\ast$) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a94abbb329c8f8b83204d74d315dbaf58}} 
+\textbf{ poly\+Ed} \textbf{ oplus} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w\+\_\+this.\+d$^\wedge$t\+\_\+this + w\+\_\+m.\+d$^\wedge$t\+\_\+m which is a polynomial \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a28ac6da510eeea370cfe39981a2fcf31}} 
+\textbf{ poly\+Ed} \textbf{ operator+} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w\+\_\+this.\+d$^\wedge$t\+\_\+this + w\+\_\+m.\+d$^\wedge$t\+\_\+m which is a polynomial \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_ae82b5b756ab4eb30d9721ecb86f06456}} 
+\textbf{ poly\+Ed} \textbf{ oplus} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em returns w\+\_\+this.\+d$^\wedge$t\+\_\+this + p which is a polynomial \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_ac034474962cb58dcafa5383662abad57}} 
+\textbf{ poly\+Ed} \textbf{ operator+} (const \textbf{ poly\+Ed} \&p) const
+\begin{DoxyCompactList}\small\item\em returns w\+\_\+this.\+d$^\wedge$t\+\_\+this + p which is a polynomial \doxyref{poly\+Ed}{p.}{classetvo_1_1poly_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a1c351a203facd9d8da31fdec1832ce55}} 
+\textbf{ Ed} \textbf{ inf} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w.\+d$^\wedge$t =inf(w\+\_\+this.\+d$^\wedge$t\+\_\+this,w\+\_\+m.\+d$^\wedge$t\+\_\+m) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a340385622c9980a5610bb90cab74000a}} 
+\textbf{ Ed} \textbf{ lfrac} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w.\+d$^\wedge$t =w\+\_\+m.\+d$^\wedge$t\+\_\+m.d$^\wedge$t\+\_\+this \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_add06ac9a5de26edd0ece3aebced9e099}} 
+\textbf{ Ed} \textbf{ rfrac} (const \textbf{ Ed} \&\textbf{ m}) const
+\begin{DoxyCompactList}\small\item\em returns w.\+d$^\wedge$t =w\+\_\+this.\+d$^\wedge$t\+\_\+this/w\+\_\+m.d$^\wedge$t\+\_\+m \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} () const
+\item 
+std\+::string \textbf{ to\+String\+As\+Mu\+Var} () const
+\item 
+\mbox{\label{classetvo_1_1_ed_a1e2e98d1403b7c82d6406a27e8349d56}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em put in a canonical form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a13c576dde3a0a0781dd6de9fb4895506}} 
+bool \textbf{ operator==} (const \textbf{ Ed} \&) const
+\begin{DoxyCompactList}\small\item\em check \doxyref{Ed}{p.}{classetvo_1_1_ed} equality \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a2baea8da61cd07bad19368bf35f6283a}} 
+bool {\bfseries operator!=} (const \textbf{ Ed} \&) const
+\item 
+\mbox{\label{classetvo_1_1_ed_a21c040cf39c10e12783dcebe18e10e7c}} 
+bool {\bfseries operator$<$=} (const \textbf{ Ed} \&) const
+\item 
+\mbox{\label{classetvo_1_1_ed_a1b10923215ed0c6eca93b9853ed7a79a}} 
+bool {\bfseries operator$>$=} (const \textbf{ Ed} \&) const
+\item 
+\mbox{\label{classetvo_1_1_ed_a0a9f3f403ca1cc39d2efdf4b794409a9}} 
+void \textbf{ to\+Pov} (\textbf{ graphic\+P\+R\+::\+Pov\+Ray} \&pov, \textbf{ graphic\+P\+R\+::\+Pov\+Ray\+::\+Color} c, \textbf{ Ed} $\ast$prec, \textbf{ Ed} $\ast$next)
+\begin{DoxyCompactList}\small\item\em used to create Pov\+Ray graphical output \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_ed_abb39cc18d8ef6038c6f73f7193e04a0d}} 
+static \textbf{ Ed} \textbf{ g} (int n)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::g(n)=g$^\wedge$n.d$^\wedge$0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a33b73fa410255d8906c47c5195ab713b}} 
+static \textbf{ Ed} \textbf{ m} (unsigned mul)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::m(mul) = m\+\_\+mul \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a189ee84fd27ea6a39936e121499ab982}} 
+static \textbf{ Ed} \textbf{ N} (unsigned mul, unsigned beta)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::\+N(mul,meta) = m\+\_\+mul.\+b\+\_\+beta \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a4d827f13d5b7a420499da3720d102eb1}} 
+static \textbf{ Ed} \textbf{ N} (unsigned mb)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::\+N(mb) = m\+\_\+mb.\+b\+\_\+mb \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a477c364d3f393ea2afd2fe9767856ce2}} 
+static \textbf{ Ed} \textbf{ b} (unsigned b)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::b(b) = b\+\_\+b \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a3aa643bf36955e4c79980e6f68c663d6}} 
+static \textbf{ Ed} \textbf{ d} (int d)
+\begin{DoxyCompactList}\small\item\em basic operator as \doxyref{Ed}{p.}{classetvo_1_1_ed} element \+: Ed\+::d(t) =d$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_ed_a70e1f67a5fdffdc2ec0ab3dbf63c84e2}} 
+static \textbf{ Ed} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em neutral operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for monomials in the semiring E[[d]]. 
+
+No epsilon, no top element
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1_ed_a165cfae686f1694ab0f26b895ab103e1}} 
+\index{etvo\+::\+Ed@{etvo\+::\+Ed}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!etvo\+::\+Ed@{etvo\+::\+Ed}}
+\subsubsection{to\+String()}
+{\footnotesize\ttfamily std\+::string etvo\+::\+Ed\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns a string with the description of the current term w.\+d$^\wedge$t The format depends on the current canonical form of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} terms ~\newline
+
+
+m1 = Ed(g\+Ng(3, 2, 3, 5),5); // g3.\+m2.\+b3.\+g5.\+d5
+
+g\+Ng\+::set\+Canon\+Form(0); // left form
+
+cout $<$$<$ m1.\+to\+String() $<$$<$ endl; // g5.\+m2.\+b3.\+g2.\+d5
+
+g\+Ng\+::set\+Canon\+Form(1); // central form
+
+cout $<$$<$ m1.\+to\+String() $<$$<$ endl; // g1.\+m2.\+g2.\+b3.\+g2.\+d5
+
+g\+Ng\+::set\+Canon\+Form(2); // right form
+
+cout $<$$<$ m1.\+to\+String() $<$$<$ endl; //g1.m2.\+b3.\+g8.\+d5 \mbox{\label{classetvo_1_1_ed_af3b82cb2e58eccd3e2daee10c8c0da40}} 
+\index{etvo\+::\+Ed@{etvo\+::\+Ed}!to\+String\+As\+Mu\+Var@{to\+String\+As\+Mu\+Var}}
+\index{to\+String\+As\+Mu\+Var@{to\+String\+As\+Mu\+Var}!etvo\+::\+Ed@{etvo\+::\+Ed}}
+\subsubsection{to\+String\+As\+Mu\+Var()}
+{\footnotesize\ttfamily std\+::string etvo\+::\+Ed\+::to\+String\+As\+Mu\+Var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns a string with the description of the current term w.\+d$^\wedge$t as a variable weighted operator $<$seq$>$ For instance (m3.\+b2.\+g1 + g2.\+m3.\+b2).d3 =g0.\+m$<$2,1$>$.\+d3 This method returns a descriptions as a sum of monomials g$^\wedge$n.m$<$seq$>$.\+d$^\wedge$t 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/Ed.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/Ed.\+cpp\end{DoxyCompactItemize}

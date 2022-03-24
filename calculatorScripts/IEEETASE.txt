@@ -1,0 +1,45 @@
+eop1Ex6=m<1,3,2>
+eop2Ex6=m<1,0,2>
+eop3Ex7=b<1,2,0>
+eop4Ex7=b<1,2>
+asMuVar(eop4Ex7)
+eop5Ex8=m<2,3>
+eop6Ex8=b<2,1,1>.g1
+eop7Ex8=m<1,0,2>
+
+EA=eps(2, 2)
+EB=eps(2, 2)
+EC=eps(1, 2)
+EB(0,0)=d4.m<2,3>
+EB(0,1)=b<2,1,1>.g1
+EC(0,1)=g0
+EA(1,0)=d1.m<1,0,2>
+EA(0,1)=g2
+EHFig11=EC.[EA]*.EB	
+asMuVar(EHFig11(0,0))
+asMuVar(EHFig11(0,1))
+
+	
+eH1Fig17=d4.[g2.d3]*
+eH2Fig17=(d5+g2.d6).[g4.d4]*
+eGa=b<1,0,1,0,0>.eH1Fig17.m<1,0,1,0,0>
+eGa=eGa+b<0,1,0,1,1>.eH2Fig17.m<0,1,0,1,1>
+asMuVar(eGa)
+eFa=rfrac(lfrac(eGa,eGa),eGa);
+eFa=pr+(eFa);
+eCLA = eGa.[eFa.eGa]*
+?=(eCLA,eGa)
+
+EAFig20=eps(3,3)
+EBFig20=eps(3,1)
+ECFig20=eps(1,3)
+EAFig20(1,0)=b<1,0,0>.d3.m<1,0,0>
+EAFig20(1,0)=EAFig20(1,0)+b<0,1,0>.d4.m<0,1,0>
+EAFig20(1,0)=EAFig20(1,0)+b<0,0,1>.d6.m<0,0,1>
+EAFig20(0,1)=g3
+EAFig20(2,1)=b<1,0>.d2.m<1,0>
+EAFig20(2,1)=EAFig20(2,1)+b<0,1>.d5.m<0,1>
+EBFig20(0,0)=g0
+ECFig20(0,2)=g0
+EGb=ECFig20.[EAFig20]*.EBFig20
+asMuVar(EGb(0,0))

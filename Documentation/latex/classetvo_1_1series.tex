@@ -1,0 +1,132 @@
+\section{etvo\+:\+:series Class Reference}
+\label{classetvo_1_1series}\index{etvo\+::series@{etvo\+::series}}
+
+
+Wrapper class to \doxyref{mmgd\+::serie}{p.}{classmmgd_1_1serie} from Min\+Max\+GD library.  
+
+
+
+
+{\ttfamily \#include $<$series\+Wrapper.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:series\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1series}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1series_af9042df4357269780732fd48247eec91}} 
+bool {\bfseries isE} () const
+\item 
+\mbox{\label{classetvo_1_1series_acdf41b448e13bbf522e9de4755153be4}} 
+bool {\bfseries is\+Poly} () const
+\item 
+\mbox{\label{classetvo_1_1series_a3a104d731521a0e9a8f6820baa3e9ae5}} 
+bool {\bfseries is\+Degenerate} () const
+\item 
+\mbox{\label{classetvo_1_1series_a62c43a051c9c9508ef441d50edac9ea5}} 
+\textbf{ series} ()
+\begin{DoxyCompactList}\small\item\em default constructor \+: epsilon series p=eps q=eps r=g0.\+d0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a2fb51387e5e2c9033bb64e097dfafd51}} 
+\textbf{ series} (const \textbf{ gd} \&)
+\begin{DoxyCompactList}\small\item\em constructor \+: set a series from only one monomial (uses the next constructor) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_abd4d7be395e14b12bd8f3de30f122539}} 
+\textbf{ series} (const \textbf{ poly} \&)
+\begin{DoxyCompactList}\small\item\em constructor \+: set a series from a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a6dcc6b366be40756f3fff156a725f341}} 
+\textbf{ series} (const \textbf{ mmgd\+::serie} \&s)
+\begin{DoxyCompactList}\small\item\em constructor \+: set a etvo\+I\+I\+::series from a mmgg\+::serie \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a02032180329f48133d41e5143d97711a}} 
+\textbf{ series} (const \textbf{ poly} \&p, const \textbf{ poly} \&q, const \textbf{ gd} \&r)
+\begin{DoxyCompactList}\small\item\em constructor \+: set a etvo\+I\+I\+::series from p+q.r$\ast$ representation \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a2fe114ea671d2fa6d60cbb347e36a3bf}} 
+\textbf{ poly} \textbf{ getP} () const
+\begin{DoxyCompactList}\small\item\em gives polynomial p (as etvo\+I\+I\+::poly) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_ac133165b16e18d843fa912ee4997278e}} 
+\textbf{ poly} \textbf{ getQ} () const
+\begin{DoxyCompactList}\small\item\em gives polynomial q (as etvo\+I\+I\+::poly) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a3c4ad8943e890e1cc2e85ce848467ae0}} 
+\textbf{ gd} \textbf{ getR} () const
+\begin{DoxyCompactList}\small\item\em gives monomial r (as etvo\+I\+I\+::gd) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_ac01af20daccd40a5dada22bf0661125e}} 
+bool {\bfseries operator!=} (const \textbf{ series} \&s) const
+\item 
+\mbox{\label{classetvo_1_1series_a92c26c932f402c8cbe695c5e24bacaf8}} 
+bool {\bfseries operator==} (const \textbf{ series} \&s) const
+\item 
+\mbox{\label{classetvo_1_1series_a361b862af945267e7e9ac1d168f6fd76}} 
+bool {\bfseries operator$<$=} (const \textbf{ series} \&s) const
+\item 
+\mbox{\label{classetvo_1_1series_af86a7a8ad6f68e5e7f87c9001c87803c}} 
+bool {\bfseries operator$>$=} (const \textbf{ series} \&s) const
+\item 
+\mbox{\label{classetvo_1_1series_a8ebfc000ddf2dc797aab8f418ab5c380}} 
+\textbf{ series} \textbf{ operator+} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em computes the sum of two series in Min\+Max[[g,d]] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a1cdfbad469208751d81713a688a8cd6b}} 
+\textbf{ series} \textbf{ operator$\ast$} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em computes the product of two series in Min\+Max[[g,d]] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a18a89048a319f4decaa9537932a348a0}} 
+\textbf{ series} \textbf{ inf} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em computes the infimum of two series in Min\+Max[[g,d]] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a50e448835f9b642a9afcfa4bd794aaf0}} 
+\textbf{ series} \textbf{ star} () const
+\begin{DoxyCompactList}\small\item\em computes the Kleene star of a series in Min\+Max[[g,d]] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a76da40b12dc11c9a9cdb1fe20a072609}} 
+\textbf{ series} \textbf{ lfrac} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em equiv. frac because the product is commutative \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_aad8c2ee6cba5028a2f3ae5e33b7a69e7}} 
+\textbf{ series} \textbf{ rfrac} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em equiv. frac because the product is commutative \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_adc565ed1e17f23aa96b8d2137580f115}} 
+\textbf{ series} \textbf{ frac} (const \textbf{ series} \&s) const
+\begin{DoxyCompactList}\small\item\em s1.\+frac(s2) is the greatest series x s.\+t. s2.\+x $<$= s1 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a68e52557163917584687f4e104d69cc1}} 
+\textbf{ series} \textbf{ frac} (const \textbf{ gd} \&m) const
+\begin{DoxyCompactList}\small\item\em s1.\+frac(g2.\+dt) is the greatest series x s.\+t. gn.\+dt.\+x $<$= s1 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a37d4dd0629adbf8320cd6e83fe535bd2}} 
+\textbf{ series} \textbf{ frac} (const \textbf{ poly} \&p) const
+\begin{DoxyCompactList}\small\item\em s1.\+frac(p) is the greatest series x s.\+t. p.\+x $<$= s1 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_aea1e95f83e8612f4bac27cdc25d59071}} 
+\textbf{ series} \textbf{ prcaus} () const
+\begin{DoxyCompactList}\small\item\em gives the causal projection of the current series. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a178950f62416cbf31292c4d35238467f}} 
+std\+::string \textbf{ To\+String} () const
+\begin{DoxyCompactList}\small\item\em gives a string giving the description of a series in a format g1.\+d2+g2.d3+(g4.\+d5+g6.d7).[g3.\+d3]$\ast$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1series_aedddfac41864e41c1fe87b099b8b96b3}} 
+static \textbf{ series} \textbf{ Epsilon} ()
+\begin{DoxyCompactList}\small\item\em gives the epsilon series \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_a5d51766db365fdeb43bcb5491c3dd315}} 
+static \textbf{ series} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em gives the series e=g0.\+d0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_ab7b66bb192070a7e3b49ea85ac876c94}} 
+static \textbf{ series} \textbf{ Top} ()
+\begin{DoxyCompactList}\small\item\em gives the top series T \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Wrapper class to \doxyref{mmgd\+::serie}{p.}{classmmgd_1_1serie} from Min\+Max\+GD library. 
+
+Class for ultimately periodic series s=p + q [g$^\wedge$n.d$^\wedge$t]$\ast$ in Min\+Max[[g,d]], where p and q are polynomials
+
+An epsilon and a top series exists
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/wrapper\+M\+M\+G\+D/\textbf{ series\+Wrapper.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/wrapper\+M\+M\+G\+D/series\+Wrapper.\+cpp\end{DoxyCompactItemize}

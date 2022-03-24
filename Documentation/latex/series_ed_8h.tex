@@ -1,0 +1,62 @@
+\section{F\+:/\+UA Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/series\+Ed.h File Reference}
+\label{series_ed_8h}\index{F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/series\+Ed.\+h@{F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Ed/series\+Ed.\+h}}
+{\ttfamily \#include \char`\"{}poly\+Ed.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../wrapper\+M\+M\+G\+D/series\+Wrapper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../wrapper\+M\+M\+G\+D/matrix\+Wrapper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}../common/\+I\+Sterm.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ etvo\+::series\+Ed}
+\begin{DoxyCompactList}\small\item\em Class for ultimately-\/periodic series in the semiring E[[d]]. In a general way, the series are described by two standard (canonical) forms s=p+q.r$\ast$=p\textquotesingle{}+r\textquotesingle{}$\ast$.q\textquotesingle{} where p,p\textquotesingle{},q,q\textquotesingle{} are polynomials in E[[d]] and r/r\textquotesingle{} are \doxyref{etvo\+::gd}{p.}{classetvo_1_1gd} terms (in Min\+Max[[g,d]]). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ etvo}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{namespaceetvo_ac1bf05b7dfac541360ebe15311f1ed7c}} 
+std\+::ostream \& {\bfseries etvo\+::operator$<$$<$} (std\+::ostream \&f, const series\+Ed \&s)
+\item 
+\mbox{\label{namespaceetvo_adf0a9cba846ea35850586848075edf2e}} 
+series\+Ed {\bfseries etvo\+::star} (const series\+Ed \&s)
+\item 
+\mbox{\label{namespaceetvo_aabb335b616044075040379ebfd7a57c3}} 
+series\+Ed {\bfseries etvo\+::oplus} (const series\+Ed \&s1, const series\+Ed \&s2)
+\item 
+\mbox{\label{namespaceetvo_ad0d3d851b631a39250b8c728cd1280d9}} 
+series\+Ed {\bfseries etvo\+::inf} (const series\+Ed \&s1, const series\+Ed \&s2)
+\item 
+\mbox{\label{namespaceetvo_a14295bcce6404d2599fbc7ef38941df3}} 
+series\+Ed {\bfseries etvo\+::otimes} (const series\+Ed \&s1, const series\+Ed \&s2)
+\item 
+\mbox{\label{namespaceetvo_a8c37ed6dc8bde2dd5990591606bd5bdd}} 
+series\+Ed {\bfseries etvo\+::lfrac} (const series\+Ed \&s1, const series\+Ed \&s2)
+\item 
+\mbox{\label{namespaceetvo_aaeff32b3ae96ced075558902039d2fe5}} 
+series\+Ed {\bfseries etvo\+::rfrac} (const series\+Ed \&s1, const series\+Ed \&s2)
+\item 
+\mbox{\label{namespaceetvo_add28ebe9bfb2cd6d24c887d5c52c9c72}} 
+series\+Ed \textbf{ etvo\+::eg} (int n)
+\begin{DoxyCompactList}\small\item\em element g$^\wedge$n in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_aae877a0fcfdb04630cd3281d71123ed7}} 
+series\+Ed \textbf{ etvo\+::ed} (int t)
+\begin{DoxyCompactList}\small\item\em element d$^\wedge$t in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a97d6b1103d4a7d594b4f463527dc18be}} 
+series\+Ed \textbf{ etvo\+::em} (unsigned m)
+\begin{DoxyCompactList}\small\item\em element mu\+\_\+m in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a520663673fc842319ee4ba99e54f93f8}} 
+series\+Ed \textbf{ etvo\+::eb} (unsigned b)
+\begin{DoxyCompactList}\small\item\em element beta\+\_\+b in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_af6b38ec220549b6ba8de69f1bccdb1d8}} 
+series\+Ed \textbf{ etvo\+::en} (unsigned n)
+\begin{DoxyCompactList}\small\item\em element Nabla\+\_\+n=mu\+\_\+n.\+beta\+\_\+n in E[[d]] \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a2cb35d4044b3f958a088f7f41856fedb}} 
+series\+Ed \textbf{ etvo\+::em} (const std\+::vector$<$ unsigned $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em element mu var mu\+\_\+$<$seq$>$ in E[[d]] where the sequence is given by a vector \end{DoxyCompactList}\item 
+\mbox{\label{namespaceetvo_a67130d07c6d624a01910bcd3509d5457}} 
+series\+Ed \textbf{ etvo\+::eb} (const std\+::vector$<$ unsigned $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em element beta var beta\+\_\+$<$seq$>$ in E[[d]] where the sequence is given by a vector \end{DoxyCompactList}\end{DoxyCompactItemize}

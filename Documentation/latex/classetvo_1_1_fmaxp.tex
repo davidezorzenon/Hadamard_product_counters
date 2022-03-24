@@ -1,0 +1,183 @@
+\section{etvo\+:\+:Fmaxp Class Reference}
+\label{classetvo_1_1_fmaxp}\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+
+
+Class for pseudo -\/ periodic functions with oplus=max and otimes=composition.  
+
+
+
+
+{\ttfamily \#include $<$Fmaxp.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:Fmaxp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1_fmaxp}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Fmaxp} ()
+\item 
+\textbf{ Fmaxp} (int dP, int codP, const std\+::vector$<$ int $>$ \&seq)
+\item 
+\textbf{ Fmaxp} (const \textbf{ Fper} \&)
+\item 
+\textbf{ Fmaxp} \textbf{ min} (const \textbf{ Fmaxp} \&) const
+\item 
+\textbf{ Fmaxp} \textbf{ max} (const \textbf{ Fmaxp} \&) const
+\item 
+\textbf{ Fmaxp} \textbf{ operator+} (const \textbf{ Fmaxp} \&f) const
+\item 
+\textbf{ Fmaxp} \textbf{ operator$\ast$} (const \textbf{ Fmaxp} \&f) const
+\item 
+\textbf{ Fmaxp} \textbf{ inf} (const \textbf{ Fmaxp} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_ad6d47362e103ffb4f34067e88323fb21}} 
+bool {\bfseries operator==} (const \textbf{ Fmaxp} \&) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_a814399943888848dc81c9dca6ce5152e}} 
+bool {\bfseries operator!=} (const \textbf{ Fmaxp} \&) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_a714673eaa746ba732c0466efff5593f1}} 
+bool {\bfseries operator$<$=} (const \textbf{ Fmaxp} \&) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_ac37fe12a520ada748b18eab7af2fa269}} 
+bool {\bfseries operator$>$=} (const \textbf{ Fmaxp} \&) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_aeadf3fceebff5caff885b625a6c95b58}} 
+bool {\bfseries operator$<$} (const \textbf{ Fmaxp} \&) const
+\item 
+\mbox{\label{classetvo_1_1_fmaxp_a6d4516a867f8a455205722db5964f093}} 
+bool {\bfseries operator$>$} (const \textbf{ Fmaxp} \&) const
+\item 
+\textbf{ Fmaxp} \textbf{ lfrac} (const \textbf{ Fmaxp} \&a) const
+\begin{DoxyCompactList}\small\item\em residuation of the left product \doxyref{Fmaxp}{p.}{classetvo_1_1_fmaxp} g,f; \end{DoxyCompactList}\item 
+\textbf{ Fmaxp} \textbf{ rfrac} (const \textbf{ Fmaxp} \&a) const
+\begin{DoxyCompactList}\small\item\em residuation of the right product \doxyref{Fmaxp}{p.}{classetvo_1_1_fmaxp} g,f; ... g.\+rfrac(f) = greatest function h s.\+t. h.\+f $<$= g \end{DoxyCompactList}\item 
+virtual std\+::string \textbf{ to\+String} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Fmaxp} \textbf{ E} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for pseudo -\/ periodic functions with oplus=max and otimes=composition. 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1_fmaxp_ae0d1d174539051f9c98a6063a2e502d3}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!Fmaxp@{Fmaxp}}
+\index{Fmaxp@{Fmaxp}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{Fmaxp()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily etvo\+::\+Fmaxp\+::\+Fmaxp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \+: Id function \mbox{\label{classetvo_1_1_fmaxp_ab2c585af810853b2e4267f2afb0bb20f}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!Fmaxp@{Fmaxp}}
+\index{Fmaxp@{Fmaxp}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{Fmaxp()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily etvo\+::\+Fmaxp\+::\+Fmaxp (\begin{DoxyParamCaption}\item[{int}]{dP,  }\item[{int}]{codP,  }\item[{const std\+::vector$<$ int $>$ \&}]{seq }\end{DoxyParamCaption})}
+
+Constructor\+: full definition (see the base class \doxyref{Fper}{p.}{classetvo_1_1_fper}) \mbox{\label{classetvo_1_1_fmaxp_a2c8a1b9a5953eb0ff7568148434c510d}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!Fmaxp@{Fmaxp}}
+\index{Fmaxp@{Fmaxp}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{Fmaxp()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily etvo\+::\+Fmaxp\+::\+Fmaxp (\begin{DoxyParamCaption}\item[{const \textbf{ Fper} \&}]{f }\end{DoxyParamCaption})}
+
+Constructor\+: initialise from \doxyref{Fper}{p.}{classetvo_1_1_fper} function 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1_fmaxp_a4095f230729e0e62bfb9b556ef815115}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!E@{E}}
+\index{E@{E}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{E()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::E (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Class method (called by \doxyref{Fminp\+::\+E()}{p.}{classetvo_1_1_fminp_a4088ca38d381a7e963685fdc788879ac}) returning the Id function \mbox{\label{classetvo_1_1_fmaxp_a0c94b9b2fabef5576f9633b196030f4b}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!inf@{inf}}
+\index{inf@{inf}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{inf()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::inf (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{f }\end{DoxyParamCaption}) const}
+
+infimum (min) operation between two functions with the same slope \mbox{\label{classetvo_1_1_fmaxp_a6496a219f52c2f321e2ac02f24638e64}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!lfrac@{lfrac}}
+\index{lfrac@{lfrac}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{lfrac()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::lfrac (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{a }\end{DoxyParamCaption}) const}
+
+
+
+residuation of the left product \doxyref{Fmaxp}{p.}{classetvo_1_1_fmaxp} g,f; 
+
+...
+
+g.\+lfrac(f) = \char`\"{}greatest\char`\"{} (according to the (max,+) order) function h s.\+t. f.\+h $<$= g a\textbackslash{}b = Max \{x $\vert$ a(x)$<$= b\} forall t, x(t)=max\{ tmax $\vert$ f(tmax)$<$=g(t)\} returns a\textbackslash{}b with b=$\ast$this \mbox{\label{classetvo_1_1_fmaxp_aa203db4eaa908c9320f2a2fea424048f}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!max@{max}}
+\index{max@{max}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{max()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::max (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{f }\end{DoxyParamCaption}) const}
+
+max operation between two functions with the same slope cod\+P/dP \mbox{\label{classetvo_1_1_fmaxp_ab7939bb9102e2f5dbfada1385e62e76b}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!min@{min}}
+\index{min@{min}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{min()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::min (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{f }\end{DoxyParamCaption}) const}
+
+min operation between two functions with the same slope cod\+P/dP \mbox{\label{classetvo_1_1_fmaxp_ae65bc00a3d0c1a893b43cd76526db4b2}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{operator$\ast$()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{f }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyItemize}
+\item operator=composition 
+\end{DoxyItemize}\mbox{\label{classetvo_1_1_fmaxp_a29e1c0fe50c158da88fd71816ae150c5}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!operator+@{operator+}}
+\index{operator+@{operator+}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{operator+()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::operator+ (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{f }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyItemize}
+\item operator=max 
+\end{DoxyItemize}\mbox{\label{classetvo_1_1_fmaxp_ad7859f4900681c6fb09f9155331e1c1e}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!rfrac@{rfrac}}
+\index{rfrac@{rfrac}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{rfrac()}
+{\footnotesize\ttfamily \textbf{ Fmaxp} etvo\+::\+Fmaxp\+::rfrac (\begin{DoxyParamCaption}\item[{const \textbf{ Fmaxp} \&}]{a }\end{DoxyParamCaption}) const}
+
+
+
+residuation of the right product \doxyref{Fmaxp}{p.}{classetvo_1_1_fmaxp} g,f; ... g.\+rfrac(f) = greatest function h s.\+t. h.\+f $<$= g 
+
+returns b/a (b=$\ast$this)
+
+Fill the begining if not complete \mbox{\label{classetvo_1_1_fmaxp_af21e95c15a7507f3b10ff21b77671139}} 
+\index{etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!etvo\+::\+Fmaxp@{etvo\+::\+Fmaxp}}
+\subsubsection{to\+String()}
+{\footnotesize\ttfamily std\+::string etvo\+::\+Fmaxp\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+returns a string description of the function 
+
+Reimplemented from \textbf{ etvo\+::\+Fper} \doxyref{}{p.}{classetvo_1_1_fper_ad1f4a28d8c2519420ba9cecf1b248302}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/\+Fper/\textbf{ Fmaxp.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/\+Fper/Fmaxp.\+cpp\end{DoxyCompactItemize}

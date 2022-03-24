@@ -1,0 +1,2828 @@
+ #include "colors.inc" 
+ #include "shapes.inc" 
+ #include "math.inc" 
+ #include "functions.inc" 
+ #declare surfCXY = color rgb<0.6,0.6,0.6>;
+ #declare surfCZ = color rgb<0.6,0.6,0.6>;
+ #declare mainColor = color rgb<0.8,0.3,0.3>;
+ #declare axisColor = color rgb<0,0,0>;
+ camera {location <-20,20,-20>
+look_at <0,2,0>}
+light_source{<-100,100,-80> rgb<1,1,1>*2}
+background{rgb<0.9,0.9,0.9>}
+text { 
+ ttf "timrom.ttf" "E-shift" 0.1, 0
+ pigment { rgb<0.1,0.1,0.1> }
+ rotate +90*y
+rotate -90*z 
+ translate -1.5*z 
+ translate 0.1*y scale 1} 
+text { 
+ ttf "timrom.ttf" "I-time" 0.1, 0
+ pigment { rgb<0.1,0.1,0.1> }
+     rotate +90*x
+ translate -z 
+  translate 1*x
+ scale 1 }text { 
+ ttf "timrom.ttf" "O-time" 0.1, 0
+ pigment { rgb<0.1,0.1,0.1> }
+   rotate +90*z   
+   rotate +90*y 
+   translate -1*z 
+   translate +2*y scale 1 } 
+text {ttf "timrom.ttf" "5 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -1*y  translate 6*z scale 1 } 
+text {ttf "timrom.ttf" "10 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -1*y  translate 11*z scale 1 } 
+text {ttf "timrom.ttf" "15 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -1*y  translate 16*z scale 1 } 
+text {ttf "timrom.ttf" "5 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -z  translate 5*x scale 1 }
+text {ttf "timrom.ttf" "10 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -z  translate 10*x scale 1 }
+text {ttf "timrom.ttf" "15 " 0.1, 0 pigment { rgb<0.1,0.1,0.1> }   rotate +90*x  translate -z  translate 15*x scale 1 }
+cylinder{<0,0,0>,<20,0,0>,0.1
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,0>,<0,0,20>,0.1
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,0>,<0,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,20>,<0,20,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,0,0>,<1,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,0,20>,<1,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,0,0>,<2,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,0,20>,<2,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,0,0>,<3,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,0,20>,<3,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,0,0>,<4,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,0,20>,<4,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,0,0>,<5,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,0,20>,<5,20,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,0,0>,<6,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,0,20>,<6,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,0,0>,<7,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,0,20>,<7,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,0,0>,<8,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,0,20>,<8,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<9,0,0>,<9,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<9,0,20>,<9,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,0,0>,<10,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,0,20>,<10,20,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,0,0>,<11,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,0,20>,<11,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<12,0,0>,<12,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<12,0,20>,<12,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,0,0>,<13,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,0,20>,<13,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<14,0,0>,<14,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<14,0,20>,<14,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<15,0,0>,<15,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<15,0,20>,<15,20,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<16,0,0>,<16,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<16,0,20>,<16,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<17,0,0>,<17,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<17,0,20>,<17,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<18,0,0>,<18,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<18,0,20>,<18,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<19,0,0>,<19,0,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<19,0,20>,<19,20,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,0>,<20,0,0>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,0>,<20,20,0>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,1>,<20,0,1>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,1>,<20,20,1>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,2>,<20,0,2>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,2>,<20,20,2>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,3>,<20,0,3>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,3>,<20,20,3>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,4>,<20,0,4>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,4>,<20,20,4>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,5>,<20,0,5>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,5>,<20,20,5>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,6>,<20,0,6>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,6>,<20,20,6>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,7>,<20,0,7>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,7>,<20,20,7>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,8>,<20,0,8>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,8>,<20,20,8>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,9>,<20,0,9>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,9>,<20,20,9>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,10>,<20,0,10>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,10>,<20,20,10>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,11>,<20,0,11>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,11>,<20,20,11>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,12>,<20,0,12>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,12>,<20,20,12>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,13>,<20,0,13>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,13>,<20,20,13>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,14>,<20,0,14>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,14>,<20,20,14>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,15>,<20,0,15>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,15>,<20,20,15>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,16>,<20,0,16>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,16>,<20,20,16>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,17>,<20,0,17>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,17>,<20,20,17>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,18>,<20,0,18>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,18>,<20,20,18>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,19>,<20,0,19>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,19>,<20,20,19>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,20>,<20,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,0,0>,<20,0,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,20>,<20,1,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,1,0>,<20,1,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,20>,<20,2,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,2,0>,<20,2,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,20>,<20,3,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,3,0>,<20,3,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,20>,<20,4,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,4,0>,<20,4,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,20>,<20,5,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,5,0>,<20,5,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,20>,<20,6,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,6,0>,<20,6,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,20>,<20,7,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,7,0>,<20,7,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,20>,<20,8,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,8,0>,<20,8,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,20>,<20,9,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,9,0>,<20,9,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,20>,<20,10,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,10,0>,<20,10,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,20>,<20,11,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,11,0>,<20,11,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,20>,<20,12,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,12,0>,<20,12,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,13,20>,<20,13,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,13,0>,<20,13,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,14,20>,<20,14,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,14,0>,<20,14,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,20>,<20,15,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,15,0>,<20,15,20>,0.05
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,16,20>,<20,16,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,16,0>,<20,16,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,20>,<20,17,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,17,0>,<20,17,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,18,20>,<20,18,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,18,0>,<20,18,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,19,20>,<20,19,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<20,19,0>,<20,19,20>,0.02
+ pigment{rgb<0.1,0.1,0.1> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<0,2,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,2,0><20,2,0><20,0,0><0,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,2,0><0,2,20><0,0,20><0,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,2,0><20,2,0><20,2,20><0,2,20>pigment { color surfCZ}}
+cylinder{<0,2,0>,<0,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,0>,<20,2,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,0>,<20,1,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,0>,<20,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,0>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,0>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,0>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,0>,<0,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,1>,<0,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,2>,<0,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,3>,<0,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,4>,<0,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,5>,<0,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,6>,<0,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,7>,<0,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,9>,<0,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<1,5,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<1,5,0><20,5,0><20,0,0><1,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<1,5,0><1,5,20><1,0,20><1,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<1,5,0><20,5,0><20,5,20><1,5,20>pigment { color surfCZ}}
+cylinder{<1,5,0>,<1,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,5,0>,<2,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,0>,<20,5,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,4,0>,<20,4,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,3,0>,<20,3,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,2,0>,<20,2,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,0>,<1,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,4,0>,<1,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,3,0>,<1,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,2,0>,<1,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,0>,<1,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,1>,<1,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,2>,<1,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,3>,<1,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,4>,<1,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,5>,<1,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,6>,<1,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,7>,<1,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,8>,<1,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,9>,<1,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,10>,<1,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,11>,<1,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,12>,<1,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,13>,<1,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,14>,<1,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,15>,<1,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,16>,<1,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,17>,<1,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,18>,<1,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,19>,<1,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,5,20>,<1,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<2,5,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<3,7,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<3,7,0><20,7,0><20,0,0><3,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<3,7,0><3,7,20><3,0,20><3,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<3,7,0><20,7,0><20,7,20><3,7,20>pigment { color surfCZ}}
+cylinder{<3,7,0>,<3,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,7,0>,<4,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,7,0>,<5,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,0>,<20,7,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,6,0>,<20,6,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,5,0>,<20,5,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,0>,<3,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,6,0>,<3,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,5,0>,<3,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,0>,<3,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,1>,<3,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,2>,<3,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,3>,<3,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,4>,<3,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,5>,<3,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,6>,<3,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,7>,<3,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,8>,<3,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,9>,<3,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,10>,<3,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,11>,<3,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,12>,<3,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,13>,<3,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,14>,<3,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,15>,<3,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,16>,<3,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,17>,<3,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,18>,<3,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,19>,<3,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,20>,<3,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<4,7,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<5,7,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<6,10,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<6,10,0><20,10,0><20,0,0><6,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<6,10,0><6,10,20><6,0,20><6,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<6,10,0><20,10,0><20,10,20><6,10,20>pigment { color surfCZ}}
+cylinder{<6,10,0>,<6,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,10,0>,<7,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,0>,<20,10,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,9,0>,<20,9,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,8,0>,<20,8,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,7,0>,<20,7,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,0>,<6,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,9,0>,<6,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,8,0>,<6,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,7,0>,<6,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,0>,<6,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,1>,<6,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,2>,<6,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,3>,<6,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,4>,<6,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,5>,<6,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,6>,<6,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,7>,<6,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,8>,<6,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,9>,<6,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,10>,<6,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,11>,<6,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,12>,<6,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,13>,<6,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,14>,<6,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,15>,<6,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,16>,<6,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,17>,<6,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,18>,<6,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,19>,<6,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,10,20>,<6,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<7,10,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<8,12,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<8,12,0><20,12,0><20,0,0><8,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<8,12,0><8,12,20><8,0,20><8,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<8,12,0><20,12,0><20,12,20><8,12,20>pigment { color surfCZ}}
+cylinder{<8,12,0>,<8,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<9,12,0>,<9,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,12,0>,<10,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,0>,<20,12,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,11,0>,<20,11,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,10,0>,<20,10,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,0>,<8,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,11,0>,<8,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,10,0>,<8,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,0>,<8,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,1>,<8,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,2>,<8,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,3>,<8,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,4>,<8,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,5>,<8,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,6>,<8,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,7>,<8,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,8>,<8,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,9>,<8,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,10>,<8,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,11>,<8,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,12>,<8,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,13>,<8,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,14>,<8,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,15>,<8,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,16>,<8,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,17>,<8,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,18>,<8,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,19>,<8,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,20>,<8,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<9,12,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<10,12,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<11,15,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<11,15,0><20,15,0><20,0,0><11,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<11,15,0><11,15,20><11,0,20><11,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<11,15,0><20,15,0><20,15,20><11,15,20>pigment { color surfCZ}}
+cylinder{<11,15,0>,<11,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<12,15,0>,<12,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,0>,<20,15,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,14,0>,<20,14,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,13,0>,<20,13,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,12,0>,<20,12,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,0>,<11,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,14,0>,<11,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,13,0>,<11,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,12,0>,<11,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,0>,<11,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,1>,<11,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,2>,<11,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,3>,<11,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,4>,<11,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,5>,<11,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,6>,<11,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,7>,<11,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,8>,<11,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,9>,<11,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,10>,<11,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,11>,<11,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,12>,<11,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,13>,<11,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,14>,<11,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,15>,<11,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,16>,<11,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,17>,<11,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,18>,<11,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,19>,<11,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,15,20>,<11,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<12,15,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<13,17,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<13,17,0><20,17,0><20,0,0><13,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<13,17,0><13,17,20><13,0,20><13,0,0>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<13,17,0><20,17,0><20,17,20><13,17,20>pigment { color surfCZ}}
+cylinder{<13,17,0>,<13,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<14,17,0>,<14,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<15,17,0>,<15,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,0>,<20,17,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,16,0>,<20,16,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,15,0>,<20,15,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,0>,<13,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,16,0>,<13,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,15,0>,<13,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,0>,<13,0,0>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,1>,<13,0,1>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,2>,<13,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,3>,<13,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,4>,<13,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,5>,<13,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,6>,<13,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,7>,<13,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,8>,<13,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,9>,<13,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,10>,<13,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,11>,<13,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,12>,<13,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,13>,<13,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,14>,<13,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,15>,<13,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,16>,<13,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,17>,<13,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,18>,<13,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,19>,<13,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<13,17,20>,<13,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<14,17,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<15,17,0>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<0,7,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,7,2><20,7,2><20,0,2><0,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,7,2><0,7,20><0,0,20><0,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,7,2><20,7,2><20,7,20><0,7,20>pigment { color surfCZ}}
+cylinder{<0,7,2>,<0,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,7,2>,<1,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,7,2>,<2,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,2>,<20,7,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,2>,<20,6,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,2>,<20,5,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,2>,<20,4,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,2>,<20,3,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,2>,<20,2,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,2>,<20,1,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,2>,<20,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,2>,<0,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,2>,<0,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,2>,<0,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,2>,<0,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,2>,<0,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,2>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,2>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,2>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,2>,<0,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,3>,<0,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,4>,<0,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,5>,<0,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,6>,<0,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,7>,<0,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,9>,<0,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<1,7,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<2,7,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<3,10,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<3,10,2><20,10,2><20,0,2><3,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<3,10,2><3,10,20><3,0,20><3,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<3,10,2><20,10,2><20,10,20><3,10,20>pigment { color surfCZ}}
+cylinder{<3,10,2>,<3,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,10,2>,<4,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,2>,<20,10,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,9,2>,<20,9,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,8,2>,<20,8,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,2>,<20,7,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,2>,<3,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,9,2>,<3,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,8,2>,<3,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,7,2>,<3,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,2>,<3,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,3>,<3,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,4>,<3,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,5>,<3,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,6>,<3,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,7>,<3,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,8>,<3,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,9>,<3,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,10>,<3,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,11>,<3,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,12>,<3,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,13>,<3,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,14>,<3,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,15>,<3,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,16>,<3,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,17>,<3,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,18>,<3,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,19>,<3,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,10,20>,<3,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<4,10,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<5,12,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<5,12,2><20,12,2><20,0,2><5,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<5,12,2><5,12,20><5,0,20><5,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<5,12,2><20,12,2><20,12,20><5,12,20>pigment { color surfCZ}}
+cylinder{<5,12,2>,<5,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,12,2>,<6,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,12,2>,<7,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,2>,<20,12,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,11,2>,<20,11,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,10,2>,<20,10,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,2>,<5,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,11,2>,<5,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,10,2>,<5,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,2>,<5,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,3>,<5,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,4>,<5,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,5>,<5,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,6>,<5,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,7>,<5,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,8>,<5,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,9>,<5,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,10>,<5,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,11>,<5,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,12>,<5,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,13>,<5,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,14>,<5,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,15>,<5,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,16>,<5,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,17>,<5,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,18>,<5,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,19>,<5,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,20>,<5,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<6,12,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<7,12,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<8,15,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<8,15,2><20,15,2><20,0,2><8,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<8,15,2><8,15,20><8,0,20><8,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<8,15,2><20,15,2><20,15,20><8,15,20>pigment { color surfCZ}}
+cylinder{<8,15,2>,<8,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<9,15,2>,<9,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,2>,<20,15,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,14,2>,<20,14,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,13,2>,<20,13,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,2>,<20,12,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,2>,<8,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,14,2>,<8,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,13,2>,<8,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,12,2>,<8,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,2>,<8,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,3>,<8,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,4>,<8,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,5>,<8,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,6>,<8,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,7>,<8,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,8>,<8,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,9>,<8,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,10>,<8,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,11>,<8,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,12>,<8,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,13>,<8,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,14>,<8,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,15>,<8,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,16>,<8,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,17>,<8,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,18>,<8,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,19>,<8,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,15,20>,<8,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<9,15,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<10,17,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<10,17,2><20,17,2><20,0,2><10,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<10,17,2><10,17,20><10,0,20><10,0,2>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<10,17,2><20,17,2><20,17,20><10,17,20>pigment { color surfCZ}}
+cylinder{<10,17,2>,<10,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<11,17,2>,<11,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<12,17,2>,<12,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,2>,<20,17,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,16,2>,<20,16,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,15,2>,<20,15,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,2>,<10,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,16,2>,<10,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,15,2>,<10,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,2>,<10,0,2>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,3>,<10,0,3>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,4>,<10,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,5>,<10,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,6>,<10,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,7>,<10,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,8>,<10,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,9>,<10,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,10>,<10,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,11>,<10,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,12>,<10,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,13>,<10,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,14>,<10,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,15>,<10,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,16>,<10,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,17>,<10,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,18>,<10,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,19>,<10,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<10,17,20>,<10,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<11,17,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<12,17,2>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<0,10,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,10,4><20,10,4><20,0,4><0,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,10,4><0,10,20><0,0,20><0,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,10,4><20,10,4><20,10,20><0,10,20>pigment { color surfCZ}}
+cylinder{<0,10,4>,<0,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,10,4>,<1,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,4>,<20,10,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,4>,<20,9,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,4>,<20,8,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,4>,<20,7,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,4>,<20,6,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,4>,<20,5,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,4>,<20,4,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,4>,<20,3,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,4>,<20,2,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,4>,<20,1,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,4>,<20,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,4>,<0,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,4>,<0,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,4>,<0,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,4>,<0,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,4>,<0,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,4>,<0,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,4>,<0,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,4>,<0,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,4>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,4>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,4>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,4>,<0,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,5>,<0,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,6>,<0,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,7>,<0,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,9>,<0,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<1,10,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<2,12,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<2,12,4><20,12,4><20,0,4><2,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<2,12,4><2,12,20><2,0,20><2,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<2,12,4><20,12,4><20,12,20><2,12,20>pigment { color surfCZ}}
+cylinder{<2,12,4>,<2,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,12,4>,<3,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,12,4>,<4,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,4>,<20,12,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,11,4>,<20,11,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,10,4>,<20,10,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,4>,<2,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,11,4>,<2,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,10,4>,<2,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,4>,<2,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,5>,<2,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,6>,<2,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,7>,<2,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,8>,<2,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,9>,<2,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,10>,<2,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,11>,<2,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,12>,<2,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,13>,<2,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,14>,<2,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,15>,<2,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,16>,<2,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,17>,<2,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,18>,<2,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,19>,<2,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,20>,<2,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<3,12,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<4,12,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<5,15,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<5,15,4><20,15,4><20,0,4><5,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<5,15,4><5,15,20><5,0,20><5,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<5,15,4><20,15,4><20,15,20><5,15,20>pigment { color surfCZ}}
+cylinder{<5,15,4>,<5,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,15,4>,<6,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,4>,<20,15,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,14,4>,<20,14,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,13,4>,<20,13,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,4>,<20,12,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,4>,<5,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,14,4>,<5,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,13,4>,<5,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,12,4>,<5,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,4>,<5,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,5>,<5,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,6>,<5,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,7>,<5,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,8>,<5,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,9>,<5,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,10>,<5,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,11>,<5,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,12>,<5,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,13>,<5,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,14>,<5,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,15>,<5,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,16>,<5,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,17>,<5,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,18>,<5,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,19>,<5,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,15,20>,<5,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<6,15,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<7,17,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<7,17,4><20,17,4><20,0,4><7,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<7,17,4><7,17,20><7,0,20><7,0,4>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<7,17,4><20,17,4><20,17,20><7,17,20>pigment { color surfCZ}}
+cylinder{<7,17,4>,<7,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<8,17,4>,<8,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<9,17,4>,<9,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,4>,<20,17,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,16,4>,<20,16,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,15,4>,<20,15,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,4>,<7,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,16,4>,<7,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,15,4>,<7,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,4>,<7,0,4>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,5>,<7,0,5>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,6>,<7,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,7>,<7,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,8>,<7,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,9>,<7,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,10>,<7,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,11>,<7,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,12>,<7,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,13>,<7,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,14>,<7,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,15>,<7,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,16>,<7,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,17>,<7,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,18>,<7,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,19>,<7,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<7,17,20>,<7,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<8,17,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<9,17,4>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<0,12,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,12,6><20,12,6><20,0,6><0,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,12,6><0,12,20><0,0,20><0,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,12,6><20,12,6><20,12,20><0,12,20>pigment { color surfCZ}}
+cylinder{<0,12,6>,<0,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,12,6>,<1,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,6>,<20,12,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,6>,<20,11,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,6>,<20,10,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,6>,<20,9,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,6>,<20,8,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,6>,<20,7,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,6>,<20,6,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,6>,<20,5,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,6>,<20,4,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,6>,<20,3,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,6>,<20,2,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,6>,<20,1,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,6>,<20,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,6>,<0,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,6>,<0,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,6>,<0,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,6>,<0,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,6>,<0,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,6>,<0,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,6>,<0,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,6>,<0,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,6>,<0,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,6>,<0,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,6>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,6>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,6>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,6>,<0,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,7>,<0,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,9>,<0,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<1,12,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<2,15,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<2,15,6><20,15,6><20,0,6><2,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<2,15,6><2,15,20><2,0,20><2,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<2,15,6><20,15,6><20,15,20><2,15,20>pigment { color surfCZ}}
+cylinder{<2,15,6>,<2,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,15,6>,<3,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,6>,<20,15,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,14,6>,<20,14,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,13,6>,<20,13,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,6>,<20,12,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,6>,<2,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,14,6>,<2,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,13,6>,<2,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,12,6>,<2,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,6>,<2,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,7>,<2,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,8>,<2,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,9>,<2,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,10>,<2,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,11>,<2,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,12>,<2,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,13>,<2,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,14>,<2,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,15>,<2,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,16>,<2,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,17>,<2,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,18>,<2,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,19>,<2,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,15,20>,<2,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<3,15,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<4,17,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<4,17,6><20,17,6><20,0,6><4,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<4,17,6><4,17,20><4,0,20><4,0,6>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<4,17,6><20,17,6><20,17,20><4,17,20>pigment { color surfCZ}}
+cylinder{<4,17,6>,<4,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<5,17,6>,<5,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<6,17,6>,<6,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,6>,<20,17,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,16,6>,<20,16,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,15,6>,<20,15,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,6>,<4,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,16,6>,<4,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,15,6>,<4,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,6>,<4,0,6>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,7>,<4,0,7>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,8>,<4,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,9>,<4,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,10>,<4,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,11>,<4,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,12>,<4,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,13>,<4,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,14>,<4,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,15>,<4,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,16>,<4,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,17>,<4,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,18>,<4,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,19>,<4,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<4,17,20>,<4,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<5,17,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<6,17,6>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<0,15,8>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,15,8><20,15,8><20,0,8><0,0,8>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,15,8><0,15,20><0,0,20><0,0,8>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,15,8><20,15,8><20,15,20><0,15,20>pigment { color surfCZ}}
+cylinder{<0,15,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,8>,<20,15,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,14,8>,<20,14,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,13,8>,<20,13,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,8>,<20,12,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,8>,<20,11,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,8>,<20,10,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,8>,<20,9,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,8>,<20,8,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,8>,<20,7,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,8>,<20,6,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,8>,<20,5,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,8>,<20,4,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,8>,<20,3,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,8>,<20,2,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,8>,<20,1,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,8>,<20,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,8>,<0,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,14,8>,<0,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,13,8>,<0,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,8>,<0,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,8>,<0,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,8>,<0,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,8>,<0,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,8>,<0,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,8>,<0,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,8>,<0,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,8>,<0,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,8>,<0,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,8>,<0,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,8>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,8>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,8>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,8>,<0,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,9>,<0,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<1,17,8>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<1,17,8><20,17,8><20,0,8><1,0,8>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<1,17,8><1,17,20><1,0,20><1,0,8>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<1,17,8><20,17,8><20,17,20><1,17,20>pigment { color surfCZ}}
+cylinder{<1,17,8>,<1,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<2,17,8>,<2,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<3,17,8>,<3,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,8>,<20,17,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,16,8>,<20,16,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,15,8>,<20,15,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,8>,<1,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,16,8>,<1,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,15,8>,<1,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,8>,<1,0,8>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,9>,<1,0,9>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,10>,<1,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,11>,<1,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,12>,<1,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,13>,<1,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,14>,<1,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,15>,<1,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,16>,<1,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,17>,<1,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,18>,<1,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,19>,<1,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<1,17,20>,<1,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+sphere{<2,17,8>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<3,17,8>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+sphere{<0,17,10>,0.18
+ pigment{rgb<0,0,1> filter .2 transmit .1}
+ finish{ reflection .2 phong .7}}
+polygon { 
+ 4, 
+<0,17,10><20,17,10><20,0,10><0,0,10>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,17,10><0,17,20><0,0,20><0,0,10>pigment { color surfCXY}}
+polygon { 
+ 4, 
+<0,17,10><20,17,10><20,17,20><0,17,20>pigment { color surfCZ}}
+cylinder{<0,17,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,10>,<20,17,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,16,10>,<20,16,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,10>,<20,15,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,14,10>,<20,14,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,13,10>,<20,13,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,10>,<20,12,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,10>,<20,11,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,10>,<20,10,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,10>,<20,9,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,10>,<20,8,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,10>,<20,7,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,10>,<20,6,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,10>,<20,5,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,10>,<20,4,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,10>,<20,3,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,10>,<20,2,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,10>,<20,1,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,10>,<20,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,10>,<0,17,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,16,10>,<0,16,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,15,10>,<0,15,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,14,10>,<0,14,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,13,10>,<0,13,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,12,10>,<0,12,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,11,10>,<0,11,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,10,10>,<0,10,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,9,10>,<0,9,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,8,10>,<0,8,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,7,10>,<0,7,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,6,10>,<0,6,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,5,10>,<0,5,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,4,10>,<0,4,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,3,10>,<0,3,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,2,10>,<0,2,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,1,10>,<0,1,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,0,10>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,10>,<0,0,10>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,11>,<0,0,11>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,12>,<0,0,12>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,13>,<0,0,13>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,14>,<0,0,14>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,15>,<0,0,15>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,16>,<0,0,16>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,17>,<0,0,17>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,18>,<0,0,18>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,19>,<0,0,19>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}
+cylinder{<0,17,20>,<0,0,20>,0.02
+ pigment{rgb<0,0,0> filter .2 transmit .1}
+ finish{ reflection .2 phong .6}}

@@ -1,0 +1,185 @@
+\section{etvo\+:\+:g\+Ng Class Reference}
+\label{classetvo_1_1g_ng}\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+
+
+Class to describe terms in E[[d]] written g$^\wedge$n.Nabla\+\_\+(m$\vert$b).g$^\wedge$n\textquotesingle{} = g$^\wedge$nl.M\+\_\+m.\+B\+\_\+b.\+g$^\wedge$nr.  
+
+
+
+
+{\ttfamily \#include $<$g\+Ng.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1g_ng_a4df8426135e2185c27f5825a21b6dd9f}} 
+\textbf{ g\+Ng} (int nl, unsigned int m, int nc, unsigned int b, int nr)
+\begin{DoxyCompactList}\small\item\em Create term g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a81cc8f75787d7c121326be99f46e15e6}} 
+\textbf{ g\+Ng} (int nl, unsigned int m, unsigned int b, int nr)
+\begin{DoxyCompactList}\small\item\em Create term g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$0.B\+\_\+b.\+g$^\wedge$nr. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a9746007a6d9cda742d3c70ed9d0107bf}} 
+\textbf{ g\+Ng} (int nl, unsigned int mb, int nr)
+\begin{DoxyCompactList}\small\item\em Create term g$^\wedge$nl.M\+\_\+mb.\+g$^\wedge$0.B\+\_\+mb.\+g$^\wedge$nr. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_ad8ff8afadf3f99a47f1344d7f917a313}} 
+\textbf{ g\+Ng} (int nc)
+\begin{DoxyCompactList}\small\item\em g$^\wedge$0.M\+\_\+1.\+g$^\wedge$nc.B\+\_\+1.\+g$^\wedge$0 = g$^\wedge$nc \end{DoxyCompactList}\item 
+int \textbf{ get\+Nl} () const
+\item 
+\mbox{\label{classetvo_1_1g_ng_ae6a4c801d0ecac9569e6cffca37d7127}} 
+unsigned int \textbf{ getM} () const
+\begin{DoxyCompactList}\small\item\em getter \+: gives m in g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr \end{DoxyCompactList}\item 
+int \textbf{ get\+Nc} () const
+\item 
+\mbox{\label{classetvo_1_1g_ng_a87e5e422ba7f784920ee5b57833763e1}} 
+unsigned int \textbf{ getB} () const
+\begin{DoxyCompactList}\small\item\em getter \+: gives b in g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr \end{DoxyCompactList}\item 
+int \textbf{ get\+Nr} () const
+\item 
+\mbox{\label{classetvo_1_1g_ng_ae79b18849ae7585ab1b1e2f3a3611c84}} 
+bool {\bfseries operator$<$=} (const \textbf{ g\+Ng} \&m) const
+\item 
+\mbox{\label{classetvo_1_1g_ng_afa5b3353026093a946e34a8c817f0670}} 
+bool {\bfseries operator$>$=} (const \textbf{ g\+Ng} \&m) const
+\item 
+\mbox{\label{classetvo_1_1g_ng_a84e2c4ab7df598c80bddf5a724bf0813}} 
+bool {\bfseries operator==} (const \textbf{ g\+Ng} \&m) const
+\item 
+\mbox{\label{classetvo_1_1g_ng_aa91e7589ed3dc7d2d614d270a8b0fb2f}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em set to the canonical form (depends on set\+Canon\+Form choice) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_abbc92a58a717475ea5428694e14b06bb}} 
+void \textbf{ canonL} ()
+\begin{DoxyCompactList}\small\item\em set to the Left form [0$<$=nr$<$=b-\/1 and nc=0] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a59b42fff71fe9e8441abe8b34817da6b}} 
+void \textbf{ canonC} ()
+\begin{DoxyCompactList}\small\item\em set to the Central [0$<$=nl$<$=m-\/1 and 0$<$=nr$<$=b-\/1] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_aa884c2eee0684e2f9b799391cdf3cae0}} 
+void \textbf{ canonR} ()
+\begin{DoxyCompactList}\small\item\em set to the Right form [0$<$=nl$<$=m-\/1 and nc=0] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a2e553fda308f55dc03b72e01beff9ba7}} 
+int \textbf{ Fw} (int ki) const
+\begin{DoxyCompactList}\small\item\em value of C/C function Fw(ki) = floor(((nr+ki)/b)+nc)$\ast$m+nl \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_aaef675c29f18dbda395d564c066bde02}} 
+\textbf{ Fminp} \textbf{ get\+Fw} () const
+\begin{DoxyCompactList}\small\item\em returns function Fw as a \doxyref{Fminp}{p.}{classetvo_1_1_fminp} object \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_af9e4a33cf4778c7ac75a096141b7b3b9}} 
+\textbf{ E\+\_\+op} \textbf{ extend\+By} (unsigned mul) const
+\begin{DoxyCompactList}\small\item\em Extension of g$^\wedge$nl M\+\_\+m B\+\_\+b g$^\wedge$nr -\/$>$ S\+U\+M\+\_\+i g$^\wedge$(nl+i$\ast$ M\+\_\+(mul$\ast$m) B\+\_\+(mul$\ast$\+\_\+b) g$^\wedge$(mul-\/1) .... \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a7fa5aad64177680647485bff30661d7b}} 
+std\+::pair$<$ unsigned, unsigned $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em returns periodicity as a pair $<$\+\_\+b,\+\_\+m$>$ \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} (unsigned n\+Ver=0) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \textbf{ set\+Canon\+Form} (unsigned val=0)
+\item 
+\mbox{\label{classetvo_1_1g_ng_a5943a784420a1d37346c80e91d2762ee}} 
+static unsigned {\bfseries get\+Canon\+Form} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1g_ng_ad143fd48763e3d41765391b3fcde64e1}} 
+int \textbf{ \+\_\+nl}
+\begin{DoxyCompactList}\small\item\em nl,m,b,nr \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1g_ng_a4934cf8a9b2fba6df1173e560ede3b40}} 
+unsigned int {\bfseries \+\_\+m}
+\item 
+\mbox{\label{classetvo_1_1g_ng_a3a4bbf59c0f5042901c9cd2ce0c19b71}} 
+int {\bfseries \+\_\+nc}
+\item 
+\mbox{\label{classetvo_1_1g_ng_ac4fba04953e3fe0e4e46f3822601e9a7}} 
+unsigned int {\bfseries \+\_\+b}
+\item 
+\mbox{\label{classetvo_1_1g_ng_aa2e659eea1a7eef34bcbbf708e7888af}} 
+int {\bfseries \+\_\+nr}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned \textbf{ \+\_\+canon} =0
+\begin{DoxyCompactList}\small\item\em set the canonical form of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} (default left form) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to describe terms in E[[d]] written g$^\wedge$n.Nabla\+\_\+(m$\vert$b).g$^\wedge$n\textquotesingle{} = g$^\wedge$nl.M\+\_\+m.\+B\+\_\+b.\+g$^\wedge$nr. 
+
+Formal series in E[[d]] can be seen as infinite sums of terms (g$^\wedge$nli.M\+\_\+m.\+B\+\_\+b.\+g$^\wedge$nri).d$^\wedge$t\+\_\+i
+
+We can also decompose a \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} term into a central form (g$^\wedge$nli.M\+\_\+m.\+g$^\wedge$nci.B\+\_\+b.\+g$^\wedge$nri) where nli$<$m and nri$<$b
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1g_ng_ae0a9274b983c28603f376285906216f0}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!get\+Nc@{get\+Nc}}
+\index{get\+Nc@{get\+Nc}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{get\+Nc()}
+{\footnotesize\ttfamily int etvo\+::g\+Ng\+::get\+Nc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+getter \+: gives nc in g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr depends on the chosen form (it is 0 in left and right form) \mbox{\label{classetvo_1_1g_ng_aa973f873c83f4c23c7c781597f21300b}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!get\+Nl@{get\+Nl}}
+\index{get\+Nl@{get\+Nl}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{get\+Nl()}
+{\footnotesize\ttfamily int etvo\+::g\+Ng\+::get\+Nl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+getter \+: gives nl in g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr depends on the chosen form \mbox{\label{classetvo_1_1g_ng_afc55d8833496cdc23c0365bfb97e638a}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!get\+Nr@{get\+Nr}}
+\index{get\+Nr@{get\+Nr}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{get\+Nr()}
+{\footnotesize\ttfamily int etvo\+::g\+Ng\+::get\+Nr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+getter \+: gives nc in g$^\wedge$nl.M\+\_\+m.\+g$^\wedge$nc.B\+\_\+b.\+g$^\wedge$nr depends on the chosen form \mbox{\label{classetvo_1_1g_ng_a7baa5b43ab27486ed13329b26626c7ef}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!set\+Canon\+Form@{set\+Canon\+Form}}
+\index{set\+Canon\+Form@{set\+Canon\+Form}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{set\+Canon\+Form()}
+{\footnotesize\ttfamily void etvo\+::g\+Ng\+::set\+Canon\+Form (\begin{DoxyParamCaption}\item[{unsigned}]{val = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Class method to choose the canonical form of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} terms
+
+
+\begin{DoxyParams}{Parameters}
+{\em val=0-\/left} & form 1-\/central form 2-\/ right form \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classetvo_1_1g_ng_a87bd5315939b1792c48a459b464c96ff}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{to\+String()}
+{\footnotesize\ttfamily std\+::string etvo\+::g\+Ng\+::to\+String (\begin{DoxyParamCaption}\item[{unsigned}]{n\+Ver = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+gives a string description of a \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} term 
+\begin{DoxyParams}{Parameters}
+{\em n\+Ver} & (default=0) ~\newline
+ if n\+Ver=0 -\/$>$ produces string \char`\"{}g-\/3.\+m3.\+b4.\+g4\char`\"{} ~\newline
+if n\+Ver!=0 -\/$>$ only for development \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classetvo_1_1g_ng_a5cf9a7b5b14be4afe30b9aff675cf99e}} 
+\index{etvo\+::g\+Ng@{etvo\+::g\+Ng}!\+\_\+canon@{\+\_\+canon}}
+\index{\+\_\+canon@{\+\_\+canon}!etvo\+::g\+Ng@{etvo\+::g\+Ng}}
+\subsubsection{\+\_\+canon}
+{\footnotesize\ttfamily unsigned etvo\+::g\+Ng\+::\+\_\+canon =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+set the canonical form of \doxyref{g\+Ng}{p.}{classetvo_1_1g_ng} (default left form) 
+
+set the default form (=0) as Left Form 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/\textbf{ g\+Ng.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/g\+Ng.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,210 @@
+\section{etvo\+:\+:poly\+Tg Class Reference}
+\label{classetvo_1_1poly_tg}\index{etvo\+::poly\+Tg@{etvo\+::poly\+Tg}}
+
+
+Class for polynomials in the semiring T[[g]].  
+
+
+
+
+{\ttfamily \#include $<$poly\+Tg.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:poly\+Tg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1poly_tg}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a2a8af2fbcc8c693da0ea6fe607425050}} 
+\textbf{ poly\+Tg} ()
+\begin{DoxyCompactList}\small\item\em initialised with Epsilon element \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_tg_a928e4668cc41d89ec75bed1916126844}} 
+\textbf{ poly\+Tg} (const \textbf{ Tg} \&m)
+\begin{DoxyCompactList}\small\item\em initialised with one monomial m \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_tg_a50e4daeebaee06eab2a85b58f02c33bd}} 
+\textbf{ poly\+Tg} (bool Top\+NotE)
+\begin{DoxyCompactList}\small\item\em specific initialization \+: poly\+Tg(true) set to Top, poly\+Tg(false) set to E \end{DoxyCompactList}\item 
+\textbf{ poly\+Tg} (const std\+::vector$<$ \textbf{ Tg} $>$ \&v)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a975989073b41ed58289e26f88384ae1b}} 
+\textbf{ poly} {\bfseries to\+Poly} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ad4832eafe1f24976e7a4af5fe1572f38}} 
+\textbf{ poly\+Tg} {\bfseries operator+} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_aff37a8770f4bba79cf16cbe14960c78f}} 
+\textbf{ poly\+Tg} {\bfseries oplus} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a2468f9b4b3f77db0c292d4c5b73c0865}} 
+\textbf{ poly\+Tg} {\bfseries oplus\+CD} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ab378beddfc62f797ebca0fa2f0e689b4}} 
+\textbf{ poly\+Tg} {\bfseries operator+} (const \textbf{ Tg} \&m) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a49c66b6e3edd626cf7ceae3b6dd3550a}} 
+void {\bfseries add} (const \textbf{ Tg} \&m)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ad48e68a8201c1425e354f0ad7e9f336e}} 
+\textbf{ poly\+Tg} {\bfseries operator$\ast$} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a4d609ff66c4a20ac89e0943706527b7a}} 
+\textbf{ poly\+Tg} {\bfseries operator$\ast$} (const \textbf{ Tg} \&m) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ac6b5be82fac1eb5997f663c3d57500b8}} 
+\textbf{ poly\+Tg} {\bfseries otimes} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_aca5e926c252636b24b70774013749495}} 
+\textbf{ poly\+Tg} {\bfseries otimes\+CD} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a4ca680095a6866f15c87e1a379a9a2c2}} 
+\textbf{ poly\+Tg} {\bfseries inf} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ae7837fd345fc6c4b1df49eef3089c074}} 
+\textbf{ poly\+Tg} {\bfseries inf\+CD} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a7ef54630db2fbca4d4bbba2489ebcb5a}} 
+\textbf{ poly\+Tg} {\bfseries lfrac} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a83e333cef3abfb93e37ba3a4e2776e31}} 
+\textbf{ poly\+Tg} {\bfseries lfrac\+CD} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_afdba8adf6afd9ff57cbfe48f81ff1943}} 
+\textbf{ poly\+Tg} {\bfseries lfrac} (const \textbf{ Tg} \&m) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a062da90558d45cee0286705596ab46b3}} 
+\textbf{ poly\+Tg} {\bfseries rfrac} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ab0a32c65e528f248133277bb84e61c44}} 
+\textbf{ poly\+Tg} {\bfseries rfrac\+CD} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a3fd2e8652d18796cfc5fb9357b3bee9a}} 
+\textbf{ poly\+Tg} {\bfseries rfrac} (const \textbf{ Tg} \&m) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ab9847846eb0e65dc880105b50fc6bbb1}} 
+bool {\bfseries operator==} (const \textbf{ poly\+Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ab8905fa00e46a4cff74b2208a289dc3b}} 
+bool {\bfseries operator!=} (const \textbf{ poly\+Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a832f566f31b3eb69ac6ada4151dd2918}} 
+bool {\bfseries operator$<$=} (const \textbf{ poly\+Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a2afebb6c24e0340274c492aedb2b3891}} 
+bool {\bfseries operator$>$=} (const \textbf{ poly\+Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a406bb20f078d0d6bd75681b731cde0e1}} 
+\textbf{ poly\+Tg} {\bfseries transient\+Star} (int Tmax) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a4716aa7465d14557e05fdaf9a1cbe3ae}} 
+\textbf{ Tg} {\bfseries get\+First\+Dif} (const \textbf{ poly\+Tg} \&p) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_af71afc37d9ae1972ac358deae0bf6718}} 
+void {\bfseries canon} ()
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a07e3c591d93a632740f3715163ccd85c}} 
+bool {\bfseries is\+Canon} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ad1e05beb69d77950d949d4cd64f1cce9}} 
+\textbf{ Tg} {\bfseries operator[$\,$]} (unsigned idx) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a28fd04bf07b85f6b822851733f2f072b}} 
+unsigned int {\bfseries size} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a35ed69de3267caad83f470e52c96490d}} 
+std\+::string {\bfseries to\+String} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ac603ac9159afb366e665269389b59e19}} 
+std\+::string {\bfseries to\+String\+As\+Delta\+Var} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a29a61a6e25b9456aa8017ca978142085}} 
+bool {\bfseries isE} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a6c94e201777977e2c9c0f93fb28c5fdd}} 
+void {\bfseries get\+Max\+Gain} (unsigned int \&mb) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a6177fd39c618c44a0607ad3055f96a0b}} 
+void {\bfseries get\+Lcm\+Gain} (unsigned int \&mb) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a8152a998bdd57600bcccdc4e7351a0b4}} 
+unsigned int {\bfseries get\+Max\+Gain} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ab059f45ea77668982b27ea54b2765850}} 
+unsigned int {\bfseries get\+Lcm\+Gain} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ac1113c779b38f055ee7156c6e34b0027}} 
+unsigned {\bfseries get\+Periodicity} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a905bce66900cfdda17113a758bb4e399}} 
+std\+::vector$<$ \textbf{ Tg} $>$ {\bfseries get\+Terms} () const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a002102c43a58d476beb268dee90ff9c8}} 
+void {\bfseries remove\+Term} (unsigned idx)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_ae132401e1413b749c97321431011fd3b}} 
+\textbf{ matrix}$<$ \textbf{ poly} $>$ {\bfseries get\+Core} (unsigned ratio=1) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a5acb9acdf83b131565f7e5d54fd76c5f}} 
+\textbf{ matrix}$<$ \textbf{ poly} $>$ {\bfseries get\+Core\+Max} (unsigned ratio=1) const
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a552150cc8c3ed3660a5dff4479c310fa}} 
+void \textbf{ to\+Pov} (\textbf{ graphic\+P\+R\+::\+Pov\+Ray} \&pov, \textbf{ graphic\+P\+R\+::\+Pov\+Ray\+::\+Color} c)
+\begin{DoxyCompactList}\small\item\em used in the creation of P\+O\+V-\/\+Ray script for a \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a5f7395bd2481043ad99fa713b17a52e9}} 
+static \textbf{ poly\+Tg} \textbf{ Epsilon} ()
+\begin{DoxyCompactList}\small\item\em Epsilon element. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_tg_a5a78cab1afd2e18277c07c55fbca56f0}} 
+static \textbf{ poly\+Tg} \textbf{ Top} ()
+\begin{DoxyCompactList}\small\item\em Top element. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_tg_ad2491872bc57e5869ab116817bdb94eb}} 
+static \textbf{ poly\+Tg} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em neutral element \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1poly_tg_a1b30c521af4534637fb72b25efe05d1a}} 
+static \textbf{ poly\+Tg} {\bfseries to\+Poly\+Tg} (const \textbf{ poly} \&p)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a11be9a40a80f7d0f27171120e2917016}} 
+static \textbf{ poly\+Tg} {\bfseries otimes} (const \textbf{ Tg} \&m, const \textbf{ poly\+Tg} \&p)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a75b26d317a10e238b384e70aad3f754f}} 
+static \textbf{ etvo\+::matrix}$<$ \textbf{ poly} $>$ {\bfseries get\+MatN} (unsigned size)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a44cf96af7fbce586bdf3a9d1d7b384dc}} 
+static \textbf{ poly\+Tg} {\bfseries core\+To\+Poly\+Tg} (const \textbf{ matrix}$<$ \textbf{ poly} $>$ \&core)
+\item 
+\mbox{\label{classetvo_1_1poly_tg_a8cee080792864121009ce47d0c34f1dc}} 
+static \textbf{ poly\+Tg} \textbf{ to\+Causal} (const \textbf{ poly\+Tg} \&s)
+\begin{DoxyCompactList}\small\item\em returns the projection of p into the set of causal series in T[[g]] (not reliable yet) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for polynomials in the semiring T[[g]]. 
+
+epsilon and top element exist.
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1poly_tg_a084bffc1ed74986e413364b3a1a6272b}} 
+\index{etvo\+::poly\+Tg@{etvo\+::poly\+Tg}!poly\+Tg@{poly\+Tg}}
+\index{poly\+Tg@{poly\+Tg}!etvo\+::poly\+Tg@{etvo\+::poly\+Tg}}
+\subsubsection{poly\+Tg()}
+{\footnotesize\ttfamily etvo\+::poly\+Tg\+::poly\+Tg (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \textbf{ Tg} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+initialization to a polynomial created from a collection of \doxyref{Tg}{p.}{classetvo_1_1_tg} terms w.\+g$^\wedge$n. The initialization leads to a canonical form where \doxyref{Tg}{p.}{classetvo_1_1_tg} terms are sorted 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/poly\+Tg.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/poly\+Tg.\+cpp\end{DoxyCompactItemize}

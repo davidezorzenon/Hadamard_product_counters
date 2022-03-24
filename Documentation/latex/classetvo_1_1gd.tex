@@ -1,0 +1,106 @@
+\section{etvo\+:\+:gd Class Reference}
+\label{classetvo_1_1gd}\index{etvo\+::gd@{etvo\+::gd}}
+
+
+Wrapper class to \doxyref{mmgd\+::gd}{p.}{classmmgd_1_1gd} from Min\+Max\+GD library.  
+
+
+
+
+{\ttfamily \#include $<$gd\+Wrapper.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:gd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1gd}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1gd_a491fc6a3d50a7a99ec8a1001c94d9f1f}} 
+\textbf{ gd} ()
+\begin{DoxyCompactList}\small\item\em default constructor \+: set to g$^\wedge$0d$^\wedge$0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a3fc5baf5345961b0d6b3ca7c17dd610f}} 
+\textbf{ gd} (long g, long d)
+\begin{DoxyCompactList}\small\item\em constructor \+: set to g$^\wedge$g.d$^\wedge$d \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_aa212987e0ab3679917cafeeb439bcc45}} 
+\textbf{ gd} (const \textbf{ gd} \&m)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a8418dbde977dfc81a5c240d33e0180cc}} 
+\textbf{ gd} (const \textbf{ mmgd\+::gd} \&m)
+\begin{DoxyCompactList}\small\item\em construcor \+: set a etvo\+I\+I\+::gd from a \doxyref{mmgd\+::gd}{p.}{classmmgd_1_1gd} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a69eb1cbc296fb9ab4ab7cf250ea4042b}} 
+\textbf{ gd} \& \textbf{ operator=} (const \textbf{ gd} \&m)
+\begin{DoxyCompactList}\small\item\em operator=\+: assignation \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_ada097f223caef4d58428c8894761af96}} 
+\textbf{ gd} \textbf{ operator$\ast$} (const \textbf{ gd} \&m) const
+\begin{DoxyCompactList}\small\item\em operator$\ast$\+: product of monomials g$^\wedge$n1d$^\wedge$t1.g$^\wedge$n2d$^\wedge$t2=g$^\wedge$(n1+n2)d$^\wedge$(t1+t2) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a3d4a0b76fd53360d2dd70dc21605bfe7}} 
+long \textbf{ getg} () const
+\begin{DoxyCompactList}\small\item\em returns n in g$^\wedge$nd$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_ae83fea42011af0d4d04e835355f211bd}} 
+long \textbf{ getd} () const
+\begin{DoxyCompactList}\small\item\em returns t in g$^\wedge$nd$^\wedge$t \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a621d688508a0e6db4e67afc6e45c86f5}} 
+bool \textbf{ isE} () const
+\begin{DoxyCompactList}\small\item\em check if is equal to g$^\wedge$0d$^\wedge$0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_affb519d6d467056f5afea9308aea9734}} 
+bool \textbf{ is\+Degenerate} () const
+\begin{DoxyCompactList}\small\item\em check if n or t are infinite \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_ac26ab40728fd575139f84c16410e5b90}} 
+bool {\bfseries operator!=} (const \textbf{ gd} \&m) const
+\item 
+\mbox{\label{classetvo_1_1gd_a34b41726d301dd8250e2b2014c815d0c}} 
+bool {\bfseries operator==} (const \textbf{ gd} \&) const
+\item 
+\mbox{\label{classetvo_1_1gd_a32d371653248425d9984142430004928}} 
+bool {\bfseries operator$>$=} (const \textbf{ gd} \&) const
+\item 
+\mbox{\label{classetvo_1_1gd_a0341db47b2d5e82139b9bb6a3c7cb243}} 
+bool {\bfseries operator$<$=} (const \textbf{ gd} \&) const
+\item 
+\mbox{\label{classetvo_1_1gd_af719cf6c5f35ff62750bd95e04080f82}} 
+\textbf{ gd} \textbf{ inf} (const \textbf{ gd} \&m) const
+\begin{DoxyCompactList}\small\item\em inf\+: infimum of monomials inf(g$^\wedge$n1d$^\wedge$t1,g$^\wedge$n2d$^\wedge$t2)=g$^\wedge$max(n1,n2)d$^\wedge$min(t1,t2) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_aaa1506c91f51f10b26df53646e4911d0}} 
+\textbf{ gd} \textbf{ frac} (const \textbf{ gd} \&m) const
+\begin{DoxyCompactList}\small\item\em frac \+: g$^\wedge$n1d$^\wedge$t1/g$^\wedge$n2d$^\wedge$t2 = g$^\wedge$(n1-\/n2)d$^\wedge$(t1-\/t2) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a2aa893e385df8b963433316142a34e21}} 
+\textbf{ poly} \textbf{ operator+} (const \textbf{ gd} \&m) const
+\begin{DoxyCompactList}\small\item\em g$^\wedge$n1d$^\wedge$t1 + g$^\wedge$n2d$^\wedge$t2 is a polynomial etvo\+I\+I\+::poly \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a199a8dc018c840489853cfb787f6290a}} 
+\textbf{ poly} \textbf{ operator+} (const \textbf{ poly} \&p) const
+\begin{DoxyCompactList}\small\item\em g$^\wedge$n1d$^\wedge$t1 + (g$^\wedge$n2d$^\wedge$t2 + ... + g$^\wedge$n\+Kd$^\wedge$tK) is a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a18724e0c412c5df4d8374d9d7b996d3e}} 
+\textbf{ poly} \textbf{ operator$\ast$} (const \textbf{ poly} \&p) const
+\begin{DoxyCompactList}\small\item\em g$^\wedge$n1d$^\wedge$t1 $\ast$ (g$^\wedge$n2d$^\wedge$t2 + ... + g$^\wedge$n\+Kd$^\wedge$tK) is a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1gd_a56c050b48c34181e209f0b75cea4a1a3}} 
+std\+::string \textbf{ To\+String} () const
+\begin{DoxyCompactList}\small\item\em returns a string giving the description of a monomial with the format \char`\"{}g2.\+d3\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1gd_a6de3a8b1c425a3ce0bb90b9e7bd46128}} 
+static \textbf{ gd} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em gives the neutral element e=g$^\wedge$0.d$^\wedge$0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Wrapper class to \doxyref{mmgd\+::gd}{p.}{classmmgd_1_1gd} from Min\+Max\+GD library. 
+
+Class for monomials g$^\wedge$n.d$^\wedge$t with finite exponents [n,t finite] In normal cases, no epsilon and no Top elements. But to keep compatible with Min\+Max\+GD, degenerate monomials can be obtained.
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/wrapper\+M\+M\+G\+D/\textbf{ gd\+Wrapper.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/wrapper\+M\+M\+G\+D/gd\+Wrapper.\+cpp\end{DoxyCompactItemize}

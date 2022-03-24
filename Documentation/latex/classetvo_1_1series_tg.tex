@@ -1,0 +1,266 @@
+\section{etvo\+:\+:series\+Tg Class Reference}
+\label{classetvo_1_1series_tg}\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+
+
+Class for ultimately-\/periodic series in the semiring T[[g]].  
+
+
+
+
+{\ttfamily \#include $<$series\+Tg.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:series\+Tg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1series_tg}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1series_tg_a67fe7c33eabed38affaa6c2e867481aa}} 
+\textbf{ series\+Tg} ()
+\begin{DoxyCompactList}\small\item\em Default initialization \+: epsilon (p=eps q=eps r=g1.\+d0) \end{DoxyCompactList}\item 
+\textbf{ series\+Tg} (bool Top\+NotE)
+\item 
+\mbox{\label{classetvo_1_1series_tg_abfa4a629d40905e3f0c4fdc2a6ac4cc3}} 
+\textbf{ series\+Tg} (const \textbf{ Tg} \&m)
+\begin{DoxyCompactList}\small\item\em Initialization of a \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg} from \doxyref{Tg}{p.}{classetvo_1_1_tg} term m (p=eps q=m r=g1.\+d0) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a043fffc8582e8e994fbdbf869d83c215}} 
+\textbf{ series\+Tg} (const \textbf{ poly\+Tg} \&q)
+\begin{DoxyCompactList}\small\item\em Initialization of a \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg} from \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} term q (p=eps q=q r=g1.\+d0) \end{DoxyCompactList}\item 
+\textbf{ series\+Tg} (const \textbf{ poly\+Tg} \&p, const \textbf{ poly\+Tg} \&q, long n, long t, bool right=true)
+\item 
+\textbf{ series\+Tg} (const \textbf{ poly\+Tg} \&p, const \textbf{ poly\+Tg} \&q, const \textbf{ gd} \&r, bool right=1)
+\item 
+\mbox{\label{classetvo_1_1series_tg_a659b0be1fef0e15a5fd1081618948572}} 
+bool \textbf{ is\+Right\+Form} () const
+\begin{DoxyCompactList}\small\item\em check if the current series in Right form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_acce711196a87d6c2f91129fa5a96a52f}} 
+bool \textbf{ is\+Left\+Form} () const
+\begin{DoxyCompactList}\small\item\em check if the current series in Left form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a0918e7ac2cfa6b753b5f900a01d7dea3}} 
+bool \textbf{ is\+Polynomial} () const
+\begin{DoxyCompactList}\small\item\em check if it is a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aa5d7c63fa4638c094466b08c7ed968d7}} 
+bool \textbf{ is\+Proper} () const
+\begin{DoxyCompactList}\small\item\em check if it is in proper form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a9d36e2b96a54eabf992bc5a4bcdd44a4}} 
+bool \textbf{ isE} () const
+\begin{DoxyCompactList}\small\item\em check if it is a neutral \doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a7ec38ae9488e42e8d2194bdc1b4da099}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em leads to the canonical left or right form (the simplest proper form) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ac19fc716d7b15ee79596e36bd6aef953}} 
+void \textbf{ to\+Right} ()
+\begin{DoxyCompactList}\small\item\em to Right form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a410eccda4ca76790cbe1d9287c446d8b}} 
+void \textbf{ to\+Left} ()
+\begin{DoxyCompactList}\small\item\em to Left form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ae0dd01558c462797ff3061b52bfe2209}} 
+\textbf{ poly\+Tg} \textbf{ getP} () const
+\begin{DoxyCompactList}\small\item\em getter returning p \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a699280593079d0da351897c82133882c}} 
+\textbf{ poly\+Tg} \textbf{ getQ} () const
+\begin{DoxyCompactList}\small\item\em getter returning q \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ae9045a8ce85b050e251c4aa33cc589f5}} 
+\textbf{ gd} \textbf{ getR} () const
+\begin{DoxyCompactList}\small\item\em getter returning r \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} () const
+\item 
+std\+::string \textbf{ to\+String\+As\+Delta\+Var} () const
+\item 
+\mbox{\label{classetvo_1_1series_tg_a0bb998d53a232f986b6e86a6f53d5f64}} 
+bool \textbf{ operator==} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em check equality \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a742dbd6958f97fae1ef3523b82c8055d}} 
+bool \textbf{ operator!=} (const \textbf{ series\+Tg} \&) const
+\begin{DoxyCompactList}\small\item\em check difference \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_abf1ae3de08db0ecb452ca26d529e2e9d}} 
+unsigned int \textbf{ get\+Lcm\+Gain} () const
+\begin{DoxyCompactList}\small\item\em returns the Least Common multiple of gains in the terms of the current series \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a11602ebfc3499361688994dfa6948371}} 
+unsigned int \textbf{ get\+Max\+Gain} () const
+\begin{DoxyCompactList}\small\item\em returns the Maximum of gains in the terms of the current series \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ae1e081acc7adf99648fe4eb17ab4de86}} 
+\textbf{ series\+Tg} \textbf{ operator+} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em sum of series in T[[g]] \+: s1+s2 (calls oplus) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a375d602bf397304021ef36beeab2e81f}} 
+\textbf{ series\+Tg} \textbf{ oplus} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em sum of series in T[[g]] \+: s1.\+oplus(s2) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a0434a15dc3a3321cfec832d31b53bcf2}} 
+\textbf{ series\+Tg} \textbf{ oplus} (const \textbf{ poly\+Tg} \&p) const
+\begin{DoxyCompactList}\small\item\em sum of series and polynomial in T[[g]] \+: s1.\+oplus(p1) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aea18a75207cc4ce7e5ca6a919fe8757e}} 
+\textbf{ series\+Tg} \textbf{ otimes} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em product of series in T[[g]] \+: s1.\+otimes(s2) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a3aff196b6a6d805f7c51cf8fc06523d2}} 
+\textbf{ series\+Tg} \textbf{ operator$\ast$} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em product of series in T[[g]] \+: s1$\ast$s2 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a240affc56b44ab23665f2d954fd43228}} 
+\textbf{ series\+Tg} \textbf{ operator$\ast$} (const \textbf{ Tg} \&m) const
+\begin{DoxyCompactList}\small\item\em product of a series by a monomial in T[[g]] \+: s1$\ast$m \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aa1e8aff324bbb272273e81ad267031a9}} 
+\textbf{ series\+Tg} \textbf{ operator$\ast$} (const \textbf{ poly\+Tg} \&p) const
+\begin{DoxyCompactList}\small\item\em product of a series by a polynomial in T[[g]] \+: s1$\ast$p \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a4da61432b94c06947546b8c0e2aa6b61}} 
+\textbf{ series\+Tg} \textbf{ otimes} (const \textbf{ Tg} \&m) const
+\begin{DoxyCompactList}\small\item\em product of a series by a monomial in T[[g]] \+: s1.\+otimes(m) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a26303cd6db63097612355357d1b2dece}} 
+\textbf{ series\+Tg} \textbf{ otimes} (const \textbf{ poly\+Tg} \&p) const
+\begin{DoxyCompactList}\small\item\em product of a series by a polynomial in T[[g]] \+: s1.\+otimes(p) \end{DoxyCompactList}\item 
+\textbf{ etvo\+::matrix}$<$ \textbf{ series} $>$ \textbf{ get\+Core} (unsigned ratio=1) const
+\item 
+\textbf{ etvo\+::matrix}$<$ \textbf{ series} $>$ \textbf{ get\+Core\+Max} (unsigned ratio=1) const
+\item 
+\textbf{ series\+Tg} \textbf{ star\+CD} () const
+\item 
+\textbf{ series\+Tg} \textbf{ star} () const
+\item 
+\mbox{\label{classetvo_1_1series_tg_a5f5ce18be1c6149e8186264ce39f545f}} 
+\textbf{ series\+Tg} \textbf{ otimes\+CD} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em operations via Core Decomposition \+: otimes \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a3aff8241ea448b44e0c1e894f470a441}} 
+\textbf{ series\+Tg} \textbf{ oplus\+CD} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em operations via Core Decomposition \+: oplus \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ab1080b2ce00c9bf40742fcfdf9fd65fb}} 
+\textbf{ series\+Tg} \textbf{ inf\+CD} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em operations via Core Decomposition \+: inf \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aa42e9049523c0e504c11a6c8cc918ca0}} 
+\textbf{ series\+Tg} \textbf{ inf} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em inf of series \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_af0f9192f5dfe73e74b6240c018c742de}} 
+\textbf{ series\+Tg} \textbf{ lfrac\+CD} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em operations via Core Decomposition \+: lfrac \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a4b5781e45dab757e5b9b6701cb5d601f}} 
+\textbf{ series\+Tg} \textbf{ rfrac\+CD} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em operations via Core Decomposition \+: rfrac \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a25968e60dcd941a7b7e021298721660f}} 
+\textbf{ series\+Tg} \textbf{ lfrac} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em left-\/product residuation \+: s1.\+lfrac(s2) = s2 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a4b80df09e4a43572863f2601bf959879}} 
+\textbf{ series\+Tg} \textbf{ rfrac} (const \textbf{ series\+Tg} \&s) const
+\begin{DoxyCompactList}\small\item\em right-\/product residuation \+: s1.\+rfrac(s2) = s1/s2 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aff3f310b32f9142c5d85ed8be769a0bc}} 
+\textbf{ poly\+Tg} \textbf{ get\+Poly\+Up\+To} (int gammaN) const
+\begin{DoxyCompactList}\small\item\em method to develop the first terms of p+q.[r]$\ast$ or p+[r]$\ast$.q up to a given gammaN event value \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a7d5f27311dee09785371ae20e2ee8326}} 
+std\+::vector$<$ \textbf{ series} $>$ \textbf{ to\+Impulse\+Response} () const
+\begin{DoxyCompactList}\small\item\em returns the response to I,g1.\+I,g2.\+I ... \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a8ae30a0a0579f39c9afa5e74a02f8e15}} 
+\textbf{ series} \textbf{ to\+Series} () const
+\begin{DoxyCompactList}\small\item\em projection series\+Tg-\/$>$series (zero slice) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1series_tg_a76affb8cb56ccac0c5172da6e1b60731}} 
+static \textbf{ series\+Tg} \textbf{ Epsilon} ()
+\begin{DoxyCompactList}\small\item\em The epsilon description of \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg}. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a2b8500e7ffb4ae47ec0ecac730614611}} 
+static \textbf{ series\+Tg} \textbf{ Top} ()
+\begin{DoxyCompactList}\small\item\em The Top description of \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg}. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ac0d5618301c3ad0b38c56f4f587450e2}} 
+static \textbf{ series\+Tg} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em The description of g0.\+d0 as \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg}. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_aac5b9338c77349b6f20ae75f0b50fb4a}} 
+static \textbf{ poly\+Tg} \textbf{ get\+Poly\+Up\+To} (int gammaN, const \textbf{ poly\+Tg} \&p, const \textbf{ poly\+Tg} \&q, const \textbf{ gd} \&r, bool droite=true)
+\begin{DoxyCompactList}\small\item\em static function to develop the first terms of p+q.[r]$\ast$ or p+[r]$\ast$.q up to a given gammaN value \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ae82bdb0335fe3d9e18056dc7170385e7}} 
+static \textbf{ series\+Tg} \textbf{ otimes} (const \textbf{ Tg} \&m, const \textbf{ series\+Tg} \&s)
+\begin{DoxyCompactList}\small\item\em [S\+T\+A\+T\+IC] product of a monomial and a series in T[[g]] \+: series\+Tg\+::otimes(m,s) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_ae7b076ce68d0873cc9169ee4d638ca12}} 
+static \textbf{ series\+Tg} \textbf{ otimes} (const \textbf{ poly\+Tg} \&m, const \textbf{ series\+Tg} \&s)
+\begin{DoxyCompactList}\small\item\em [S\+T\+A\+T\+IC] product of a polynomial and a series in T[[g]] \+: series\+Tg\+::otimes(p,s) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a7c56c094d344c14a95783e4230c9a478}} 
+static \textbf{ series\+Tg} \textbf{ oplus} (const \textbf{ poly\+Tg} \&p, const \textbf{ series\+Tg} \&s)
+\begin{DoxyCompactList}\small\item\em [S\+T\+A\+T\+IC] sum of a polynomial and a series in T[[g]] \+: series\+Tg\+::oplus(p,s) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a595ec36048f85a2c6ac004eb42acbcf2}} 
+static \textbf{ series\+Tg} \textbf{ to\+Series\+Tg} (const \textbf{ series} \&s)
+\begin{DoxyCompactList}\small\item\em injection series(mmgd)-\/$>$\doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a7c9d248da62bdcf8cb9662b52b19aff5}} 
+static \textbf{ etvo\+::matrix}$<$ \textbf{ series} $>$ {\bfseries get\+MatN} (unsigned size)
+\item 
+\mbox{\label{classetvo_1_1series_tg_ac9d45cd62e2bd037efdccc454f6f10ce}} 
+static \textbf{ series\+Tg} \textbf{ core\+To\+Series\+Tg} (const \textbf{ matrix}$<$ \textbf{ series} $>$ \&C)
+\begin{DoxyCompactList}\small\item\em [static] conversion C\+O\+RE decomposition -\/$>$ \doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1series_tg_a686ff65b6fca4565831c042321bb0dd8}} 
+static \textbf{ series\+Tg} \textbf{ to\+Causal} (const \textbf{ series\+Tg} \&s)
+\begin{DoxyCompactList}\small\item\em returns the projection of s into the set of causal series in T[[g]] (not reliable yet) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for ultimately-\/periodic series in the semiring T[[g]]. 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1series_tg_ac145bcd6c7f4e3d5d7c4d9e3d9875958}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!series\+Tg@{series\+Tg}}
+\index{series\+Tg@{series\+Tg}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{series\+Tg()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily etvo\+::series\+Tg\+::series\+Tg (\begin{DoxyParamCaption}\item[{bool}]{Top\+NotE }\end{DoxyParamCaption})}
+
+Initialization as Top (true) OR E(false) Top (p=T q=T r=g1.\+d0) E (p=eps q=g0.\+d0 r=g1.\+d0) \mbox{\label{classetvo_1_1series_tg_a849d21d79f2f62b01a45ea6fae1894bb}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!series\+Tg@{series\+Tg}}
+\index{series\+Tg@{series\+Tg}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{series\+Tg()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily etvo\+::series\+Tg\+::series\+Tg (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Tg} \&}]{p,  }\item[{const \textbf{ poly\+Tg} \&}]{q,  }\item[{long}]{n,  }\item[{long}]{t,  }\item[{bool}]{right = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Initialization of a \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg} from periodic p,q,r (right/left) form if right=true -\/$>$ s=p+q.[gn.\+dt]$\ast$ otherwise -\/$>$ s=p+[gn.\+dt]$\ast$.q \mbox{\label{classetvo_1_1series_tg_abd05ff5a2dbdbeee0bebab4ca7023db1}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!series\+Tg@{series\+Tg}}
+\index{series\+Tg@{series\+Tg}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{series\+Tg()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily etvo\+::series\+Tg\+::series\+Tg (\begin{DoxyParamCaption}\item[{const \textbf{ poly\+Tg} \&}]{p,  }\item[{const \textbf{ poly\+Tg} \&}]{q,  }\item[{const \textbf{ gd} \&}]{r,  }\item[{bool}]{right = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Initialization of a \doxyref{series\+Tg}{p.}{classetvo_1_1series_tg} from periodic p,q,r (right/left) form if right=true -\/$>$ s=p+q.[r]$\ast$ otherwise -\/$>$ s=p+[r]$\ast$.q 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1series_tg_a8955eb67dd9ec719e96e7b232380e98e}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!get\+Core@{get\+Core}}
+\index{get\+Core@{get\+Core}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{get\+Core()}
+{\footnotesize\ttfamily \textbf{ etvo\+::matrix}$<$ \textbf{ series} $>$ etvo\+::series\+Tg\+::get\+Core (\begin{DoxyParamCaption}\item[{unsigned}]{ratio = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+
+returns the Core matrix of the current series. A ratio!=1 allows us to expand the matrix to a multiple of the basic gain. \mbox{\label{classetvo_1_1series_tg_af3b505055e92d01a18f623fa9f60483c}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!get\+Core\+Max@{get\+Core\+Max}}
+\index{get\+Core\+Max@{get\+Core\+Max}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{get\+Core\+Max()}
+{\footnotesize\ttfamily \textbf{ etvo\+::matrix}$<$ \textbf{ series} $>$ etvo\+::series\+Tg\+::get\+Core\+Max (\begin{DoxyParamCaption}\item[{unsigned}]{ratio = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+
+returns the maximal Core matrix of the current series. A ratio!=1 allows us to expand the matrix to a multiple of the basic gain. \mbox{\label{classetvo_1_1series_tg_a58cac44fe0b1ce19c81aba7df94d52e6}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!star@{star}}
+\index{star@{star}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{star()}
+{\footnotesize\ttfamily \textbf{ series\+Tg} etvo\+::series\+Tg\+::star (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the Kleene star of a series in T[[g]]. Operates via a Core Decomposition of the series (see J.\+Trunk thesis) Throws an exception if the computation is not handled yet (degenerate case) \mbox{\label{classetvo_1_1series_tg_aa2e7fea770a54be8050b936f655fde35}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!star\+CD@{star\+CD}}
+\index{star\+CD@{star\+CD}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{star\+C\+D()}
+{\footnotesize\ttfamily \textbf{ series\+Tg} etvo\+::series\+Tg\+::star\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the Kleene star of a series in T[[g]]. Operates via a Core Decomposition of the series (see J.\+Trunk thesis) \mbox{\label{classetvo_1_1series_tg_a5701ea2bbc28879f222748cb9678389a}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{to\+String()}
+{\footnotesize\ttfamily std\+::string etvo\+::series\+Tg\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the string description of a series in E[[d]]. This format is compatible with the parser of \doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} (needs boost installation) \mbox{\label{classetvo_1_1series_tg_a715f210578264d453d4cc53116f0be1c}} 
+\index{etvo\+::series\+Tg@{etvo\+::series\+Tg}!to\+String\+As\+Delta\+Var@{to\+String\+As\+Delta\+Var}}
+\index{to\+String\+As\+Delta\+Var@{to\+String\+As\+Delta\+Var}!etvo\+::series\+Tg@{etvo\+::series\+Tg}}
+\subsubsection{to\+String\+As\+Delta\+Var()}
+{\footnotesize\ttfamily std\+::string etvo\+::series\+Tg\+::to\+String\+As\+Delta\+Var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the string description of a series in E[[d]] with mu$<$seq$>$ operators. This format is compatible with the parser of \doxyref{series\+Ed}{p.}{classetvo_1_1series_ed} (needs boost installation) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/series\+Tg.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/series\+Tg.\+cpp\end{DoxyCompactItemize}

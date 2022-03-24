@@ -1,0 +1,132 @@
+\section{etvo\+:\+:Tg Class Reference}
+\label{classetvo_1_1_tg}\index{etvo\+::\+Tg@{etvo\+::\+Tg}}
+
+
+Class for monomials in the semiring T[[g]].  
+
+
+
+
+{\ttfamily \#include $<$Tg.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_tg_aee77fe25306be7f1e2978b30790f2081}} 
+\textbf{ Tg} ()
+\begin{DoxyCompactList}\small\item\em init as neutral opertor (d0.\+g0) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_ad66e29aa61614eecb78350e9c1f33a03}} 
+\textbf{ Tg} (int t, int n)
+\begin{DoxyCompactList}\small\item\em init as dt.\+gn operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a76f7b2e49692bc4d6cdfa56afdf208b5}} 
+\textbf{ Tg} (int t, unsigned \textbf{ D}, int tp, int n)
+\begin{DoxyCompactList}\small\item\em init as dt.\+D\+\_\+\+D.\+dtp.\+gn operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a19abafbb55c2b9c351cd4cf8748462ad}} 
+\textbf{ Tg} (const \textbf{ T\+\_\+op} \&w, int \textbf{ g})
+\begin{DoxyCompactList}\small\item\em init as w.\+gn operator where w is a T-\/operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_ab4836ed5cbc8ceb8c10238b172147364}} 
+\textbf{ T\+\_\+op} \textbf{ get\+T\+\_\+op} () const
+\begin{DoxyCompactList}\small\item\em returns w, the T-\/operator of the current term \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_afa5ba7f3834956d9c41ebdb95924e4e5}} 
+void \textbf{ set\+T\+\_\+op} (const \textbf{ T\+\_\+op} \&)
+\begin{DoxyCompactList}\small\item\em sets the T-\/operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a195760a35e844fb05e1c7ff95941d381}} 
+int \textbf{ getG} () const
+\begin{DoxyCompactList}\small\item\em returns the exponent n of the current term w.\+gn \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a6f67e82f1cfb6bc7258feb19c6bafb28}} 
+void \textbf{ setG} (int n)
+\begin{DoxyCompactList}\small\item\em sets the exponent n of w.\+gn \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a2b40eb2d6c86c5dbc8c5e90e96317663}} 
+void \textbf{ get\+Gain} (unsigned int \&mb) const
+\begin{DoxyCompactList}\small\item\em gives the gain of the T-\/operator w of w.\+g$^\wedge$n \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a4ad809bfa7cdd01091cd61638581da2a}} 
+\textbf{ Tg} \textbf{ operator$\ast$} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the product of two \doxyref{Tg}{p.}{classetvo_1_1_tg} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a5a8c71bb82014209eef3c0957ca57123}} 
+\textbf{ Tg} \textbf{ otimes} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the product of two \doxyref{Tg}{p.}{classetvo_1_1_tg} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_aa92a1646ed8730cd4ce0b622e73104f7}} 
+\textbf{ poly\+Tg} \textbf{ operator$\ast$} (const \textbf{ poly\+Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the product of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term by a \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a8a8379e5c00f2efa772b8b2d63131a72}} 
+\textbf{ poly\+Tg} \textbf{ otimes} (const \textbf{ poly\+Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the product of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term by a \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_aae965431ea10d458031c992c381cd772}} 
+\textbf{ poly\+Tg} \textbf{ operator+} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the sum of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term with \doxyref{Tg}{p.}{classetvo_1_1_tg} term. It is a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a8a55d07aa35a2184f326bfcc4f806194}} 
+\textbf{ poly\+Tg} \textbf{ oplus} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the sum of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term with \doxyref{Tg}{p.}{classetvo_1_1_tg} term. It is a polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a27ee0e8b01474bf33eb30a2181878a5a}} 
+\textbf{ poly\+Tg} \textbf{ operator+} (const \textbf{ poly\+Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the sum of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term with a \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a2abae9cbeef3aa5d18da3320c5f3bd2b}} 
+\textbf{ poly\+Tg} \textbf{ oplus} (const \textbf{ poly\+Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the sum of the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term with a \doxyref{poly\+Tg}{p.}{classetvo_1_1poly_tg} polynomial \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_ad67ca06ef5027351930bedef041bc54a}} 
+\textbf{ Tg} \textbf{ inf} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em returns the infimum of two \doxyref{Tg}{p.}{classetvo_1_1_tg} terms \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a405d638e62f80c7d4e50b50e54dca5d2}} 
+\textbf{ Tg} {\bfseries lfrac} (const \textbf{ Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1_tg_aecf99a2b18eaf73a407d95dc2f7f9ba7}} 
+\textbf{ Tg} {\bfseries rfrac} (const \textbf{ Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1_tg_ab65635aa8ae0afce8f78524d18fd7e55}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em returns a string which describes the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a209b00c100149b908fc2d1211f27290a}} 
+std\+::string \textbf{ to\+String\+As\+Delta\+Var} () const
+\begin{DoxyCompactList}\small\item\em returns a string which describes the current \doxyref{Tg}{p.}{classetvo_1_1_tg} term as a variable delta operator \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_aa51baf361369ffc5b8408dfac2a6798f}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em puts the current term into a canonical form \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_aba73c3a2b0dcaf6361a19724f0ddb589}} 
+bool \textbf{ operator==} (const \textbf{ Tg} \&) const
+\begin{DoxyCompactList}\small\item\em checks terms equality \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a8377ca734615de2fee60e052b63dcf7e}} 
+bool {\bfseries operator!=} (const \textbf{ Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1_tg_aa4ba5a08d26468728131ebc3de0c73ce}} 
+bool {\bfseries operator$<$=} (const \textbf{ Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1_tg_a802596f9e50523e09ea981a555bf014c}} 
+bool {\bfseries operator$>$=} (const \textbf{ Tg} \&) const
+\item 
+\mbox{\label{classetvo_1_1_tg_ab92f281e61d80967e10aba8b1efa1c2d}} 
+void \textbf{ to\+Pov} (\textbf{ graphic\+P\+R\+::\+Pov\+Ray} \&pov, \textbf{ graphic\+P\+R\+::\+Pov\+Ray\+::\+Color} c, \textbf{ Tg} $\ast$prec, \textbf{ Tg} $\ast$next)
+\begin{DoxyCompactList}\small\item\em used to create Pov\+Ray graphical output \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_tg_a7cb19c3c1d88c1b73e2af868839f0968}} 
+static \textbf{ Tg} \textbf{ E} ()
+\begin{DoxyCompactList}\small\item\em neutral operator as \doxyref{Tg}{p.}{classetvo_1_1_tg} element (d0.\+g0) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a17f678001f4e287b124a13804470138b}} 
+static \textbf{ Tg} \textbf{ g} (int n)
+\begin{DoxyCompactList}\small\item\em basic gamma operator as \doxyref{Tg}{p.}{classetvo_1_1_tg} element\+: Tg\+::g(n)= d0.\+gn \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a001e4cb85834ade4cd53af7316e25bbf}} 
+static \textbf{ Tg} \textbf{ D} (unsigned mb)
+\begin{DoxyCompactList}\small\item\em basic Delta\+\_\+mb operator as \doxyref{Tg}{p.}{classetvo_1_1_tg} element\+: Tg\+::\+D(mb)= D\+\_\+mb.\+g0 \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_tg_a5f60e89588f5353d18ab94cd626ee5aa}} 
+static \textbf{ Tg} \textbf{ d} (int t)
+\begin{DoxyCompactList}\small\item\em basic delta operator as \doxyref{Tg}{p.}{classetvo_1_1_tg} element\+: Tg\+::d(t)= dt.\+g0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for monomials in the semiring T[[g]]. 
+
+No epsilon, no top element
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/Tg.\+h\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/series\+Tg/Tg.\+cpp\end{DoxyCompactItemize}

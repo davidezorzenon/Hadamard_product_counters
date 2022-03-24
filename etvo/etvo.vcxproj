@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\mainDocETVO.cpp" />
+    <ClCompile Include="..\parsers\calculatorMmEdTgETVO21.cpp" />
+    <ClCompile Include="..\parsers\parser.cpp" />
+    <ClCompile Include="..\parsers\parserSeriesEd.cpp" />
+    <ClCompile Include="..\parsers\parserSeriesTg.cpp" />
+    <ClCompile Include="..\test\factory\FactoryFper.cpp" />
+    <ClCompile Include="..\test\factory\FactoryPoly.cpp" />
+    <ClCompile Include="..\test\factory\FactoryPolyEd.cpp" />
+    <ClCompile Include="..\test\factory\FactoryPolyTg.cpp" />
+    <ClCompile Include="..\test\factory\FactorySeries.cpp" />
+    <ClCompile Include="..\test\factory\FactorySeriesEd.cpp" />
+    <ClCompile Include="..\test\factory\FactorySeriesTg.cpp" />
+    <ClCompile Include="..\test\factory\randGen.cpp" />
+    <ClCompile Include="..\test\Test.cpp" />
+    <ClCompile Include="..\test\TestCommon\TestBugs.cpp" />
+    <ClCompile Include="..\test\TestCommon\TestPov.cpp" />
+    <ClCompile Include="..\test\TestETVOP\TestSpecificgNgdDd.cpp" />
+    <ClCompile Include="..\test\testException.cpp" />
+    <ClCompile Include="..\test\TestFper\TestFperFmaxFmin.cpp" />
+    <ClCompile Include="..\test\TestMMGD\TestWrapperMMGD.cpp" />
+    <ClCompile Include="..\test\TestScenarios.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdCanon.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdCore.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdUnit.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestPolyEdExtra.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestPolyEd.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdRegular.cpp" />
+    <ClCompile Include="..\test\TestSeriesEd\TestSeriesEdExtra1.cpp" />
+    <ClCompile Include="..\test\TestSeriesTg\TestPolyTg.cpp" />
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTg.cpp" />
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTgRegular.cpp" />
+    <ClCompile Include="..\test\TestSeriesTg\TestSeriesTgUnit.cpp" />
+    <ClCompile Include="common\etvoException.cpp" />
+    <ClCompile Include="common\global.cpp" />
+    <ClCompile Include="common\ISterm.cpp" />
+    <ClCompile Include="common\EtvoTools.cpp" />
+    <ClCompile Include="etop\dDd.cpp" />
+    <ClCompile Include="etop\E_op.cpp" />
+    <ClCompile Include="etop\gNg.cpp" />
+    <ClCompile Include="etop\T_op.cpp" />
+    <ClCompile Include="Fper\Fmaxp.cpp" />
+    <ClCompile Include="Fper\Fminp.cpp" />
+    <ClCompile Include="Fper\Fper.cpp" />
+    <ClCompile Include="grafic\PovRay.cpp" />
+    <ClCompile Include="seriesEd\Ed.cpp" />
+    <ClCompile Include="seriesEd\polyEd.cpp" />
+    <ClCompile Include="seriesEd\seriesEd.cpp" />
+    <ClCompile Include="seriesTg\polyTg.cpp" />
+    <ClCompile Include="seriesTg\seriesTg.cpp" />
+    <ClCompile Include="seriesTg\Tg.cpp" />
+    <ClCompile Include="wrapperMMGD\gdWrapper.cpp" />
+    <ClCompile Include="wrapperMMGD\lminmaxgd.cpp" />
+    <ClCompile Include="wrapperMMGD\polyWrapper.cpp" />
+    <ClCompile Include="wrapperMMGD\seriesWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\test\factory\FactoryFper.h" />
+    <ClInclude Include="..\test\factory\FactoryPoly.h" />
+    <ClInclude Include="..\test\factory\FactoryPolyEd.h" />
+    <ClInclude Include="..\test\factory\FactoryPolyTg.h" />
+    <ClInclude Include="..\test\factory\FactorySeries.h" />
+    <ClInclude Include="..\test\factory\FactorySeriesEd.h" />
+    <ClInclude Include="..\test\factory\FactorySeriesTg.h" />
+    <ClInclude Include="..\test\factory\factoryT.h" />
+    <ClInclude Include="..\test\factory\randGen.h" />
+    <ClInclude Include="..\test\macros.h" />
+    <ClInclude Include="..\test\Test.h" />
+    <ClInclude Include="..\test\testException.h" />
+    <ClInclude Include="..\test\TestTemplate\TestIS.h" />
+    <ClInclude Include="..\test\TestTemplate\TestKleene.h" />
+    <ClInclude Include="..\test\TestTemplate\TestResiduation.h" />
+    <ClInclude Include="..\test\TestTemplate\testresiduationineq.h" />
+    <ClInclude Include="..\test\TestTemplate\TestXIS.h" />
+    <ClInclude Include="common\etvoException.h" />
+    <ClInclude Include="common\global.h" />
+    <ClInclude Include="common\ISterm.h" />
+    <ClInclude Include="etop\dDd.h" />
+    <ClInclude Include="etop\E_op.h" />
+    <ClInclude Include="etop\gNg.h" />
+    <ClInclude Include="etop\T_op.h" />
+    <ClInclude Include="Fper\Fmaxp.h" />
+    <ClInclude Include="Fper\Fminp.h" />
+    <ClInclude Include="Fper\Fper.h" />
+    <ClInclude Include="grafic\PovRay.h" />
+    <ClInclude Include="libminmaxgd\include\gd.h" />
+    <ClInclude Include="libminmaxgd\include\poly.h" />
+    <ClInclude Include="libminmaxgd\include\serie.h" />
+    <ClInclude Include="libminmaxgd\include\tools.h" />
+    <ClInclude Include="libminmaxgd\include\vars.h" />
+    <ClInclude Include="seriesEd\Ed.h" />
+    <ClInclude Include="seriesEd\polyEd.h" />
+    <ClInclude Include="seriesEd\seriesEd.h" />
+    <ClInclude Include="seriesTg\polyTg.h" />
+    <ClInclude Include="seriesTg\seriesTg.h" />
+    <ClInclude Include="seriesTg\Tg.h" />
+    <ClInclude Include="wrapperMMGD\gdWrapper.h" />
+    <ClInclude Include="wrapperMMGD\matrixWrapper.h" />
+    <ClInclude Include="wrapperMMGD\polyWrapper.h" />
+    <ClInclude Include="wrapperMMGD\seriesWrapper.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4CCB6BF7-F6DB-4A19-B7C5-E3DD5E6ACA07}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>etvo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\boost_1_68_0;F:\boost_1_68_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\boost_1_68_0;D:\boost_1_68_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>F:\boost_1_68_0;F:\boost_1_68_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>F:\boost_1_68_0;D:\boost_1_68_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <StackReserveSize>
+      </StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <HeapReserveSize>5000000</HeapReserveSize>
+      <StackReserveSize>5000000</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>
+      </StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <HeapReserveSize>5000000</HeapReserveSize>
+      <StackReserveSize>5000000</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

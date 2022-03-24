@@ -1,0 +1,146 @@
+\section{etvo\+:\+:d\+Dd Class Reference}
+\label{classetvo_1_1d_dd}\index{etvo\+::d\+Dd@{etvo\+::d\+Dd}}
+
+
+terms like d$^\wedge$tl T\+M\+\_\+m d$^\wedge$tc T\+B\+\_\+b d$^\wedge$tr  
+
+
+
+
+{\ttfamily \#include $<$d\+Dd.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1d_dd_a1d1a924c037e82169fae97f7cc435593}} 
+\textbf{ d\+Dd} (int tl, unsigned int tmb, int tc, int tr)
+\begin{DoxyCompactList}\small\item\em Create term d$^\wedge$tl T\+M\+\_\+tmb d$^\wedge$tc T\+B\+\_\+tmb d$^\wedge$tr. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a9dc8dc475eb5c66dd5f6a1ce52d34356}} 
+\textbf{ d\+Dd} (int tl, unsigned int tmb, int tr)
+\begin{DoxyCompactList}\small\item\em Create term d$^\wedge$tl T\+M\+\_\+tmb d$^\wedge$0 T\+B\+\_\+tmb d$^\wedge$tr. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a9776955dc4cac58cce380899c31fc584}} 
+\textbf{ d\+Dd} (int tc)
+\begin{DoxyCompactList}\small\item\em d$^\wedge$0 M\+\_\+1 d$^\wedge$tc B\+\_\+1 d$^\wedge$0 = d$^\wedge$tc \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a9a39dd3b74c2f40feef7be013da08e6c}} 
+int \textbf{ get\+Tl} () const
+\begin{DoxyCompactList}\small\item\em getters tl, tm, tb, br of term d$^\wedge$tl M\+\_\+m B\+\_\+b d$^\wedge$tr \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a64c4e74ac9024e12efc2ba28cc00ae49}} 
+unsigned int {\bfseries get\+Tmb} () const
+\item 
+\mbox{\label{classetvo_1_1d_dd_ad999418b868c26d4904eb683ec3e4268}} 
+int {\bfseries get\+Tc} () const
+\item 
+\mbox{\label{classetvo_1_1d_dd_ab571c654de6185c2144ec91c473d454c}} 
+int {\bfseries get\+Tr} () const
+\item 
+\mbox{\label{classetvo_1_1d_dd_adfe7ed586d9255b34e09f585250339b5}} 
+int {\bfseries invariant} () const
+\item 
+\mbox{\label{classetvo_1_1d_dd_a1acebdb4088d8841fc355097872e629f}} 
+bool \textbf{ operator$<$=} (const \textbf{ d\+Dd} \&m) const
+\begin{DoxyCompactList}\small\item\em comparison of terms (with the same Periodicity) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a01a842d72d1965eae4e7970fe42a90ce}} 
+bool {\bfseries operator$>$=} (const \textbf{ d\+Dd} \&m) const
+\item 
+\mbox{\label{classetvo_1_1d_dd_a0de2be419a0e749c99e2921ee580bd8b}} 
+bool {\bfseries operator==} (const \textbf{ d\+Dd} \&m) const
+\item 
+\mbox{\label{classetvo_1_1d_dd_a66d3daa13c1ba6e3a5ca17421d0986d9}} 
+void \textbf{ canon} ()
+\begin{DoxyCompactList}\small\item\em gives canonical form (depends on the choice made by set\+Canon\+Form) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a4ff6df566dcb791b13252ca074de54f2}} 
+void \textbf{ canonL} ()
+\begin{DoxyCompactList}\small\item\em set Left form [-\/tmb$<$tr$<$=0 and tc=0] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_ad7c9c42d9d9142d835439b12506f9ed7}} 
+void \textbf{ canonC} ()
+\begin{DoxyCompactList}\small\item\em set Central \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_aa437ea6553ea7e8d2cb678b2ced7e471}} 
+void \textbf{ canonR} ()
+\begin{DoxyCompactList}\small\item\em set Right form [-\/tmb$<$tl$<$=0 and tc=0] \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a25a7d66d5a58916ee0c4a3dcf34c4013}} 
+int \textbf{ Rw} (int ki) const
+\begin{DoxyCompactList}\small\item\em value of Release function Rw(ti) = ceil(((tr+ti)/mb)+tc)$\ast$mb+tl \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a598d5937209a9a46de5df45d7e001e91}} 
+\textbf{ Fmaxp} \textbf{ get\+Rw} () const
+\begin{DoxyCompactList}\small\item\em returns function Rw \end{DoxyCompactList}\item 
+std\+::pair$<$ unsigned, unsigned $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em Extension of g$^\wedge$nl M\+\_\+m B\+\_\+b g$^\wedge$nr -\/$>$ S\+U\+M\+\_\+i g$^\wedge$(nl+i$\ast$ M\+\_\+(mul$\ast$m) B\+\_\+(mul$\ast$\+\_\+b) g$^\wedge$(mul-\/1) .... \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a4b3b46599722b132373b5057a5d587e9}} 
+std\+::string \textbf{ to\+String} (unsigned n\+Ver=0) const
+\begin{DoxyCompactList}\small\item\em gain rational(m/b) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1d_dd_aa5f51d457d382e7b30a6407ae56069dd}} 
+static void \textbf{ set\+Canon\+Form} (unsigned val=0)
+\begin{DoxyCompactList}\small\item\em set the type of canonical form 0=left 1=center 2=right \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_ab808d3265bf3b93f915fb3bc509bd985}} 
+static unsigned {\bfseries get\+Canon\+Form} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1d_dd_ad530cc1fc79e08cde525efffaecf7ae8}} 
+int \textbf{ \+\_\+tl}
+\begin{DoxyCompactList}\small\item\em tl, tmb, tc, tr \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1d_dd_a57411e83f2caa0d528b0a9248bf9b733}} 
+unsigned int {\bfseries \+\_\+tmb}
+\item 
+\mbox{\label{classetvo_1_1d_dd_afcd1b0a4148daf8c2f4a4f79f3648a5c}} 
+int {\bfseries \+\_\+tc}
+\item 
+\mbox{\label{classetvo_1_1d_dd_a741c5d94316dd14e3753b16d2c735acb}} 
+int {\bfseries \+\_\+tr}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned \textbf{ \+\_\+canon} =0
+\begin{DoxyCompactList}\small\item\em set canonical form of \doxyref{d\+Dd}{p.}{classetvo_1_1d_dd} (default left form) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+terms like d$^\wedge$tl T\+M\+\_\+m d$^\wedge$tc T\+B\+\_\+b d$^\wedge$tr 
+
+Class to describe terms in T[[g]] written d$^\wedge$t.Delta\+\_\+(\+T).d$^\wedge$t\textquotesingle{}.
+
+Formal series in T[[g]] can be seen as infinite sums of terms ( d$^\wedge$ti.Delta\+\_\+(\+T).d$^\wedge$ti\textquotesingle{}).g$^\wedge$n\+\_\+i
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1d_dd_a21fc31d069f82586016b8d57e87509d3}} 
+\index{etvo\+::d\+Dd@{etvo\+::d\+Dd}!get\+Periodicity@{get\+Periodicity}}
+\index{get\+Periodicity@{get\+Periodicity}!etvo\+::d\+Dd@{etvo\+::d\+Dd}}
+\subsubsection{get\+Periodicity()}
+{\footnotesize\ttfamily std\+::pair$<$ unsigned, unsigned $>$ etvo\+::d\+Dd\+::get\+Periodicity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Extension of g$^\wedge$nl M\+\_\+m B\+\_\+b g$^\wedge$nr -\/$>$ S\+U\+M\+\_\+i g$^\wedge$(nl+i$\ast$ M\+\_\+(mul$\ast$m) B\+\_\+(mul$\ast$\+\_\+b) g$^\wedge$(mul-\/1) .... 
+
+periodicity as a pair $<$\+\_\+b,\+\_\+m$>$ 
+
+\subsection{Member Data Documentation}
+\mbox{\label{classetvo_1_1d_dd_aad28535e766a87e9b91862cbf8a964bb}} 
+\index{etvo\+::d\+Dd@{etvo\+::d\+Dd}!\+\_\+canon@{\+\_\+canon}}
+\index{\+\_\+canon@{\+\_\+canon}!etvo\+::d\+Dd@{etvo\+::d\+Dd}}
+\subsubsection{\+\_\+canon}
+{\footnotesize\ttfamily unsigned etvo\+::d\+Dd\+::\+\_\+canon =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+set canonical form of \doxyref{d\+Dd}{p.}{classetvo_1_1d_dd} (default left form) 
+
+set the default form as the Left Form 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/\textbf{ d\+Dd.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/etop/d\+Dd.\+cpp\end{DoxyCompactItemize}

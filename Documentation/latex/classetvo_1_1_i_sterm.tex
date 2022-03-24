@@ -1,0 +1,69 @@
+\section{etvo\+:\+:I\+Sterm Class Reference}
+\label{classetvo_1_1_i_sterm}\index{etvo\+::\+I\+Sterm@{etvo\+::\+I\+Sterm}}
+
+
+Abstract base class to handle Idempotent Semiring terms.  
+
+
+
+
+{\ttfamily \#include $<$I\+Sterm.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:I\+Sterm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.885522cm]{classetvo_1_1_i_sterm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_a2770f7090dc44b664773bae24cb3fa16}} 
+\textbf{ I\+Sterm} (bool is\+Epsilon=false)
+\begin{DoxyCompactList}\small\item\em default constructor \+: an epsilon term \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_i_sterm_acdcfe8c39b5783fc891373fe9ebfba03}} 
+\textbf{ I\+Sterm} (int eps\+N\+Top)
+\begin{DoxyCompactList}\small\item\em constructor to specify the type of \doxyref{I\+Sterm}{p.}{classetvo_1_1_i_sterm} \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_i_sterm_a6ed12700e35a84ef3a6bf852433882db}} 
+bool {\bfseries is\+Epsilon} () const
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_ae721e3fa0f1f6f2bd36b1793caabfd22}} 
+bool {\bfseries is\+Top} () const
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_ad457132ac788ddd78be3bd909345427c}} 
+bool {\bfseries is\+Extreme} () const
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_a3fa1ae37666661f7dec558fa198dd8da}} 
+void {\bfseries set\+Epsilon} ()
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_ae8b288b60a7f9c5c5c1597f337127c9d}} 
+void {\bfseries set\+Top} ()
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_a11e93913bcde5123734974cf3930cb00}} 
+bool {\bfseries operator==} (const \textbf{ I\+Sterm} \&) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_i_sterm_a04eb25dbdba96268cffe6a80bb6b029b}} 
+char \textbf{ \+\_\+eps\+N\+Top}
+\begin{DoxyCompactList}\small\item\em \+\_\+eps\+N\+Top = -\/1 epsilon 0 not extrem (normal) +1 Top \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class to handle Idempotent Semiring terms. 
+
+Attribute \+\_\+eps\+N\+Top describes epsilon (-\/1) Top(+1) and Not extrem (0)
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/common/\textbf{ I\+Sterm.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/common/I\+Sterm.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,288 @@
+\section{etvo\+:\+:Fper Class Reference}
+\label{classetvo_1_1_fper}\index{etvo\+::\+Fper@{etvo\+::\+Fper}}
+
+
+Base class for pseudo -\/ periodic functions Z-\/$>$Z where f(x + dP) = codP + f(x)  
+
+
+
+
+{\ttfamily \#include $<$Fper.\+h$>$}
+
+Inheritance diagram for etvo\+:\+:Fper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classetvo_1_1_fper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_fper_a6594dc69c1e42ab3cc761c90c74153a9}} 
+\textbf{ Fper} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \+: set as Id function Z-\/$>$Z,x-\/$>$x. \end{DoxyCompactList}\item 
+\textbf{ Fper} (int dP, int codP, const std\+::vector$<$ int $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em Constructor \+: full definition. \end{DoxyCompactList}\item 
+void \textbf{ set\+Seq} (const std\+::vector$<$ int $>$ \&seq)
+\begin{DoxyCompactList}\small\item\em Set values of f(0),f(1), ... over one period. \end{DoxyCompactList}\item 
+void \textbf{ set\+Periodicity} (int dP, int codP)
+\begin{DoxyCompactList}\small\item\em Set d\+P/codP. \end{DoxyCompactList}\item 
+int \textbf{ get\+Value} (int arg) const
+\begin{DoxyCompactList}\small\item\em Value of f(x) \end{DoxyCompactList}\item 
+int \textbf{ operator()} (int arg) const
+\begin{DoxyCompactList}\small\item\em Value of f(x) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_a7c95500da53639792f127fbaa6599000}} 
+bool {\bfseries operator==} (const \textbf{ Fper} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_fper_ae2bd6d08aa9c2d6ff30de7e300e4d829}} 
+bool {\bfseries operator!=} (const \textbf{ Fper} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_fper_a9c9b02ee4d0a82e15b4f34b43e9da43f}} 
+bool {\bfseries operator$<$=} (const \textbf{ Fper} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_fper_af484562d34b883cc8d39995ae2188f6c}} 
+bool {\bfseries operator$>$=} (const \textbf{ Fper} \&f) const
+\item 
+\mbox{\label{classetvo_1_1_fper_a97b70ed2fab8b6237592a4dd5e4936be}} 
+std\+::pair$<$ int, int $>$ \textbf{ get\+Periodicity} () const
+\begin{DoxyCompactList}\small\item\em returns the pair (dP,codP) \end{DoxyCompactList}\item 
+int \textbf{ get\+Dom\+Per} () const
+\item 
+int \textbf{ get\+Codom\+Per} () const
+\item 
+\mbox{\label{classetvo_1_1_fper_aab73972f15baf5ad0afecdae00b327e2}} 
+\textbf{ Fper} \textbf{ extend\+By} (unsigned mul) const
+\begin{DoxyCompactList}\small\item\em Produces a non-\/canonical extension of a (dP,codP) pseudo-\/periodic function The result is the equivalent (mulxdP,mulxcodP) pseudo-\/periodc function. \end{DoxyCompactList}\item 
+\textbf{ Fper} \textbf{ compose\+With} (const \textbf{ Fper} \&f) const
+\begin{DoxyCompactList}\small\item\em Computes the composition of $\ast$this with f. \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_ae13f594da0ec1ed58b8c3e208008bd8c}} 
+void \textbf{ reduce} ()
+\begin{DoxyCompactList}\small\item\em Reduces a non-\/canonical pseudo-\/periodic function to the canonical form which has the least period (dP,codP) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_a60a5a12b6ff782823653cb77d13dc407}} 
+void {\bfseries canon} ()
+\item 
+double \textbf{ gety\+Max0} () const
+\item 
+double \textbf{ gety\+Min0} () const
+\item 
+virtual std\+::string \textbf{ to\+String} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_fper_a4daeece372795ecbf12840318cf10729}} 
+static void \textbf{ set\+Auto\+Reduction} (bool on)
+\begin{DoxyCompactList}\small\item\em Class method (called by Fper\+::set\+Auto\+Reduction\+State(b)) to set the autoreduction state (O\+N/\+O\+FF) \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_a4979d4b48c92bfca22d5369cb724d5be}} 
+static bool \textbf{ get\+Auto\+Reduction\+State} ()
+\begin{DoxyCompactList}\small\item\em Class method (called by \doxyref{Fper\+::get\+Auto\+Reduction\+State()}{p.}{classetvo_1_1_fper_a4979d4b48c92bfca22d5369cb724d5be}) to obtain the autoreduction state (O\+N/\+O\+FF) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_fper_af0594d84117f2030eed6a656c5c8d04e}} 
+bool {\bfseries reduce\+By} (unsigned div)
+\item 
+\mbox{\label{classetvo_1_1_fper_a24f7dc3569ac14ae0dd6232aab5f35df}} 
+void {\bfseries update\+Y\+Min\+Max} ()
+\item 
+\mbox{\label{classetvo_1_1_fper_ad0c0ddec58325201d08ba7d8fcfda97b}} 
+bool {\bfseries is\+Nodecreasing} (const std\+::vector$<$ int $>$ \&v)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classetvo_1_1_fper_a224e0499d9eaab7b1304e4ff6970d4c2}} 
+int \textbf{ \+\_\+domP}
+\begin{DoxyCompactList}\small\item\em domain period \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_a384e158d85b4f1a852c1bb22bd6ad5c7}} 
+int \textbf{ \+\_\+codomP}
+\begin{DoxyCompactList}\small\item\em codomain period \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_a6a1a9c5a95a910415dae35d997cd12e4}} 
+std\+::vector$<$ int $>$ \textbf{ \+\_\+seq}
+\begin{DoxyCompactList}\small\item\em periodic sequence \end{DoxyCompactList}\item 
+\mbox{\label{classetvo_1_1_fper_aa7795d78964c9333a343052071d1045b}} 
+double {\bfseries \+\_\+y\+Max0}
+\item 
+\mbox{\label{classetvo_1_1_fper_a436d74a7514e66162c004e9efb31f55e}} 
+double {\bfseries \+\_\+y\+Min0}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \textbf{ \+\_\+autoreduction} =true
+\begin{DoxyCompactList}\small\item\em class variable to set O\+N/\+O\+FF the autoreduction \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for pseudo -\/ periodic functions Z-\/$>$Z where f(x + dP) = codP + f(x) 
+
+\begin{DoxyAuthor}{Author}
+BC LH JT L\+A\+R\+IS 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classetvo_1_1_fper_a7db375de96bd6a1279b083d11b079a0e}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!Fper@{Fper}}
+\index{Fper@{Fper}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{Fper()}
+{\footnotesize\ttfamily etvo\+::\+Fper\+::\+Fper (\begin{DoxyParamCaption}\item[{int}]{dP,  }\item[{int}]{codP,  }\item[{const std\+::vector$<$ int $>$ \&}]{seq }\end{DoxyParamCaption})}
+
+
+
+Constructor \+: full definition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dP} & domain period \\
+\hline
+{\em codP} & codomain period \\
+\hline
+{\em seq} & \+: values of f(0),f(1), ... over one period \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classetvo_1_1_fper_a8f7d8cf4034dfa6ba6b40e09f7faa39e}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!compose\+With@{compose\+With}}
+\index{compose\+With@{compose\+With}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{compose\+With()}
+{\footnotesize\ttfamily \textbf{ Fper} etvo\+::\+Fper\+::compose\+With (\begin{DoxyParamCaption}\item[{const \textbf{ Fper} \&}]{f }\end{DoxyParamCaption}) const}
+
+
+
+Computes the composition of $\ast$this with f. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & an \doxyref{Fper}{p.}{classetvo_1_1_fper} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \doxyref{Fper}{p.}{classetvo_1_1_fper} object 
+\end{DoxyReturn}
+\mbox{\label{classetvo_1_1_fper_a245b174b519cccd07dfa8c6d03a0cbeb}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!get\+Codom\+Per@{get\+Codom\+Per}}
+\index{get\+Codom\+Per@{get\+Codom\+Per}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{get\+Codom\+Per()}
+{\footnotesize\ttfamily int etvo\+::\+Fper\+::get\+Codom\+Per (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the codomain period codP \mbox{\label{classetvo_1_1_fper_a1429629d4813a38e83a0699a12fa9c89}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!get\+Dom\+Per@{get\+Dom\+Per}}
+\index{get\+Dom\+Per@{get\+Dom\+Per}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{get\+Dom\+Per()}
+{\footnotesize\ttfamily int etvo\+::\+Fper\+::get\+Dom\+Per (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+returns the domain period dP \mbox{\label{classetvo_1_1_fper_aec63a99ef1520af08e35b12e726fe085}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{get\+Value()}
+{\footnotesize\ttfamily int etvo\+::\+Fper\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption}) const}
+
+
+
+Value of f(x) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & x \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+f(x) 
+\end{DoxyReturn}
+\mbox{\label{classetvo_1_1_fper_a3a44423e8af95b3fa705aba0bcb7c8b2}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!gety\+Max0@{gety\+Max0}}
+\index{gety\+Max0@{gety\+Max0}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{gety\+Max0()}
+{\footnotesize\ttfamily double etvo\+::\+Fper\+::gety\+Max0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+gives the maximum of f(x) projected on y axis [x=0] parallel to (dP,codP) line This value is important for improving max,min computation between functions \mbox{\label{classetvo_1_1_fper_a9ac3a7e1ba800636b5b046996f10d9d8}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!gety\+Min0@{gety\+Min0}}
+\index{gety\+Min0@{gety\+Min0}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{gety\+Min0()}
+{\footnotesize\ttfamily double etvo\+::\+Fper\+::gety\+Min0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+gives the minimum of f(x) projected on y axis [x=0] parallel to (dP,codP) line This value is important for improving max,min computation between functions \mbox{\label{classetvo_1_1_fper_affe7ba991ae109ddfdd7935ce3ea6d09}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!operator()@{operator()}}
+\index{operator()@{operator()}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{operator()()}
+{\footnotesize\ttfamily int etvo\+::\+Fper\+::operator() (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption}) const}
+
+
+
+Value of f(x) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & x \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+f(x) 
+\end{DoxyReturn}
+\mbox{\label{classetvo_1_1_fper_abfe4dd602ac3a34c3bcd8c7ea39d8260}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!set\+Periodicity@{set\+Periodicity}}
+\index{set\+Periodicity@{set\+Periodicity}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{set\+Periodicity()}
+{\footnotesize\ttfamily void etvo\+::\+Fper\+::set\+Periodicity (\begin{DoxyParamCaption}\item[{int}]{dP,  }\item[{int}]{codP }\end{DoxyParamCaption})}
+
+
+
+Set d\+P/codP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dP} & domain period \\
+\hline
+{\em codP} & codomain period \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classetvo_1_1_fper_ac791ffa39ecb3bccd89ec981526bd5a1}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!set\+Seq@{set\+Seq}}
+\index{set\+Seq@{set\+Seq}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{set\+Seq()}
+{\footnotesize\ttfamily void etvo\+::\+Fper\+::set\+Seq (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{seq }\end{DoxyParamCaption})}
+
+
+
+Set values of f(0),f(1), ... over one period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & \+: values of f(0),f(1), \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classetvo_1_1_fper_ad1f4a28d8c2519420ba9cecf1b248302}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{to\+String()}
+{\footnotesize\ttfamily std\+::string etvo\+::\+Fper\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a string description of a pseudo-\/periodic function Ex\+: \char`\"{}[-\/7 -\/7 -\/3 -\/3 ](4,5)\char`\"{} for a (4,5) pseudo-\/periodic function f(0)=-\/7,f(1)=-\/7,f(2)=-\/3 ... 
+
+Reimplemented in \textbf{ etvo\+::\+Fminp} \doxyref{}{p.}{classetvo_1_1_fminp_a498d19bc5563949ce9028a4c44e69463}, and \textbf{ etvo\+::\+Fmaxp} \doxyref{}{p.}{classetvo_1_1_fmaxp_af21e95c15a7507f3b10ff21b77671139}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classetvo_1_1_fper_a360fe3522dab4ddbe42f533e932e6ee2}} 
+\index{etvo\+::\+Fper@{etvo\+::\+Fper}!\+\_\+autoreduction@{\+\_\+autoreduction}}
+\index{\+\_\+autoreduction@{\+\_\+autoreduction}!etvo\+::\+Fper@{etvo\+::\+Fper}}
+\subsubsection{\+\_\+autoreduction}
+{\footnotesize\ttfamily bool etvo\+::\+Fper\+::\+\_\+autoreduction =true\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+class variable to set O\+N/\+O\+FF the autoreduction 
+
+autoreduction mode default = ON 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/\+Fper/\textbf{ Fper.\+h}\item 
+F\+:/\+U\+A Box/\+Dev\+Soft/etvo\+I\+I\+I/etvo21/etvo/\+Fper/\textbf{ Fper.\+cpp}\end{DoxyCompactItemize}

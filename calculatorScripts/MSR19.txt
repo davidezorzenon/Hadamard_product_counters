@@ -1,0 +1,16 @@
+eA=d2.m3.[b3.g5.m2.b2.d7.m3]*.b2
+eH=(g1.b2.d5+b2).eA
+
+EB=eps(4,1)
+EC=eps(1,4)
+EA=eps(4,4)
+EB(0,0)=b2
+EC(0,1)=b2
+EC(0,3)=g1
+EA(0,3)=b3.g5.m2
+EA(1,0)=d2.m3
+EA(2,1)=g0
+EA(3,2)=b2.d5
+EH=EC.[[EA]*]*.EB
+eh=EH(0,0)
+?=(eH,eh)

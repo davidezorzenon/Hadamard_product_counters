@@ -1,0 +1,16 @@
+TA=eps(3,3)
+TB=eps(3,1)
+TC=eps(1,3)
+TA(1,0)=d<0,0,2,1>
+TA(1,1)=g2.d<1,3,2,1>
+TA(2,1)=d1
+TB(0,0)=g0
+TC(0,2)=g0
+TH=TC.[TA]*.TB
+tH=TH(0,0)
+asDeltaVar(tH)
+tH=right(tH)	
+asDeltaVar(tH)
+tF=rfrac(lfrac(tH,tH),tH)
+tF=pr+(tF)
+asDeltaVar(tF)

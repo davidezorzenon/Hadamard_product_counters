@@ -12,6 +12,10 @@ Consider monomials ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%
 The following code produces ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot&space;r_2&space;=&space;8\delta^2), ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot^\sharp&space;r_2&space;=&space;2\delta^{&plus;\infty}), and ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot^\flat&space;r_2&space;=&space;2\delta^2).
 
 ```cpp
+#include <iostream>
+#include "etvo.h"
+using namespace etvo;
+
 void main()
 {
     // initialize monomials

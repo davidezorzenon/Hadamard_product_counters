@@ -6,7 +6,7 @@ See <http://perso-laris.univ-angers.fr/~cottenceau/etvo.html> for the start-up i
 The added functions are `hadamard_prod`, `hadamard_res`, and `hadamard_dualres`, which compute the Hadamard product, its residual, and its dual residual, respectively.
 They accept two inputs, which must be elements of class `gd` (monomials), `poly` (polynomials), or `series` (ultimately periodic series).
 
-## Code example
+## Code examples
 
 Consider monomials ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1&space;=&space;5\delta^2) and ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_2&space;=&space;3\delta^2).
 The following code produces ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot&space;r_2&space;=&space;8\delta^2), ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot^\sharp&space;r_2&space;=&space;2\delta^{&plus;\infty}), and ![equation](https://latex.codecogs.com/png.image?%5Cbg_white%20r_1\odot^\flat&space;r_2&space;=&space;2\delta^2).
@@ -37,4 +37,18 @@ void main()
 }
 ```
 
-Other examples are documented in the technical report *The Hadamard product, its residual, and its dual residual in the dioid of counters: algorithms and implementation in C++*, available on [arxiv](https://arxiv.org/).
+An example showing how to use the functions to solve an optimal-control problem for timed event graphs with resource sharing can be found in `mainHadamard.cpp`.
+The example is taken from [[1]](#1).
+Other examples are documented in the technical report [[2]](#2).
+
+## References
+
+<a id="1">[1]</a> 
+Zorzenon D., Schafaschek G., Moradi S., Tirpák D., Hardouin L., Raisch J. (2022).
+Implementation of procedures for optimal control of timed event graphs with resource sharing.
+Sumbitted to the 16th IFAC Workshop on Discrete Event Systems.
+
+<a id="2">[2]</a> 
+Zorzenon D., Schafaschek G., Moradi S., Tirpák D., Hardouin L., Raisch J. (2022).
+The Hadamard product, its residual, and its dual residual in the dioid of counters: algorithms and implementation in C++.
+Submitted to arxiv.

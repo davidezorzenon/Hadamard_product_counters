@@ -48,11 +48,11 @@ Other examples are documented in the technical report [[2]](#2).
 ## References
 
 <a id="1">[1]</a> 
-Zorzenon D., Schafaschek G., Moradi S., Tirpák D., Hardouin L., Raisch J. (2022).
+Zorzenon D., Schafaschek G., Tirpák D., Moradi S., Hardouin L., Raisch J. (2022).
 Implementation of procedures for optimal control of timed event graphs with resource sharing.
 Sumbitted to the 16th IFAC Workshop on Discrete Event Systems.
 
 <a id="2">[2]</a> 
-Zorzenon D., Schafaschek G., Moradi S., Tirpák D., Hardouin L., Raisch J. (2022).
+Zorzenon D., Schafaschek G., Tirpák D., Moradi S., Hardouin L., Raisch J. (2022).
 The Hadamard product, its residual, and its dual residual in the dioid of counters: algorithms and implementation in C++.
 Submitted to arxiv.

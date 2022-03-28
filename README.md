@@ -41,9 +41,18 @@ void main()
 }
 ```
 
-An example showing how to use the functions to solve an optimal-control problem for timed event graphs with resource sharing can be found in `mainHadamard.cpp`.
-The example is taken from [[1]](#1).
-Other examples are documented in the technical report [[2]](#2).
+An example showing how to use the functions to solve an optimal-control problem for timed event graphs with resource sharing can be found in `mainHadamard.cpp`, see function `train_station_example_WODES()`.
+The example is taken from [[1, Section 4]](#1).
+Other examples are documented in the [[2, Section 4]](#2).
+
+## Proof of the correctness of the algorithms
+
+The correctness of the algorithms for computing the Hadamard product, its residual, and its dual residual between monomials, polynomials, and ultimately periodic formal power series is proven in [[2, Section 3]](#2).
+
+## Performance evaluation
+
+Function `performance_evaluation()` in `mainHadamard.cpp` measures the computational time to solve an optimal-control problem for timed event graphs with resoure sharing and output-reference update.
+The results of the tests are reported in [[1, Section 5]](#1).
 
 ## References
 

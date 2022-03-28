@@ -273,7 +273,8 @@ vector<series> output_reference_update_RS_one_resource(int K, long T, series bet
 }
 
 /// <summary>
-/// Example from Section 4 of 2022 WODES paper 
+/// Example of optimal-control problem for timed event graphs with resource sharing and ouput-reference update.
+/// Taken from [1, Section 4].
 /// </summary>
 void train_station_example_WODES()
 {
@@ -338,7 +339,8 @@ void train_station_example_WODES()
 }
 
 /// <summary>
-/// Performance evaluation of the toolbox
+/// Performance evaluation of the toolbox.
+/// The performance evaluation is presented in [1, Section 5].
 /// </summary>
 void performance_evaluation() {
     unsigned int m_max = 40;
@@ -397,12 +399,19 @@ void performance_evaluation() {
 int main()
 {
 
-    // Example from Section 4 of 2022 WODES paper
+    // Example from [1, Section 4]
     train_station_example_WODES();
 
-    // Performance evaluation from Section 5 of 2022 WODES paper
+    // Performance evaluation from [1, Section 5]
     // performance_evaluation();
 
     getchar();
 }
 
+/*
+#References:
+
+[1] 	Zorzenon D., Schafaschek G., Tirpák D., Moradi S., Hardouin L., Raisch J. (2022).
+	Implementation of procedures for optimal control of timed event graphs with resource sharing. 
+	Sumbitted to the 16th IFAC Workshop on Discrete Event Systems.
+*/

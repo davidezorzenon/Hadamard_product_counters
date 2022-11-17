@@ -1,4 +1,4 @@
-# Hadamard_product_counters
+# Hadamard product for counters
 
 Functions to compute the Hadamard product, its residual, and its dual residual on counters. The code is written on top of the library [ETVO](http://perso-laris.univ-angers.fr/~cottenceau/etvo.html) ((Event|Time)-Variant Operators).
 
